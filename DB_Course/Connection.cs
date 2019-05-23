@@ -1,35 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
-namespace ClassRequest
+namespace DB_Course
 {
-    public class SqlConnect
+    class SqlConnection
     {
-        private static SqlConnect NewConnection = null;
-
-        public SqlConnect(NpgsqlConnection Connection)
+        private static SqlConnection NewConnection = null;
+        public NpgsqlConnection Connection { get; }
+        public SqlConnection (NpgsqlConnection Connection)
         {
             this.Connection = Connection;
         }
-
-        public SqlConnect GetNewSqlConnection()
-        {
-            return NewConnection = new SqlConnect(Connection);
-        }
-
-        public NpgsqlConnection Connection { get; }
-
+        public SqlConnection CreateConnection => NewConnection = new SqlConnection(Connection);
         public void OpenConnection()
         {
             try
             {
                 Connection.Open();
-                //MessageBox.Show(@"Соединение открыто!");
             }
-            catch (Exception exp)
+            catch (Exception ex)
             {
-                MessageBox.Show(Convert.ToString(exp));
+                MessageBox.Show(Convert.ToString(ex));
             }
         }
         public void CloseConnection()
@@ -37,11 +33,10 @@ namespace ClassRequest
             try
             {
                 Connection.Close();
-                //MessageBox.Show(@"Соединение закрыто!");
             }
-            catch (Exception exp)
+            catch(Exception ex)
             {
-                MessageBox.Show(Convert.ToString(exp));
+                MessageBox.Show(Convert.ToString(ex));
             }
         }
     }
