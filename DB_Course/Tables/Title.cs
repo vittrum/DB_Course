@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DB_Course.Tables
 {
-    class Titles
+    class Title
     {
         public string ID_Title { private set; get; }
         public string Name { private set; get; }
-        public Titles() { }
-        public Titles(
+        public Title() { }
+        public Title(
             string ID_Title,
             string Name)
         {
