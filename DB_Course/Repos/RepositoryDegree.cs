@@ -50,11 +50,16 @@ namespace DB_Course
             try
             {
                 string QueryString =
-                    "delete from \"Degrees\"" +
+                    "delete from \"Degree\"" +
                     " where \"ID_Degree\" = @ID_Degree;";
                 NpgsqlCommand Command = new NpgsqlCommand
                     (QueryString, sqlConnect.CreateConnection.Connection);
-
+                Command.Parameters.AddWithValue("@ID_Degree", Convert.ToInt32(ID_Degree));
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
         }
     }

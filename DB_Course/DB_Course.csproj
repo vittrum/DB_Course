@@ -82,6 +82,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\RepositoryDegree.cs" />
+    <Compile Include="Repos\RepositoryStaff.cs" />
     <Compile Include="Repos\RepositoryTitles.cs" />
     <Compile Include="Tables\Chair.cs" />
     <Compile Include="Tables\Staff_Degree.cs" />
