@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="ErrorProtector.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,7 +95,7 @@
     <Compile Include="Repos\RepositoryStaff_Degree.cs" />
     <Compile Include="Repos\RepositoryStaff_Title.cs" />
     <Compile Include="Repos\RepositoryTime_Sheet.cs" />
-    <Compile Include="Repos\RepositoryTitles.cs" />
+    <Compile Include="Repos\RepositoryTitle.cs" />
     <Compile Include="Repos\RepositoryTransfer_Training.cs" />
     <Compile Include="Repos\RepositoryVacations.cs" />
     <Compile Include="Tables\Chair.cs" />
@@ -111,6 +113,9 @@
     <Compile Include="Tables\Title.cs" />
     <Compile Include="Tables\Transfer_Training.cs" />
     <Compile Include="Tables\Vacation.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
