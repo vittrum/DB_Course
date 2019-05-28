@@ -11,81 +11,37 @@ namespace DB_Course
     {
         public NpgsqlConnection NpgsqlConnection;
         public SqlConnection SqlConnection;
-        public RepositoryBusiness_Trip RepositoryBusiness_Trip
-        {
-            get => RepositoryBusiness_Trip;
-            private set => RepositoryBusiness_Trip = value;
-        }
-        public RepositoryChair RepositoryChair
-        {
-            get => RepositoryChair;
-            private set => RepositoryChair = value;
-        }
-        public RepositoryContract RepositoryContract
-        {
-            get => RepositoryContract;
-            private set => RepositoryContract = value;
-        }
-        public RepositoryDegree RepositoryDegree
-        {
-            get => RepositoryDegree;
-            private set => RepositoryDegree = value;
-        }
-        public RepositoryEmployee_Sheet RepositoryEmployee_Sheet
-        {
-            get => RepositoryEmployee_Sheet;
-            private set => RepositoryEmployee_Sheet = value;
-        }
-        public RepositoryOrder RepositoryOrder
-        {
-            get => RepositoryOrder;
-            private set => RepositoryOrder = value;
-        }
-        public RepositoryPositions RepositoryPositions
-        {
-            get => RepositoryPositions;
-            private set => RepositoryPositions = value;
-        }
-        public RepositorySick_List RepositorySick_List
-        {
-            get => RepositorySick_List;
-            private set => RepositorySick_List = value;
-        }
-        public RepositoryStaff RepositoryStaff
-        {
-            get => RepositoryStaff;
-            private set => RepositoryStaff = value;
-        }
-        public RepositoryStaff_Degree RepositoryStaff_Degree
-        {
-            get => RepositoryStaff_Degree;
-            private set => RepositoryStaff_Degree = value;
-        }
-        public RepositoryStaff_Title RepositoryStaff_Title
-        {
-            get => RepositoryStaff_Title;
-            set => RepositoryStaff_Title = value;
-        }
-        public RepositoryTime_Sheet RepositoryTime_Sheet
-        {
-            get => RepositoryTime_Sheet;
-            set => RepositoryTime_Sheet = value;
-        }
-        public RepositoryTitle RepositoryTitle
-        {
-            get => RepositoryTitle;
-            set => RepositoryTitle = value;
-        }
-        public RepositoryTransfer_Training RepositoryTransfer_Training
-        {
-            get => RepositoryTransfer_Training;
-            set => RepositoryTransfer_Training = value;
-        }
-        public RepositoryVacations RepositoryVacations
-        {
-            get => RepositoryVacations;
-            set => RepositoryVacations = value;
-        }
+        public RepositoryBusiness_Trip RepositoryBusiness_Trip { get; set; }
+        public RepositoryBusiness_Trip Business_Trip => RepositoryBusiness_Trip;
+        public RepositoryChair RepositoryChair { get; set; }
+        public RepositoryChair Chair => RepositoryChair;
+        public RepositoryContract RepositoryContract { get; set; }
+        public RepositoryContract Contract => RepositoryContract;
+        public RepositoryDegree RepositoryDegree { get; set; }
+        public RepositoryDegree Degree => RepositoryDegree;
+        public RepositoryEmployee_Sheet RepositoryEmployee_Sheet { get; set; }
+        public RepositoryEmployee_Sheet Employee_Sheet => RepositoryEmployee_Sheet;
+        public RepositoryOrder RepositoryOrder { get; set; }
+        public RepositoryOrder Order => RepositoryOrder;
+        public RepositoryPositions RepositoryPositions { get; set; }
+        public RepositoryPositions Positions => RepositoryPositions;
+        public RepositorySick_List RepositorySick_List { get; set; }
+        public RepositorySick_List Sick_List => RepositorySick_List;
+        public RepositoryStaff RepositoryStaff { get; set; }
+        public RepositoryStaff Staff => RepositoryStaff;
+        public RepositoryStaff_Degree RepositoryStaff_Degree { get; set; }
+        public RepositoryStaff_Degree Staff_Degree => RepositoryStaff_Degree;
+        public RepositoryStaff_Title RepositoryStaff_Title { get; set; }
+        public RepositoryStaff_Title Staff_Title => RepositoryStaff_Title;
+        public RepositoryTime_Sheet RepositoryTime_Sheet { get; set; }
+        public RepositoryTime_Sheet Time_Sheet => RepositoryTime_Sheet;
+        public RepositoryTitle repositoryTitle { get; set; }
+        public RepositoryTitle Tiltle => repositoryTitle;
+        public RepositoryTransfer_Training RepositoryTransfer_Training { get; set; }
+        public RepositoryTransfer_Training Transfer_Training => RepositoryTransfer_Training;
+        public RepositoryVacations RepositoryVacations { get; set; }
+        public RepositoryVacations Vacations => RepositoryVacations;
+    
         private bool Disposed = false;
 
         public Factory(string server, string port, string user, string pass, string dbname)
@@ -106,7 +62,7 @@ namespace DB_Course
             RepositoryStaff_Degree = new RepositoryStaff_Degree(SqlConnection);
             RepositoryStaff_Title = new RepositoryStaff_Title(SqlConnection);
             RepositoryTime_Sheet = new RepositoryTime_Sheet(SqlConnection);
-            RepositoryTitle = new RepositoryTitle(SqlConnection);
+            repositoryTitle = new RepositoryTitle(SqlConnection);
             RepositoryTransfer_Training = new RepositoryTransfer_Training(SqlConnection);
             RepositoryVacations = new RepositoryVacations(SqlConnection);
         }
