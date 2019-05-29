@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DB_Course.Tables;
 using Npgsql;
 using System.Data.Common;
@@ -12,10 +9,10 @@ namespace DB_Course
 {
     class RepositoryDegree
     {
-        private SqlConnection sqlConnect;
+        private SqlConnection sqlConnection;
         public RepositoryDegree(SqlConnection sqlConnect)
         {
-            this.sqlConnect = sqlConnect;
+            this.sqlConnection = sqlConnect;
         }
         public List<Degree> GetTable()
         {
@@ -28,7 +25,7 @@ namespace DB_Course
                     "from \"Degree\"" +
                     "order by \"ID_Degree\";";
                 NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnect.CreateConnection.Connection);
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader)
                 {
@@ -53,7 +50,7 @@ namespace DB_Course
                     "delete from \"Degree\"" +
                     " where \"ID_Degree\" = @ID_Degree;";
                 NpgsqlCommand Command = new NpgsqlCommand
-                    (QueryString, sqlConnect.CreateConnection.Connection);
+                    (QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@ID_Degree", Convert.ToInt32(ID_Degree));
                 Command.ExecuteNonQuery();
             }

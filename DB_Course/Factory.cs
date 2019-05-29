@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DB_Course.Repos;
 using Npgsql;
 namespace DB_Course
@@ -35,8 +31,8 @@ namespace DB_Course
         public RepositoryStaff_Title Staff_Title => RepositoryStaff_Title;
         public RepositoryTime_Sheet RepositoryTime_Sheet { get; set; }
         public RepositoryTime_Sheet Time_Sheet => RepositoryTime_Sheet;
-        public RepositoryTitle repositoryTitle { get; set; }
-        public RepositoryTitle Tiltle => repositoryTitle;
+        public RepositoryTitle RepositoryTitle { get; set; }
+        public RepositoryTitle Tiltle => RepositoryTitle;        
         public RepositoryTransfer_Training RepositoryTransfer_Training { get; set; }
         public RepositoryTransfer_Training Transfer_Training => RepositoryTransfer_Training;
         public RepositoryVacations RepositoryVacations { get; set; }
@@ -62,7 +58,7 @@ namespace DB_Course
             RepositoryStaff_Degree = new RepositoryStaff_Degree(SqlConnection);
             RepositoryStaff_Title = new RepositoryStaff_Title(SqlConnection);
             RepositoryTime_Sheet = new RepositoryTime_Sheet(SqlConnection);
-            repositoryTitle = new RepositoryTitle(SqlConnection);
+            RepositoryTitle = new RepositoryTitle(SqlConnection);
             RepositoryTransfer_Training = new RepositoryTransfer_Training(SqlConnection);
             RepositoryVacations = new RepositoryVacations(SqlConnection);
         }

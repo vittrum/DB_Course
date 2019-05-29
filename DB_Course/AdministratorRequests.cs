@@ -13,7 +13,7 @@ namespace DB_Course
     {
         public void Title_Output(Factory f, DataGridView dgv)
         {
-            foreach (var i in f.repositoryTitle.GetTable())
+            foreach (var i in f.RepositoryTitle.GetTable())
             {
                 dgv.Rows.Add(i.ID_Title,i.Name);
             }
