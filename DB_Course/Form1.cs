@@ -19,7 +19,7 @@ namespace DB_Course
 
         }
         AdministratorRequests Areq = new AdministratorRequests();
-        Factory fact = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department");
+        Factory fact = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
