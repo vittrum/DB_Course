@@ -18,6 +18,13 @@ namespace DB_Course
         public void MustBeString() => MessageBox.Show("Значения могут быть только строчного типа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void Error() => MessageBox.Show("Ошибка при вводе!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void AccessError() => MessageBox.Show("Нет прав доступа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        
+        /* 
+         * Обработка ошибки для вывода сообщения
+         * Contract.ContractFailed += (sender, e) =>
+        {
+        Console.WriteLine(e.Message);
+        e.SetHandled();
+        };
+        */
     }
 }

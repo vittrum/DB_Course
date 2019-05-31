@@ -19,14 +19,21 @@ namespace DB_Course
 
         }
         AdministratorRequests Areq = new AdministratorRequests();
-        Factory fact = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
+        Factory fact = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
+        DataTable dt = new DataTable();
+        
 
         private void Button1_Click_1(object sender, EventArgs e)
         {
             Areq.Title_Output(fact, dgvTitles);
-            if (dgvTitles.CurrentRow != null) dgvTitles.Rows[dgvTitles.CurrentRow.Index].Selected = false;
+            if (dgvTitles.CurrentRow != null)
+                dgvTitles.Rows[dgvTitles.CurrentRow.Index].Selected = false;
         }
 
-        
+        private void btnSelectAllStaff_Click(object sender, EventArgs e)
+        {
+            //if (che)
+            
+        }
     }
 }
