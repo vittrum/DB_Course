@@ -70,6 +70,40 @@ namespace DB_Course.Repos
                 MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
         }
+        public void Insert(
+            string Name,
+            string Lastname,
+            string Patronymic,
+            string Education,
+            string Phone,
+            string Registration,
+            string Pass,
+            string Type)
+        {
+            try
+            {
+                string QueryString = 
+                    "insert into staff" +
+                    "(s_name, \"LastName\", \"Patronymic\",\"Education\",\"Phone\"," +
+                    "\"Registration\",\"Pass\",\"Type\")" +
+                    "values (@Name, @Lastname, @Patronymic, @Education, @Phone," +
+                    "@Registration, @Pass, @Type);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnect.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@Name", Name); // Возможно нужно прописать Add Wit Value!
+                Command.Parameters.AddWithValue("@LastName", Lastname);
+                Command.Parameters.AddWithValue("@Patronymic", Patronymic);
+                Command.Parameters.AddWithValue("@Education", Education);
+                Command.Parameters.AddWithValue("@Phone", Phone);
+                Command.Parameters.AddWithValue("@Registration", Registration);
+                Command.Parameters.AddWithValue("@Pass", Pass);
+                Command.Parameters.AddWithValue("@Type", Type);
 
+                try { Command.ExecuteNonQuery(); }
+                catch { MessageBox.Show("Лажа с эезекьютом"); }
+            }
+            catch { MessageBox.Show("Лажа с методом"); }
+
+        }
     }
 }
