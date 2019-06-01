@@ -18,6 +18,14 @@ namespace DB_Course
         public void MustBeString() => MessageBox.Show("Значения могут быть только строчного типа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void Error() => MessageBox.Show("Ошибка при вводе!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void AccessError() => MessageBox.Show("Нет прав доступа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        #region Staff Validation
+        public void Check_Insert(Factory factory, string name, string lastname, string patronymic, string education,
+                                string phone, string registration, string pass, string type)
+        {
+
+        }
+        #endregion
         /* 
          * Обработка ошибки для вывода сообщения
          * Contract.ContractFailed += (sender, e) =>

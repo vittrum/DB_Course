@@ -19,7 +19,7 @@ namespace DB_Course
 
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
         DataTable dt = new DataTable();
         
 
