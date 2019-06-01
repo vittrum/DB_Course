@@ -139,12 +139,6 @@
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnStaffSelectSome = new System.Windows.Forms.Button();
-            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
-            this.chboxStaffType = new System.Windows.Forms.CheckBox();
-            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
-            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
-            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -168,6 +162,13 @@
             this.pageStaffContract = new System.Windows.Forms.TabPage();
             this.pageStaffWorkingTime = new System.Windows.Forms.TabPage();
             this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.btnStaffSelectSome = new System.Windows.Forms.Button();
+            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
+            this.chboxStaffType = new System.Windows.Forms.CheckBox();
+            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
+            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
+            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
+            this.btnSelectStaffById = new System.Windows.Forms.Button();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1311,6 +1312,12 @@
             // groupBox3
             // 
             this.groupBox3.AutoSize = true;
+            this.groupBox3.Controls.Add(this.btnStaffSelectSome);
+            this.groupBox3.Controls.Add(this.chboxStaffPhone);
+            this.groupBox3.Controls.Add(this.chboxStaffType);
+            this.groupBox3.Controls.Add(this.chboxStaffEducation);
+            this.groupBox3.Controls.Add(this.chboxStaffRegistration);
+            this.groupBox3.Controls.Add(this.chboxStaffPass);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.btnSelectAllStaff);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1324,12 +1331,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.btnStaffSelectSome);
-            this.groupBox4.Controls.Add(this.chboxStaffPhone);
-            this.groupBox4.Controls.Add(this.chboxStaffType);
-            this.groupBox4.Controls.Add(this.chboxStaffEducation);
-            this.groupBox4.Controls.Add(this.chboxStaffRegistration);
-            this.groupBox4.Controls.Add(this.chboxStaffPass);
+            this.groupBox4.Controls.Add(this.btnSelectStaffById);
             this.groupBox4.Controls.Add(this.label25);
             this.groupBox4.Controls.Add(this.label24);
             this.groupBox4.Controls.Add(this.label23);
@@ -1343,92 +1345,20 @@
             this.groupBox4.Controls.Add(this.rbtnSelectStaffByID);
             this.groupBox4.Controls.Add(this.rbtnSelectStaffByName);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(5, 64);
+            this.groupBox4.Location = new System.Drawing.Point(5, 146);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(442, 245);
+            this.groupBox4.Size = new System.Drawing.Size(461, 163);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Выбрать по критериям";
-            // 
-            // btnStaffSelectSome
-            // 
-            this.btnStaffSelectSome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStaffSelectSome.Location = new System.Drawing.Point(309, 174);
-            this.btnStaffSelectSome.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStaffSelectSome.Name = "btnStaffSelectSome";
-            this.btnStaffSelectSome.Size = new System.Drawing.Size(117, 35);
-            this.btnStaffSelectSome.TabIndex = 23;
-            this.btnStaffSelectSome.Text = "Выбрать";
-            this.btnStaffSelectSome.UseVisualStyleBackColor = true;
-            this.btnStaffSelectSome.Click += new System.EventHandler(this.BtnStaffSelectSome_Click);
-            // 
-            // chboxStaffPhone
-            // 
-            this.chboxStaffPhone.AutoSize = true;
-            this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPhone.Location = new System.Drawing.Point(150, 197);
-            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffPhone.Name = "chboxStaffPhone";
-            this.chboxStaffPhone.Size = new System.Drawing.Size(134, 19);
-            this.chboxStaffPhone.TabIndex = 33;
-            this.chboxStaffPhone.Text = "Телефонный номер";
-            this.chboxStaffPhone.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffType
-            // 
-            this.chboxStaffType.AutoSize = true;
-            this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffType.Location = new System.Drawing.Point(5, 197);
-            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffType.Name = "chboxStaffType";
-            this.chboxStaffType.Size = new System.Drawing.Size(112, 19);
-            this.chboxStaffType.TabIndex = 32;
-            this.chboxStaffType.Text = "Тип сотрудника";
-            this.chboxStaffType.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffEducation
-            // 
-            this.chboxStaffEducation.AutoSize = true;
-            this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffEducation.Location = new System.Drawing.Point(150, 174);
-            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffEducation.Name = "chboxStaffEducation";
-            this.chboxStaffEducation.Size = new System.Drawing.Size(102, 19);
-            this.chboxStaffEducation.TabIndex = 31;
-            this.chboxStaffEducation.Text = "Образование";
-            this.chboxStaffEducation.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffRegistration
-            // 
-            this.chboxStaffRegistration.AutoSize = true;
-            this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffRegistration.Location = new System.Drawing.Point(5, 220);
-            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffRegistration.Name = "chboxStaffRegistration";
-            this.chboxStaffRegistration.Size = new System.Drawing.Size(81, 19);
-            this.chboxStaffRegistration.TabIndex = 29;
-            this.chboxStaffRegistration.Text = "Прописка";
-            this.chboxStaffRegistration.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffPass
-            // 
-            this.chboxStaffPass.AutoSize = true;
-            this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPass.Location = new System.Drawing.Point(5, 174);
-            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffPass.Name = "chboxStaffPass";
-            this.chboxStaffPass.Size = new System.Drawing.Size(141, 19);
-            this.chboxStaffPass.TabIndex = 30;
-            this.chboxStaffPass.Text = "Паспортные данные";
-            this.chboxStaffPass.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(180, 140);
+            this.label25.Location = new System.Drawing.Point(149, 140);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 15);
@@ -1439,7 +1369,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(215, 21);
+            this.label24.Location = new System.Drawing.Point(184, 21);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(19, 15);
@@ -1450,7 +1380,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(177, 102);
+            this.label23.Location = new System.Drawing.Point(146, 102);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(57, 15);
@@ -1461,7 +1391,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(204, 55);
+            this.label20.Location = new System.Drawing.Point(173, 55);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(30, 15);
@@ -1470,7 +1400,7 @@
             // 
             // tbStaffSelectByChair
             // 
-            this.tbStaffSelectByChair.Location = new System.Drawing.Point(240, 138);
+            this.tbStaffSelectByChair.Location = new System.Drawing.Point(209, 138);
             this.tbStaffSelectByChair.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByChair.Name = "tbStaffSelectByChair";
             this.tbStaffSelectByChair.Size = new System.Drawing.Size(186, 23);
@@ -1478,7 +1408,7 @@
             // 
             // tbStaffSelectByPatronymic
             // 
-            this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(240, 100);
+            this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(209, 100);
             this.tbStaffSelectByPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByPatronymic.Name = "tbStaffSelectByPatronymic";
             this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(186, 23);
@@ -1486,7 +1416,7 @@
             // 
             // tbStaffSelectByLastname
             // 
-            this.tbStaffSelectByLastname.Location = new System.Drawing.Point(240, 76);
+            this.tbStaffSelectByLastname.Location = new System.Drawing.Point(209, 76);
             this.tbStaffSelectByLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByLastname.Name = "tbStaffSelectByLastname";
             this.tbStaffSelectByLastname.Size = new System.Drawing.Size(186, 23);
@@ -1494,7 +1424,7 @@
             // 
             // tbStaffSelectByName
             // 
-            this.tbStaffSelectByName.Location = new System.Drawing.Point(240, 53);
+            this.tbStaffSelectByName.Location = new System.Drawing.Point(209, 52);
             this.tbStaffSelectByName.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByName.Name = "tbStaffSelectByName";
             this.tbStaffSelectByName.Size = new System.Drawing.Size(186, 23);
@@ -1502,7 +1432,7 @@
             // 
             // tbStaffSelectByID
             // 
-            this.tbStaffSelectByID.Location = new System.Drawing.Point(240, 19);
+            this.tbStaffSelectByID.Location = new System.Drawing.Point(209, 19);
             this.tbStaffSelectByID.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByID.Name = "tbStaffSelectByID";
             this.tbStaffSelectByID.Size = new System.Drawing.Size(186, 23);
@@ -1512,7 +1442,7 @@
             // 
             this.rbtnSelectStaffByChair.AutoSize = true;
             this.rbtnSelectStaffByChair.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByChair.Location = new System.Drawing.Point(46, 140);
+            this.rbtnSelectStaffByChair.Location = new System.Drawing.Point(15, 140);
             this.rbtnSelectStaffByChair.Name = "rbtnSelectStaffByChair";
             this.rbtnSelectStaffByChair.Size = new System.Drawing.Size(90, 19);
             this.rbtnSelectStaffByChair.TabIndex = 11;
@@ -1524,7 +1454,7 @@
             // 
             this.rbtnSelectStaffByID.AutoSize = true;
             this.rbtnSelectStaffByID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByID.Location = new System.Drawing.Point(46, 21);
+            this.rbtnSelectStaffByID.Location = new System.Drawing.Point(15, 21);
             this.rbtnSelectStaffByID.Name = "rbtnSelectStaffByID";
             this.rbtnSelectStaffByID.Size = new System.Drawing.Size(55, 19);
             this.rbtnSelectStaffByID.TabIndex = 9;
@@ -1536,7 +1466,7 @@
             // 
             this.rbtnSelectStaffByName.AutoSize = true;
             this.rbtnSelectStaffByName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByName.Location = new System.Drawing.Point(46, 76);
+            this.rbtnSelectStaffByName.Location = new System.Drawing.Point(15, 76);
             this.rbtnSelectStaffByName.Name = "rbtnSelectStaffByName";
             this.rbtnSelectStaffByName.Size = new System.Drawing.Size(69, 19);
             this.rbtnSelectStaffByName.TabIndex = 10;
@@ -1548,7 +1478,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(177, 78);
+            this.label12.Location = new System.Drawing.Point(146, 78);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 15);
@@ -1681,6 +1611,87 @@
             this.tabControlMain.Size = new System.Drawing.Size(820, 584);
             this.tabControlMain.TabIndex = 0;
             // 
+            // btnStaffSelectSome
+            // 
+            this.btnStaffSelectSome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnStaffSelectSome.Location = new System.Drawing.Point(320, 69);
+            this.btnStaffSelectSome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStaffSelectSome.Name = "btnStaffSelectSome";
+            this.btnStaffSelectSome.Size = new System.Drawing.Size(117, 73);
+            this.btnStaffSelectSome.TabIndex = 34;
+            this.btnStaffSelectSome.Text = "Выбрать некоторых";
+            this.btnStaffSelectSome.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffPhone
+            // 
+            this.chboxStaffPhone.AutoSize = true;
+            this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffPhone.Location = new System.Drawing.Point(161, 92);
+            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffPhone.Name = "chboxStaffPhone";
+            this.chboxStaffPhone.Size = new System.Drawing.Size(134, 19);
+            this.chboxStaffPhone.TabIndex = 39;
+            this.chboxStaffPhone.Text = "Телефонный номер";
+            this.chboxStaffPhone.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffType
+            // 
+            this.chboxStaffType.AutoSize = true;
+            this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffType.Location = new System.Drawing.Point(16, 92);
+            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffType.Name = "chboxStaffType";
+            this.chboxStaffType.Size = new System.Drawing.Size(112, 19);
+            this.chboxStaffType.TabIndex = 38;
+            this.chboxStaffType.Text = "Тип сотрудника";
+            this.chboxStaffType.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffEducation
+            // 
+            this.chboxStaffEducation.AutoSize = true;
+            this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffEducation.Location = new System.Drawing.Point(161, 69);
+            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffEducation.Name = "chboxStaffEducation";
+            this.chboxStaffEducation.Size = new System.Drawing.Size(102, 19);
+            this.chboxStaffEducation.TabIndex = 37;
+            this.chboxStaffEducation.Text = "Образование";
+            this.chboxStaffEducation.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffRegistration
+            // 
+            this.chboxStaffRegistration.AutoSize = true;
+            this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffRegistration.Location = new System.Drawing.Point(16, 115);
+            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffRegistration.Name = "chboxStaffRegistration";
+            this.chboxStaffRegistration.Size = new System.Drawing.Size(81, 19);
+            this.chboxStaffRegistration.TabIndex = 35;
+            this.chboxStaffRegistration.Text = "Прописка";
+            this.chboxStaffRegistration.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffPass
+            // 
+            this.chboxStaffPass.AutoSize = true;
+            this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffPass.Location = new System.Drawing.Point(16, 69);
+            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffPass.Name = "chboxStaffPass";
+            this.chboxStaffPass.Size = new System.Drawing.Size(141, 19);
+            this.chboxStaffPass.TabIndex = 36;
+            this.chboxStaffPass.Text = "Паспортные данные";
+            this.chboxStaffPass.UseVisualStyleBackColor = true;
+            // 
+            // btnSelectStaffById
+            // 
+            this.btnSelectStaffById.Location = new System.Drawing.Point(400, 21);
+            this.btnSelectStaffById.Name = "btnSelectStaffById";
+            this.btnSelectStaffById.Size = new System.Drawing.Size(55, 23);
+            this.btnSelectStaffById.TabIndex = 23;
+            this.btnSelectStaffById.Text = "test";
+            this.btnSelectStaffById.UseVisualStyleBackColor = true;
+            this.btnSelectStaffById.Click += new System.EventHandler(this.BtnSelectStaffById_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1739,6 +1750,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).EndInit();
@@ -1858,12 +1870,6 @@
         private System.Windows.Forms.SplitContainer splitContainer4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnStaffSelectSome;
-        private System.Windows.Forms.CheckBox chboxStaffPhone;
-        private System.Windows.Forms.CheckBox chboxStaffType;
-        private System.Windows.Forms.CheckBox chboxStaffEducation;
-        private System.Windows.Forms.CheckBox chboxStaffRegistration;
-        private System.Windows.Forms.CheckBox chboxStaffPass;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
@@ -1897,6 +1903,13 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnStaffSelectSome;
+        private System.Windows.Forms.CheckBox chboxStaffPhone;
+        private System.Windows.Forms.CheckBox chboxStaffType;
+        private System.Windows.Forms.CheckBox chboxStaffEducation;
+        private System.Windows.Forms.CheckBox chboxStaffRegistration;
+        private System.Windows.Forms.CheckBox chboxStaffPass;
+        private System.Windows.Forms.Button btnSelectStaffById;
     }
 }
 

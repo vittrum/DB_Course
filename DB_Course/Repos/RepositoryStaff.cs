@@ -105,5 +105,28 @@ namespace DB_Course.Repos
             catch { MessageBox.Show("Лажа с методом"); }
 
         }
+        //Допилить
+        public Staff GetStaffByID(int id)
+        {
+            Staff staff = new Staff();
+            NpgsqlCommand Command =
+                    new NpgsqlCommand("select * from staff where \"ID_Staff\" = " + Convert.ToString(id)+';', sqlConnect.CreateConnection.Connection);
+            NpgsqlDataReader dataReader = Command.ExecuteReader();
+            foreach (DbDataRecord dbDataRecord in dataReader)
+            {
+                staff = new Staff(
+                    dbDataRecord["ID_Staff"].ToString(),
+                    dbDataRecord["Type"].ToString(),
+                    dbDataRecord["s_name"].ToString(),
+                    dbDataRecord["LastName"].ToString(),
+                    dbDataRecord["Patronymic"].ToString(),
+                    dbDataRecord["Education"].ToString(),
+                    dbDataRecord["Phone"].ToString(),
+                    dbDataRecord["Registration"].ToString(),
+                    dbDataRecord["Pass"].ToString());
+            }
+            dataReader.Close();
+            return staff;
+        }
     }
 }

@@ -50,10 +50,16 @@ namespace DB_Course
         
         private void BtnStaffSelectSome_Click(object sender, EventArgs e)
         {
-            AdministratorRequest.SelectSomeStaff(factory, dgvSelectedStaff, chboxStaffPass.Checked, chboxStaffEducation.Checked,
+            AdministratorRequest.Select_Some_Staff(factory, dgvSelectedStaff, chboxStaffPass.Checked, chboxStaffEducation.Checked,
                 chboxStaffPhone.Checked, chboxStaffType.Checked, chboxStaffRegistration.Checked);
 
         }
         #endregion
+
+        private void BtnSelectStaffById_Click(object sender, EventArgs e)
+        {
+            if (rbtnSelectStaffByID.Checked)
+                AdministratorRequest.Select_By_ID(factory, dgvSelectedStaff, Convert.ToInt32(tbStaffSelectByID.Text));
+        }
     }
 }
