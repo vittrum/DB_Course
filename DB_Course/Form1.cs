@@ -19,7 +19,7 @@ namespace DB_Course
 
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
         DataTable dt = new DataTable();
         
 
@@ -32,7 +32,7 @@ namespace DB_Course
         #region Staff
         private void btnSelectAllStaff_Click(object sender, EventArgs e)
         {
-            
+            AdministratorRequest.Select_All_Staff(factory, dgvSelectedStaff);
         }
 
         private void BtnAddStaff_Click(object sender, EventArgs e)
@@ -45,12 +45,13 @@ namespace DB_Course
         
         private void BtnDeleteStaff_Click(object sender, EventArgs e)
         {
-
+            AdministratorRequest.Delete_Staff(factory, tbStaffDeleteID.Text);
         }
         
-
         private void BtnStaffSelectSome_Click(object sender, EventArgs e)
         {
+            AdministratorRequest.SelectSomeStaff(factory, dgvSelectedStaff, chboxStaffPass.Checked, chboxStaffEducation.Checked,
+                chboxStaffPhone.Checked, chboxStaffType.Checked, chboxStaffRegistration.Checked);
 
         }
         #endregion

@@ -36,8 +36,8 @@ namespace DB_Course.Repos
                     staff = new Staff(
                         dbDataRecord["ID_Staff"].ToString(),
                         dbDataRecord["Type"].ToString(),
-                        dbDataRecord["Name"].ToString(),
-                        dbDataRecord["Lastname"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
                         dbDataRecord["Patronymic"].ToString(),
                         dbDataRecord["Education"].ToString(),
                         dbDataRecord["Phone"].ToString(),
