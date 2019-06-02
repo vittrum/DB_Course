@@ -28,6 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagePositions = new System.Windows.Forms.TabPage();
             this.groupboxPositions = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -138,7 +165,14 @@
             this.label19 = new System.Windows.Forms.Label();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnStaffSelectSome = new System.Windows.Forms.Button();
+            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
+            this.chboxStaffType = new System.Windows.Forms.CheckBox();
+            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
+            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
+            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnSelectStaffById = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -155,20 +189,45 @@
             this.btnSelectAllStaff = new System.Windows.Forms.Button();
             this.dgvSelectedStaff = new System.Windows.Forms.DataGridView();
             this.pageStaffDegrees = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnRefreshStaffTitle = new System.Windows.Forms.Button();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.tbStaffTitleAddIDstaff = new System.Windows.Forms.TextBox();
+            this.btnStaffTitleAdd = new System.Windows.Forms.Button();
+            this.tbStaffTitleAddIDtitle = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.tbStaffTitleDeleteIDstaff = new System.Windows.Forms.TextBox();
+            this.btnStaffTitleDelete = new System.Windows.Forms.Button();
+            this.tbStaffTitleDeleteIDtitle = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tbStaffDegreeAddIDstaff = new System.Windows.Forms.TextBox();
+            this.btnStaffDegreeAdd = new System.Windows.Forms.Button();
+            this.tbStaffDegreeAddIDdegree = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.tbStaffDegreeDeleteIDstaff = new System.Windows.Forms.TextBox();
+            this.btnStaffDegreeDelete = new System.Windows.Forms.Button();
+            this.tbStaffDegreeDeleteIDdegree = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.dgvStaffTitleAvailable = new System.Windows.Forms.DataGridView();
+            this.dgvStaffDegreeAvailable = new System.Windows.Forms.DataGridView();
             this.pageStaffOrders = new System.Windows.Forms.TabPage();
             this.pageStaffContract = new System.Windows.Forms.TabPage();
             this.pageStaffWorkingTime = new System.Windows.Forms.TabPage();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.btnStaffSelectSome = new System.Windows.Forms.Button();
-            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
-            this.chboxStaffType = new System.Windows.Forms.CheckBox();
-            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
-            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
-            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
-            this.btnSelectStaffById = new System.Windows.Forms.Button();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -210,13 +269,16 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).BeginInit();
             this.pageStaffDegrees.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffTitleAvailable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffDegreeAvailable)).BeginInit();
             this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,7 +288,7 @@
             this.pagePositions.Location = new System.Drawing.Point(4, 22);
             this.pagePositions.Name = "pagePositions";
             this.pagePositions.Padding = new System.Windows.Forms.Padding(3);
-            this.pagePositions.Size = new System.Drawing.Size(812, 558);
+            this.pagePositions.Size = new System.Drawing.Size(813, 601);
             this.pagePositions.TabIndex = 4;
             this.pagePositions.Text = "Должности";
             this.pagePositions.UseVisualStyleBackColor = true;
@@ -387,13 +449,37 @@
             // 
             // dgvSelectPositions
             // 
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectPositions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvSelectPositions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSelectPositions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSelectPositionsID,
             this.dgvSelectPositionsName});
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectPositions.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvSelectPositions.Location = new System.Drawing.Point(2, 118);
             this.dgvSelectPositions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSelectPositions.Name = "dgvSelectPositions";
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectPositions.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvSelectPositions.RowTemplate.Height = 27;
             this.dgvSelectPositions.Size = new System.Drawing.Size(373, 257);
             this.dgvSelectPositions.TabIndex = 4;
@@ -414,7 +500,7 @@
             this.pageOrders.Location = new System.Drawing.Point(4, 22);
             this.pageOrders.Name = "pageOrders";
             this.pageOrders.Padding = new System.Windows.Forms.Padding(3);
-            this.pageOrders.Size = new System.Drawing.Size(812, 558);
+            this.pageOrders.Size = new System.Drawing.Size(813, 601);
             this.pageOrders.TabIndex = 3;
             this.pageOrders.Text = "Приказы";
             this.pageOrders.UseVisualStyleBackColor = true;
@@ -438,7 +524,7 @@
             this.pageTitles.Margin = new System.Windows.Forms.Padding(2);
             this.pageTitles.Name = "pageTitles";
             this.pageTitles.Padding = new System.Windows.Forms.Padding(2);
-            this.pageTitles.Size = new System.Drawing.Size(812, 558);
+            this.pageTitles.Size = new System.Drawing.Size(813, 601);
             this.pageTitles.TabIndex = 2;
             this.pageTitles.Text = "Звания и степени";
             this.pageTitles.UseVisualStyleBackColor = true;
@@ -599,13 +685,37 @@
             // 
             // dgvDegrees
             // 
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvDegrees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDegrees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDegrees.DefaultCellStyle = dataGridViewCellStyle32;
             this.dgvDegrees.Location = new System.Drawing.Point(2, 118);
             this.dgvDegrees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDegrees.Name = "dgvDegrees";
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.RowHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvDegrees.RowTemplate.Height = 27;
             this.dgvDegrees.Size = new System.Drawing.Size(373, 257);
             this.dgvDegrees.TabIndex = 4;
@@ -777,13 +887,37 @@
             // 
             // dgvTitles
             // 
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvTitles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTitles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Title,
             this.titlename});
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTitles.DefaultCellStyle = dataGridViewCellStyle35;
             this.dgvTitles.Location = new System.Drawing.Point(2, 118);
             this.dgvTitles.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTitles.Name = "dgvTitles";
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
             this.dgvTitles.RowTemplate.Height = 27;
             this.dgvTitles.Size = new System.Drawing.Size(373, 257);
             this.dgvTitles.TabIndex = 4;
@@ -810,7 +944,7 @@
             this.pageChair.Margin = new System.Windows.Forms.Padding(2);
             this.pageChair.Name = "pageChair";
             this.pageChair.Padding = new System.Windows.Forms.Padding(2);
-            this.pageChair.Size = new System.Drawing.Size(812, 558);
+            this.pageChair.Size = new System.Drawing.Size(813, 601);
             this.pageChair.TabIndex = 1;
             this.pageChair.Text = "Кафедра";
             this.pageChair.UseVisualStyleBackColor = true;
@@ -971,14 +1105,38 @@
             // 
             // dgvSelectChairs
             // 
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectChairs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dgvSelectChairs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSelectChairs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSelectChairsID,
             this.dgvSelectChairsName,
             this.dgvSelectChairsPhone});
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectChairs.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgvSelectChairs.Location = new System.Drawing.Point(2, 118);
             this.dgvSelectChairs.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSelectChairs.Name = "dgvSelectChairs";
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectChairs.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dgvSelectChairs.RowTemplate.Height = 27;
             this.dgvSelectChairs.Size = new System.Drawing.Size(373, 257);
             this.dgvSelectChairs.TabIndex = 4;
@@ -1007,7 +1165,7 @@
             this.pageStaff.Margin = new System.Windows.Forms.Padding(2);
             this.pageStaff.Name = "pageStaff";
             this.pageStaff.Padding = new System.Windows.Forms.Padding(2);
-            this.pageStaff.Size = new System.Drawing.Size(812, 558);
+            this.pageStaff.Size = new System.Drawing.Size(813, 601);
             this.pageStaff.TabIndex = 0;
             this.pageStaff.Text = "Сотрудник";
             this.pageStaff.UseVisualStyleBackColor = true;
@@ -1023,7 +1181,7 @@
             this.tabControlStaff.Location = new System.Drawing.Point(2, 2);
             this.tabControlStaff.Name = "tabControlStaff";
             this.tabControlStaff.SelectedIndex = 0;
-            this.tabControlStaff.Size = new System.Drawing.Size(808, 554);
+            this.tabControlStaff.Size = new System.Drawing.Size(809, 597);
             this.tabControlStaff.TabIndex = 0;
             // 
             // pageStaffGeneral
@@ -1032,7 +1190,7 @@
             this.pageStaffGeneral.Location = new System.Drawing.Point(4, 22);
             this.pageStaffGeneral.Name = "pageStaffGeneral";
             this.pageStaffGeneral.Padding = new System.Windows.Forms.Padding(3);
-            this.pageStaffGeneral.Size = new System.Drawing.Size(800, 528);
+            this.pageStaffGeneral.Size = new System.Drawing.Size(801, 571);
             this.pageStaffGeneral.TabIndex = 0;
             this.pageStaffGeneral.Text = "Общее";
             this.pageStaffGeneral.UseVisualStyleBackColor = true;
@@ -1053,7 +1211,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(794, 522);
+            this.splitContainer3.Size = new System.Drawing.Size(795, 565);
             this.splitContainer3.SplitterDistance = 319;
             this.splitContainer3.SplitterWidth = 3;
             this.splitContainer3.TabIndex = 0;
@@ -1304,8 +1462,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.dgvSelectedStaff);
-            this.splitContainer4.Size = new System.Drawing.Size(472, 522);
-            this.splitContainer4.SplitterDistance = 315;
+            this.splitContainer4.Size = new System.Drawing.Size(473, 565);
+            this.splitContainer4.SplitterDistance = 340;
             this.splitContainer4.SplitterWidth = 3;
             this.splitContainer4.TabIndex = 0;
             // 
@@ -1324,292 +1482,10 @@
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(468, 311);
+            this.groupBox3.Size = new System.Drawing.Size(469, 336);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Выбрать ";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnSelectStaffById);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.tbStaffSelectByChair);
-            this.groupBox4.Controls.Add(this.tbStaffSelectByPatronymic);
-            this.groupBox4.Controls.Add(this.tbStaffSelectByLastname);
-            this.groupBox4.Controls.Add(this.tbStaffSelectByName);
-            this.groupBox4.Controls.Add(this.tbStaffSelectByID);
-            this.groupBox4.Controls.Add(this.rbtnSelectStaffByChair);
-            this.groupBox4.Controls.Add(this.rbtnSelectStaffByID);
-            this.groupBox4.Controls.Add(this.rbtnSelectStaffByName);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(5, 146);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(461, 163);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Выбрать по критериям";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(149, 140);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 15);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "Кафедра";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(184, 21);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(19, 15);
-            this.label24.TabIndex = 21;
-            this.label24.Text = "ID";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(146, 102);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(57, 15);
-            this.label23.TabIndex = 20;
-            this.label23.Text = "Отчество";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(173, 55);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(30, 15);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Имя";
-            // 
-            // tbStaffSelectByChair
-            // 
-            this.tbStaffSelectByChair.Location = new System.Drawing.Point(209, 138);
-            this.tbStaffSelectByChair.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStaffSelectByChair.Name = "tbStaffSelectByChair";
-            this.tbStaffSelectByChair.Size = new System.Drawing.Size(186, 23);
-            this.tbStaffSelectByChair.TabIndex = 17;
-            // 
-            // tbStaffSelectByPatronymic
-            // 
-            this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(209, 100);
-            this.tbStaffSelectByPatronymic.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStaffSelectByPatronymic.Name = "tbStaffSelectByPatronymic";
-            this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(186, 23);
-            this.tbStaffSelectByPatronymic.TabIndex = 16;
-            // 
-            // tbStaffSelectByLastname
-            // 
-            this.tbStaffSelectByLastname.Location = new System.Drawing.Point(209, 76);
-            this.tbStaffSelectByLastname.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStaffSelectByLastname.Name = "tbStaffSelectByLastname";
-            this.tbStaffSelectByLastname.Size = new System.Drawing.Size(186, 23);
-            this.tbStaffSelectByLastname.TabIndex = 15;
-            // 
-            // tbStaffSelectByName
-            // 
-            this.tbStaffSelectByName.Location = new System.Drawing.Point(209, 52);
-            this.tbStaffSelectByName.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStaffSelectByName.Name = "tbStaffSelectByName";
-            this.tbStaffSelectByName.Size = new System.Drawing.Size(186, 23);
-            this.tbStaffSelectByName.TabIndex = 14;
-            // 
-            // tbStaffSelectByID
-            // 
-            this.tbStaffSelectByID.Location = new System.Drawing.Point(209, 19);
-            this.tbStaffSelectByID.Margin = new System.Windows.Forms.Padding(2);
-            this.tbStaffSelectByID.Name = "tbStaffSelectByID";
-            this.tbStaffSelectByID.Size = new System.Drawing.Size(186, 23);
-            this.tbStaffSelectByID.TabIndex = 13;
-            // 
-            // rbtnSelectStaffByChair
-            // 
-            this.rbtnSelectStaffByChair.AutoSize = true;
-            this.rbtnSelectStaffByChair.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByChair.Location = new System.Drawing.Point(15, 140);
-            this.rbtnSelectStaffByChair.Name = "rbtnSelectStaffByChair";
-            this.rbtnSelectStaffByChair.Size = new System.Drawing.Size(90, 19);
-            this.rbtnSelectStaffByChair.TabIndex = 11;
-            this.rbtnSelectStaffByChair.TabStop = true;
-            this.rbtnSelectStaffByChair.Text = "По кафедре";
-            this.rbtnSelectStaffByChair.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSelectStaffByID
-            // 
-            this.rbtnSelectStaffByID.AutoSize = true;
-            this.rbtnSelectStaffByID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByID.Location = new System.Drawing.Point(15, 21);
-            this.rbtnSelectStaffByID.Name = "rbtnSelectStaffByID";
-            this.rbtnSelectStaffByID.Size = new System.Drawing.Size(55, 19);
-            this.rbtnSelectStaffByID.TabIndex = 9;
-            this.rbtnSelectStaffByID.TabStop = true;
-            this.rbtnSelectStaffByID.Text = "По ID";
-            this.rbtnSelectStaffByID.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSelectStaffByName
-            // 
-            this.rbtnSelectStaffByName.AutoSize = true;
-            this.rbtnSelectStaffByName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rbtnSelectStaffByName.Location = new System.Drawing.Point(15, 76);
-            this.rbtnSelectStaffByName.Name = "rbtnSelectStaffByName";
-            this.rbtnSelectStaffByName.Size = new System.Drawing.Size(69, 19);
-            this.rbtnSelectStaffByName.TabIndex = 10;
-            this.rbtnSelectStaffByName.TabStop = true;
-            this.rbtnSelectStaffByName.Text = "По ФИО";
-            this.rbtnSelectStaffByName.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(146, 78);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 15);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "Фамилия";
-            // 
-            // btnSelectAllStaff
-            // 
-            this.btnSelectAllStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSelectAllStaff.Location = new System.Drawing.Point(5, 19);
-            this.btnSelectAllStaff.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSelectAllStaff.Name = "btnSelectAllStaff";
-            this.btnSelectAllStaff.Size = new System.Drawing.Size(442, 41);
-            this.btnSelectAllStaff.TabIndex = 3;
-            this.btnSelectAllStaff.Text = "Выбрать всех сотрудников";
-            this.btnSelectAllStaff.UseVisualStyleBackColor = true;
-            this.btnSelectAllStaff.Click += new System.EventHandler(this.btnSelectAllStaff_Click);
-            // 
-            // dgvSelectedStaff
-            // 
-            this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
-            this.dgvSelectedStaff.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvSelectedStaff.Name = "dgvSelectedStaff";
-            this.dgvSelectedStaff.RowTemplate.Height = 27;
-            this.dgvSelectedStaff.Size = new System.Drawing.Size(468, 200);
-            this.dgvSelectedStaff.TabIndex = 0;
-            // 
-            // pageStaffDegrees
-            // 
-            this.pageStaffDegrees.Controls.Add(this.splitContainer1);
-            this.pageStaffDegrees.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffDegrees.Name = "pageStaffDegrees";
-            this.pageStaffDegrees.Padding = new System.Windows.Forms.Padding(3);
-            this.pageStaffDegrees.Size = new System.Drawing.Size(800, 528);
-            this.pageStaffDegrees.TabIndex = 1;
-            this.pageStaffDegrees.Text = "Звания и степени сотрудника";
-            this.pageStaffDegrees.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(794, 522);
-            this.splitContainer1.SplitterDistance = 264;
-            this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 0;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer2.Size = new System.Drawing.Size(527, 522);
-            this.splitContainer2.SplitterDistance = 179;
-            this.splitContainer2.SplitterWidth = 3;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(523, 336);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // pageStaffOrders
-            // 
-            this.pageStaffOrders.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pageStaffOrders.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffOrders.Name = "pageStaffOrders";
-            this.pageStaffOrders.Padding = new System.Windows.Forms.Padding(3);
-            this.pageStaffOrders.Size = new System.Drawing.Size(800, 528);
-            this.pageStaffOrders.TabIndex = 2;
-            this.pageStaffOrders.Text = "Приказы по сотруднику";
-            this.pageStaffOrders.UseVisualStyleBackColor = true;
-            // 
-            // pageStaffContract
-            // 
-            this.pageStaffContract.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffContract.Margin = new System.Windows.Forms.Padding(2);
-            this.pageStaffContract.Name = "pageStaffContract";
-            this.pageStaffContract.Padding = new System.Windows.Forms.Padding(2);
-            this.pageStaffContract.Size = new System.Drawing.Size(800, 528);
-            this.pageStaffContract.TabIndex = 3;
-            this.pageStaffContract.Text = "Трудовой договор";
-            this.pageStaffContract.UseVisualStyleBackColor = true;
-            // 
-            // pageStaffWorkingTime
-            // 
-            this.pageStaffWorkingTime.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffWorkingTime.Margin = new System.Windows.Forms.Padding(2);
-            this.pageStaffWorkingTime.Name = "pageStaffWorkingTime";
-            this.pageStaffWorkingTime.Padding = new System.Windows.Forms.Padding(2);
-            this.pageStaffWorkingTime.Size = new System.Drawing.Size(800, 528);
-            this.pageStaffWorkingTime.TabIndex = 4;
-            this.pageStaffWorkingTime.Text = "Табель рабочего времени";
-            this.pageStaffWorkingTime.UseVisualStyleBackColor = true;
-            // 
-            // tabControlMain
-            // 
-            this.tabControlMain.Controls.Add(this.pageStaff);
-            this.tabControlMain.Controls.Add(this.pageChair);
-            this.tabControlMain.Controls.Add(this.pageTitles);
-            this.tabControlMain.Controls.Add(this.pageOrders);
-            this.tabControlMain.Controls.Add(this.pagePositions);
-            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
-            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControlMain.Name = "tabControlMain";
-            this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(820, 584);
-            this.tabControlMain.TabIndex = 0;
             // 
             // btnStaffSelectSome
             // 
@@ -1682,21 +1558,710 @@
             this.chboxStaffPass.Text = "Паспортные данные";
             this.chboxStaffPass.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnSelectStaffById);
+            this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.label24);
+            this.groupBox4.Controls.Add(this.label23);
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.tbStaffSelectByChair);
+            this.groupBox4.Controls.Add(this.tbStaffSelectByPatronymic);
+            this.groupBox4.Controls.Add(this.tbStaffSelectByLastname);
+            this.groupBox4.Controls.Add(this.tbStaffSelectByName);
+            this.groupBox4.Controls.Add(this.tbStaffSelectByID);
+            this.groupBox4.Controls.Add(this.rbtnSelectStaffByChair);
+            this.groupBox4.Controls.Add(this.rbtnSelectStaffByID);
+            this.groupBox4.Controls.Add(this.rbtnSelectStaffByName);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Location = new System.Drawing.Point(5, 146);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Size = new System.Drawing.Size(461, 163);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Выбрать по критериям";
+            // 
             // btnSelectStaffById
             // 
-            this.btnSelectStaffById.Location = new System.Drawing.Point(400, 21);
+            this.btnSelectStaffById.Location = new System.Drawing.Point(245, 121);
             this.btnSelectStaffById.Name = "btnSelectStaffById";
-            this.btnSelectStaffById.Size = new System.Drawing.Size(55, 23);
+            this.btnSelectStaffById.Size = new System.Drawing.Size(187, 33);
             this.btnSelectStaffById.TabIndex = 23;
-            this.btnSelectStaffById.Text = "test";
+            this.btnSelectStaffById.Text = "Выбрать по критериям";
             this.btnSelectStaffById.UseVisualStyleBackColor = true;
             this.btnSelectStaffById.Click += new System.EventHandler(this.BtnSelectStaffById_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(186, 96);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 15);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "Кафедра";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(122, 130);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(19, 15);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "ID";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(183, 68);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(57, 15);
+            this.label23.TabIndex = 20;
+            this.label23.Text = "Отчество";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(210, 21);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(30, 15);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Имя";
+            // 
+            // tbStaffSelectByChair
+            // 
+            this.tbStaffSelectByChair.Location = new System.Drawing.Point(246, 93);
+            this.tbStaffSelectByChair.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffSelectByChair.Name = "tbStaffSelectByChair";
+            this.tbStaffSelectByChair.Size = new System.Drawing.Size(186, 23);
+            this.tbStaffSelectByChair.TabIndex = 17;
+            // 
+            // tbStaffSelectByPatronymic
+            // 
+            this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(246, 66);
+            this.tbStaffSelectByPatronymic.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffSelectByPatronymic.Name = "tbStaffSelectByPatronymic";
+            this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(186, 23);
+            this.tbStaffSelectByPatronymic.TabIndex = 16;
+            // 
+            // tbStaffSelectByLastname
+            // 
+            this.tbStaffSelectByLastname.Location = new System.Drawing.Point(246, 42);
+            this.tbStaffSelectByLastname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffSelectByLastname.Name = "tbStaffSelectByLastname";
+            this.tbStaffSelectByLastname.Size = new System.Drawing.Size(186, 23);
+            this.tbStaffSelectByLastname.TabIndex = 15;
+            // 
+            // tbStaffSelectByName
+            // 
+            this.tbStaffSelectByName.Location = new System.Drawing.Point(246, 18);
+            this.tbStaffSelectByName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffSelectByName.Name = "tbStaffSelectByName";
+            this.tbStaffSelectByName.Size = new System.Drawing.Size(186, 23);
+            this.tbStaffSelectByName.TabIndex = 14;
+            // 
+            // tbStaffSelectByID
+            // 
+            this.tbStaffSelectByID.Location = new System.Drawing.Point(156, 127);
+            this.tbStaffSelectByID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffSelectByID.Name = "tbStaffSelectByID";
+            this.tbStaffSelectByID.Size = new System.Drawing.Size(81, 23);
+            this.tbStaffSelectByID.TabIndex = 13;
+            // 
+            // rbtnSelectStaffByChair
+            // 
+            this.rbtnSelectStaffByChair.AutoSize = true;
+            this.rbtnSelectStaffByChair.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbtnSelectStaffByChair.Location = new System.Drawing.Point(11, 46);
+            this.rbtnSelectStaffByChair.Name = "rbtnSelectStaffByChair";
+            this.rbtnSelectStaffByChair.Size = new System.Drawing.Size(90, 19);
+            this.rbtnSelectStaffByChair.TabIndex = 11;
+            this.rbtnSelectStaffByChair.TabStop = true;
+            this.rbtnSelectStaffByChair.Text = "По кафедре";
+            this.rbtnSelectStaffByChair.UseVisualStyleBackColor = true;
+            // 
+            // rbtnSelectStaffByID
+            // 
+            this.rbtnSelectStaffByID.AutoSize = true;
+            this.rbtnSelectStaffByID.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbtnSelectStaffByID.Location = new System.Drawing.Point(11, 71);
+            this.rbtnSelectStaffByID.Name = "rbtnSelectStaffByID";
+            this.rbtnSelectStaffByID.Size = new System.Drawing.Size(55, 19);
+            this.rbtnSelectStaffByID.TabIndex = 9;
+            this.rbtnSelectStaffByID.TabStop = true;
+            this.rbtnSelectStaffByID.Text = "По ID";
+            this.rbtnSelectStaffByID.UseVisualStyleBackColor = true;
+            // 
+            // rbtnSelectStaffByName
+            // 
+            this.rbtnSelectStaffByName.AutoSize = true;
+            this.rbtnSelectStaffByName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rbtnSelectStaffByName.Location = new System.Drawing.Point(11, 21);
+            this.rbtnSelectStaffByName.Name = "rbtnSelectStaffByName";
+            this.rbtnSelectStaffByName.Size = new System.Drawing.Size(69, 19);
+            this.rbtnSelectStaffByName.TabIndex = 10;
+            this.rbtnSelectStaffByName.TabStop = true;
+            this.rbtnSelectStaffByName.Text = "По ФИО";
+            this.rbtnSelectStaffByName.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(183, 44);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 15);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Фамилия";
+            // 
+            // btnSelectAllStaff
+            // 
+            this.btnSelectAllStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSelectAllStaff.Location = new System.Drawing.Point(5, 19);
+            this.btnSelectAllStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelectAllStaff.Name = "btnSelectAllStaff";
+            this.btnSelectAllStaff.Size = new System.Drawing.Size(442, 41);
+            this.btnSelectAllStaff.TabIndex = 3;
+            this.btnSelectAllStaff.Text = "Выбрать всех сотрудников";
+            this.btnSelectAllStaff.UseVisualStyleBackColor = true;
+            this.btnSelectAllStaff.Click += new System.EventHandler(this.btnSelectAllStaff_Click);
+            // 
+            // dgvSelectedStaff
+            // 
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle53;
+            this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
+            this.dgvSelectedStaff.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSelectedStaff.Name = "dgvSelectedStaff";
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
+            this.dgvSelectedStaff.RowTemplate.Height = 27;
+            this.dgvSelectedStaff.Size = new System.Drawing.Size(469, 218);
+            this.dgvSelectedStaff.TabIndex = 0;
+            // 
+            // pageStaffDegrees
+            // 
+            this.pageStaffDegrees.Controls.Add(this.btnRefreshStaffTitle);
+            this.pageStaffDegrees.Controls.Add(this.label36);
+            this.pageStaffDegrees.Controls.Add(this.label28);
+            this.pageStaffDegrees.Controls.Add(this.groupBox6);
+            this.pageStaffDegrees.Controls.Add(this.dataGridView4);
+            this.pageStaffDegrees.Controls.Add(this.dataGridView3);
+            this.pageStaffDegrees.Controls.Add(this.groupBox5);
+            this.pageStaffDegrees.Controls.Add(this.label29);
+            this.pageStaffDegrees.Controls.Add(this.label27);
+            this.pageStaffDegrees.Controls.Add(this.dgvStaffTitleAvailable);
+            this.pageStaffDegrees.Controls.Add(this.dgvStaffDegreeAvailable);
+            this.pageStaffDegrees.Location = new System.Drawing.Point(4, 22);
+            this.pageStaffDegrees.Name = "pageStaffDegrees";
+            this.pageStaffDegrees.Padding = new System.Windows.Forms.Padding(3);
+            this.pageStaffDegrees.Size = new System.Drawing.Size(801, 571);
+            this.pageStaffDegrees.TabIndex = 1;
+            this.pageStaffDegrees.Text = "Звания и степени сотрудника";
+            this.pageStaffDegrees.UseVisualStyleBackColor = true;
+            // 
+            // btnRefreshStaffTitle
+            // 
+            this.btnRefreshStaffTitle.Location = new System.Drawing.Point(283, 528);
+            this.btnRefreshStaffTitle.Name = "btnRefreshStaffTitle";
+            this.btnRefreshStaffTitle.Size = new System.Drawing.Size(241, 23);
+            this.btnRefreshStaffTitle.TabIndex = 20;
+            this.btnRefreshStaffTitle.Text = "Обновить";
+            this.btnRefreshStaffTitle.UseVisualStyleBackColor = true;
+            this.btnRefreshStaffTitle.Click += new System.EventHandler(this.BtnRefreshStaffTitle_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(424, 405);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(150, 13);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "Список званий сотрудников";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 405);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(161, 13);
+            this.label28.TabIndex = 18;
+            this.label28.Text = "Список степеней сотрудников";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox9);
+            this.groupBox6.Controls.Add(this.groupBox10);
+            this.groupBox6.Location = new System.Drawing.Point(409, 6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(385, 237);
+            this.groupBox6.TabIndex = 17;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Звания сотрудника";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.tbStaffTitleAddIDstaff);
+            this.groupBox9.Controls.Add(this.btnStaffTitleAdd);
+            this.groupBox9.Controls.Add(this.tbStaffTitleAddIDtitle);
+            this.groupBox9.Controls.Add(this.label32);
+            this.groupBox9.Controls.Add(this.label33);
+            this.groupBox9.Location = new System.Drawing.Point(6, 19);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(338, 98);
+            this.groupBox9.TabIndex = 10;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Удалить звания сотрудника";
+            // 
+            // tbStaffTitleAddIDstaff
+            // 
+            this.tbStaffTitleAddIDstaff.Location = new System.Drawing.Point(106, 22);
+            this.tbStaffTitleAddIDstaff.Name = "tbStaffTitleAddIDstaff";
+            this.tbStaffTitleAddIDstaff.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffTitleAddIDstaff.TabIndex = 6;
+            // 
+            // btnStaffTitleAdd
+            // 
+            this.btnStaffTitleAdd.Location = new System.Drawing.Point(235, 41);
+            this.btnStaffTitleAdd.Name = "btnStaffTitleAdd";
+            this.btnStaffTitleAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnStaffTitleAdd.TabIndex = 2;
+            this.btnStaffTitleAdd.Text = "Добавить";
+            this.btnStaffTitleAdd.UseVisualStyleBackColor = true;
+            // 
+            // tbStaffTitleAddIDtitle
+            // 
+            this.tbStaffTitleAddIDtitle.Location = new System.Drawing.Point(106, 61);
+            this.tbStaffTitleAddIDtitle.Name = "tbStaffTitleAddIDtitle";
+            this.tbStaffTitleAddIDtitle.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffTitleAddIDtitle.TabIndex = 7;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(21, 64);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(57, 13);
+            this.label32.TabIndex = 9;
+            this.label32.Text = "ID звания";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(21, 25);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 13);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "ID сотрудника";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.tbStaffTitleDeleteIDstaff);
+            this.groupBox10.Controls.Add(this.btnStaffTitleDelete);
+            this.groupBox10.Controls.Add(this.tbStaffTitleDeleteIDtitle);
+            this.groupBox10.Controls.Add(this.label34);
+            this.groupBox10.Controls.Add(this.label35);
+            this.groupBox10.Location = new System.Drawing.Point(6, 123);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(338, 108);
+            this.groupBox10.TabIndex = 8;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Удалить звания сотрудника";
+            // 
+            // tbStaffTitleDeleteIDstaff
+            // 
+            this.tbStaffTitleDeleteIDstaff.Location = new System.Drawing.Point(106, 22);
+            this.tbStaffTitleDeleteIDstaff.Name = "tbStaffTitleDeleteIDstaff";
+            this.tbStaffTitleDeleteIDstaff.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffTitleDeleteIDstaff.TabIndex = 6;
+            // 
+            // btnStaffTitleDelete
+            // 
+            this.btnStaffTitleDelete.Location = new System.Drawing.Point(235, 41);
+            this.btnStaffTitleDelete.Name = "btnStaffTitleDelete";
+            this.btnStaffTitleDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnStaffTitleDelete.TabIndex = 2;
+            this.btnStaffTitleDelete.Text = "Удалить";
+            this.btnStaffTitleDelete.UseVisualStyleBackColor = true;
+            // 
+            // tbStaffTitleDeleteIDtitle
+            // 
+            this.tbStaffTitleDeleteIDtitle.Location = new System.Drawing.Point(106, 61);
+            this.tbStaffTitleDeleteIDtitle.Name = "tbStaffTitleDeleteIDtitle";
+            this.tbStaffTitleDeleteIDtitle.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffTitleDeleteIDtitle.TabIndex = 7;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(21, 64);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(57, 13);
+            this.label34.TabIndex = 9;
+            this.label34.Text = "ID звания";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(21, 25);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(79, 13);
+            this.label35.TabIndex = 8;
+            this.label35.Text = "ID сотрудника";
+            // 
+            // dataGridView4
+            // 
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle41;
+            this.dataGridView4.Location = new System.Drawing.Point(6, 424);
+            this.dataGridView4.Name = "dataGridView4";
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            this.dataGridView4.Size = new System.Drawing.Size(383, 98);
+            this.dataGridView4.TabIndex = 16;
+            // 
+            // dataGridView3
+            // 
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle44;
+            this.dataGridView3.Location = new System.Drawing.Point(415, 424);
+            this.dataGridView3.Name = "dataGridView3";
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            this.dataGridView3.Size = new System.Drawing.Size(379, 98);
+            this.dataGridView3.TabIndex = 15;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.groupBox8);
+            this.groupBox5.Controls.Add(this.groupBox7);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(383, 237);
+            this.groupBox5.TabIndex = 13;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Степени сотрудника";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.tbStaffDegreeAddIDstaff);
+            this.groupBox8.Controls.Add(this.btnStaffDegreeAdd);
+            this.groupBox8.Controls.Add(this.tbStaffDegreeAddIDdegree);
+            this.groupBox8.Controls.Add(this.label30);
+            this.groupBox8.Controls.Add(this.label31);
+            this.groupBox8.Location = new System.Drawing.Point(6, 19);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(338, 98);
+            this.groupBox8.TabIndex = 10;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Удалить степень сотрудника";
+            // 
+            // tbStaffDegreeAddIDstaff
+            // 
+            this.tbStaffDegreeAddIDstaff.Location = new System.Drawing.Point(106, 22);
+            this.tbStaffDegreeAddIDstaff.Name = "tbStaffDegreeAddIDstaff";
+            this.tbStaffDegreeAddIDstaff.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffDegreeAddIDstaff.TabIndex = 6;
+            // 
+            // btnStaffDegreeAdd
+            // 
+            this.btnStaffDegreeAdd.Location = new System.Drawing.Point(235, 41);
+            this.btnStaffDegreeAdd.Name = "btnStaffDegreeAdd";
+            this.btnStaffDegreeAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnStaffDegreeAdd.TabIndex = 2;
+            this.btnStaffDegreeAdd.Text = "Добавить";
+            this.btnStaffDegreeAdd.UseVisualStyleBackColor = true;
+            this.btnStaffDegreeAdd.Click += new System.EventHandler(this.BtnStaffDegreeAdd_Click);
+            // 
+            // tbStaffDegreeAddIDdegree
+            // 
+            this.tbStaffDegreeAddIDdegree.Location = new System.Drawing.Point(106, 61);
+            this.tbStaffDegreeAddIDdegree.Name = "tbStaffDegreeAddIDdegree";
+            this.tbStaffDegreeAddIDdegree.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffDegreeAddIDdegree.TabIndex = 7;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(21, 64);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(62, 13);
+            this.label30.TabIndex = 9;
+            this.label30.Text = "ID степени";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(21, 25);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(79, 13);
+            this.label31.TabIndex = 8;
+            this.label31.Text = "ID сотрудника";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.tbStaffDegreeDeleteIDstaff);
+            this.groupBox7.Controls.Add(this.btnStaffDegreeDelete);
+            this.groupBox7.Controls.Add(this.tbStaffDegreeDeleteIDdegree);
+            this.groupBox7.Controls.Add(this.label26);
+            this.groupBox7.Controls.Add(this.label21);
+            this.groupBox7.Location = new System.Drawing.Point(6, 123);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(338, 108);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Удалить степень сотрудника";
+            // 
+            // tbStaffDegreeDeleteIDstaff
+            // 
+            this.tbStaffDegreeDeleteIDstaff.Location = new System.Drawing.Point(106, 22);
+            this.tbStaffDegreeDeleteIDstaff.Name = "tbStaffDegreeDeleteIDstaff";
+            this.tbStaffDegreeDeleteIDstaff.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffDegreeDeleteIDstaff.TabIndex = 6;
+            // 
+            // btnStaffDegreeDelete
+            // 
+            this.btnStaffDegreeDelete.Location = new System.Drawing.Point(235, 41);
+            this.btnStaffDegreeDelete.Name = "btnStaffDegreeDelete";
+            this.btnStaffDegreeDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnStaffDegreeDelete.TabIndex = 2;
+            this.btnStaffDegreeDelete.Text = "Удалить";
+            this.btnStaffDegreeDelete.UseVisualStyleBackColor = true;
+            // 
+            // tbStaffDegreeDeleteIDdegree
+            // 
+            this.tbStaffDegreeDeleteIDdegree.Location = new System.Drawing.Point(106, 61);
+            this.tbStaffDegreeDeleteIDdegree.Name = "tbStaffDegreeDeleteIDdegree";
+            this.tbStaffDegreeDeleteIDdegree.Size = new System.Drawing.Size(100, 20);
+            this.tbStaffDegreeDeleteIDdegree.TabIndex = 7;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(21, 64);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(62, 13);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "ID степени";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(21, 25);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(79, 13);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "ID сотрудника";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(424, 319);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(139, 13);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "Список доступных званий";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(9, 319);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(150, 13);
+            this.label27.TabIndex = 10;
+            this.label27.Text = "Список доступных степеней";
+            // 
+            // dgvStaffTitleAvailable
+            // 
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitleAvailable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            this.dgvStaffTitleAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffTitleAvailable.DefaultCellStyle = dataGridViewCellStyle47;
+            this.dgvStaffTitleAvailable.Location = new System.Drawing.Point(415, 335);
+            this.dgvStaffTitleAvailable.Name = "dgvStaffTitleAvailable";
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitleAvailable.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+            this.dgvStaffTitleAvailable.Size = new System.Drawing.Size(379, 67);
+            this.dgvStaffTitleAvailable.TabIndex = 3;
+            // 
+            // dgvStaffDegreeAvailable
+            // 
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegreeAvailable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            this.dgvStaffDegreeAvailable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffDegreeAvailable.DefaultCellStyle = dataGridViewCellStyle50;
+            this.dgvStaffDegreeAvailable.Location = new System.Drawing.Point(6, 335);
+            this.dgvStaffDegreeAvailable.Name = "dgvStaffDegreeAvailable";
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegreeAvailable.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            this.dgvStaffDegreeAvailable.Size = new System.Drawing.Size(383, 67);
+            this.dgvStaffDegreeAvailable.TabIndex = 0;
+            // 
+            // pageStaffOrders
+            // 
+            this.pageStaffOrders.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pageStaffOrders.Location = new System.Drawing.Point(4, 22);
+            this.pageStaffOrders.Name = "pageStaffOrders";
+            this.pageStaffOrders.Padding = new System.Windows.Forms.Padding(3);
+            this.pageStaffOrders.Size = new System.Drawing.Size(801, 571);
+            this.pageStaffOrders.TabIndex = 2;
+            this.pageStaffOrders.Text = "Приказы по сотруднику";
+            this.pageStaffOrders.UseVisualStyleBackColor = true;
+            // 
+            // pageStaffContract
+            // 
+            this.pageStaffContract.Location = new System.Drawing.Point(4, 22);
+            this.pageStaffContract.Margin = new System.Windows.Forms.Padding(2);
+            this.pageStaffContract.Name = "pageStaffContract";
+            this.pageStaffContract.Padding = new System.Windows.Forms.Padding(2);
+            this.pageStaffContract.Size = new System.Drawing.Size(801, 571);
+            this.pageStaffContract.TabIndex = 3;
+            this.pageStaffContract.Text = "Трудовой договор";
+            this.pageStaffContract.UseVisualStyleBackColor = true;
+            // 
+            // pageStaffWorkingTime
+            // 
+            this.pageStaffWorkingTime.Location = new System.Drawing.Point(4, 22);
+            this.pageStaffWorkingTime.Margin = new System.Windows.Forms.Padding(2);
+            this.pageStaffWorkingTime.Name = "pageStaffWorkingTime";
+            this.pageStaffWorkingTime.Padding = new System.Windows.Forms.Padding(2);
+            this.pageStaffWorkingTime.Size = new System.Drawing.Size(801, 571);
+            this.pageStaffWorkingTime.TabIndex = 4;
+            this.pageStaffWorkingTime.Text = "Табель рабочего времени";
+            this.pageStaffWorkingTime.UseVisualStyleBackColor = true;
+            // 
+            // tabControlMain
+            // 
+            this.tabControlMain.Controls.Add(this.pageStaff);
+            this.tabControlMain.Controls.Add(this.pageChair);
+            this.tabControlMain.Controls.Add(this.pageTitles);
+            this.tabControlMain.Controls.Add(this.pageOrders);
+            this.tabControlMain.Controls.Add(this.pagePositions);
+            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(821, 627);
+            this.tabControlMain.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 584);
+            this.ClientSize = new System.Drawing.Size(821, 627);
             this.Controls.Add(this.tabControlMain);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -1755,13 +2320,21 @@
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).EndInit();
             this.pageStaffDegrees.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pageStaffDegrees.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffTitleAvailable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaffDegreeAvailable)).EndInit();
             this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1859,9 +2432,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSelectChairsPhone;
         private System.Windows.Forms.TabPage pageStaffWorkingTime;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnDeleteStaff;
@@ -1910,6 +2480,41 @@
         private System.Windows.Forms.CheckBox chboxStaffRegistration;
         private System.Windows.Forms.CheckBox chboxStaffPass;
         private System.Windows.Forms.Button btnSelectStaffById;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox tbStaffTitleAddIDstaff;
+        private System.Windows.Forms.Button btnStaffTitleAdd;
+        private System.Windows.Forms.TextBox tbStaffTitleAddIDtitle;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox tbStaffTitleDeleteIDstaff;
+        private System.Windows.Forms.Button btnStaffTitleDelete;
+        private System.Windows.Forms.TextBox tbStaffTitleDeleteIDtitle;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox tbStaffDegreeAddIDstaff;
+        private System.Windows.Forms.Button btnStaffDegreeAdd;
+        private System.Windows.Forms.TextBox tbStaffDegreeAddIDdegree;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox tbStaffDegreeDeleteIDstaff;
+        private System.Windows.Forms.Button btnStaffDegreeDelete;
+        private System.Windows.Forms.TextBox tbStaffDegreeDeleteIDdegree;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.DataGridView dgvStaffTitleAvailable;
+        private System.Windows.Forms.DataGridView dgvStaffDegreeAvailable;
+        private System.Windows.Forms.Button btnRefreshStaffTitle;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label28;
     }
 }
 

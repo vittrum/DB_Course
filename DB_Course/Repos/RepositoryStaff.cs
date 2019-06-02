@@ -105,7 +105,7 @@ namespace DB_Course.Repos
             catch { MessageBox.Show("Лажа с методом"); }
 
         }
-        //Допилить
+
         public Staff GetStaffByID(int id)
         {
             Staff staff = new Staff();
@@ -128,5 +128,6 @@ namespace DB_Course.Repos
             dataReader.Close();
             return staff;
         }
+        
     }
 }

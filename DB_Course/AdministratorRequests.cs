@@ -1,13 +1,14 @@
 ﻿using System.Windows.Forms;
+using DB_Course.Tables;
 
 namespace DB_Course
 {
     class AdministratorRequests
     {
         
-        #region Staff requests
+        #region Staff 
         
-        public void Select_By_ID(Factory factory, DataGridView dgv, int id)
+        public void Select_Concrete_Staff_By_ID(Factory factory, DataGridView dgv, int id)
         {
             
             dgv.Columns.Add("ID", "Номер");
@@ -19,18 +20,18 @@ namespace DB_Course
             dgv.Columns.Add("Registration", "Прописка");
             dgv.Columns.Add("Pass", "Паспортный данные");
             dgv.Columns.Add("Type", "Тип сотрудника");
-            
-            dgv.Rows.Add(factory.Staff.GetStaffByID(id).ID_Staff, 
-                         factory.Staff.GetStaffByID(id).Name, 
-                         factory.Staff.GetStaffByID(id).Lastname,
-                         factory.Staff.GetStaffByID(id).Patronymic,
-                         factory.Staff.GetStaffByID(id).Education,
-                         factory.Staff.GetStaffByID(id).Phone,
-                         factory.Staff.GetStaffByID(id).Registration,
-                         factory.Staff.GetStaffByID(id).Pass,
-                         factory.Staff.GetStaffByID(id).Type);
+            Staff staff = factory.Staff.GetStaffByID(id);
+            dgv.Rows.Add(staff.ID_Staff, 
+                         staff.Name, 
+                         staff.Lastname,
+                         staff.Patronymic,
+                         staff.Education,
+                         staff.Phone,
+                         staff.Registration,
+                         staff.Pass,
+                         staff.Type);
         }
-        public void Insert_Staff(Factory factory, string name, string lastname, 
+        public void Add_Staff(Factory factory, string name, string lastname, 
                                 string patronymic, string education,
                                 string phone, string registration, 
                                 string pass, string type)
@@ -46,7 +47,7 @@ namespace DB_Course
             factory.RepositoryStaff.Insert(name, lastname, patronymic, education, 
                                             phone, registration, pass, type);
         }
-        public void Select_All_Staff(Factory factory, DataGridView dgv)
+        public void Show_All_Staff(Factory factory, DataGridView dgv)
         {
             dgv.Columns.Add("ID", "Номер");
             dgv.Columns.Add("Name", "Имя");
@@ -106,16 +107,72 @@ namespace DB_Course
         {
             factory.RepositoryStaff.Delete(id_staff);
         }
+        public void Show_Staff_Time_Sheet() { }
+        public void Show_Concrete_Staff_Titles() { }
+        public void Show_Concrete_Staff_Degrees() { }
+        public void Show_Staff_Chair() { }
+        public void Show_Staff_Orders() { }
+        public void Show_Staff_Contract() { }
+        public void Add_Staff_Contract() { }
+        public void Delete_Staff_Contract() { }
         #endregion
       
         #region Titles
-        public void Title_Output(Factory factory, DataGridView dgv)
+        public void Show_Titles(Factory factory, DataGridView dgv)
         {
             foreach (var i in factory.RepositoryTitle.GetTable())
             {
                 dgv.Rows.Add(i.ID_Title, i.Name);
             }
         }
+        public void Add_Title() { }
+        public void Delete_Title() { }
         #endregion
+
+        #region Degrees
+        public void Show_Degrees() { }
+        public void Add_Degree() { }
+        public void Delete_Degree() { }
+        #endregion
+
+        #region Staff_Titles
+        public void Show_Staff_Titles() { }
+        public void Add_Staff_Title() { }
+        public void Delete_Staff_Title() { }
+
+        #endregion
+
+        #region Staff_Degrees
+        public void Show_Staff_Degrees() { }
+        public void Add_Staff_Degrees() { }
+        public void Delete_Staff_Degrees() { }
+        #endregion
+
+        #region Orders
+        public void Show_Orders() { }
+        public void Select_Concrete_Order() { }
+        public void Add_Order() { }
+        public void Delete_Order() { }
+        #endregion
+
+        #region Chairs
+        public void Show_Chairs() { }
+        public void Select_Concrete_Chair() { }
+        public void Add_Chair() { }
+        public void Delete_Chair() { }
+        public void Update_Chair_Phone() { }
+        public void Show_Chair_Time_Sheet() { }
+        public void Add_Chair_Time_Sheet() { }
+        public void Delete_Chair_Time_Sheet() { }
+        #endregion
+
+        #region Positions
+        public void Show_Positions() { }
+        public void Add_Position() { }
+        public void Delete_Position() { }
+        #endregion
+
+        #region 
+
     }
 }

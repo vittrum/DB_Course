@@ -10,6 +10,7 @@ namespace DB_Course
     class ErrorProtector
     {
         public ErrorProtector() { }
+        #region Messages
         public void WrongValue() => MessageBox.Show("Значение введено неверно!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void EmptyBox() => MessageBox.Show("Поле не может быть пустым!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void WrongPassword() => MessageBox.Show("Неверный пароль!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -18,6 +19,7 @@ namespace DB_Course
         public void MustBeString() => MessageBox.Show("Значения могут быть только строчного типа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void Error() => MessageBox.Show("Ошибка при вводе!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void AccessError() => MessageBox.Show("Нет прав доступа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        #endregion
 
         #region Staff Validation
         public void Check_Insert(Factory factory, string name, string lastname, string patronymic, string education,
