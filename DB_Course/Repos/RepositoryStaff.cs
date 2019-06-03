@@ -13,10 +13,10 @@ namespace DB_Course.Repos
     class RepositoryStaff
     {
 
-        private SqlConnection sqlConnect;
-        public RepositoryStaff(SqlConnection sqlConnect)
+        private SqlConnection sqlConnection;
+        public RepositoryStaff(SqlConnection sqlConnection)
         {
-            this.sqlConnect = sqlConnect;
+            this.sqlConnection = sqlConnection;
         }
         public List<Staff> GetTable()
         {
@@ -29,7 +29,7 @@ namespace DB_Course.Repos
                     "from \"staff\"" +
                     "order by \"ID_Staff\";";
                 NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnect.CreateConnection.Connection);
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader)
                 {
@@ -61,7 +61,7 @@ namespace DB_Course.Repos
                     "delete from \"staff\"" +
                     " where \"ID_Staff\" = @ID_Staff;";
                 NpgsqlCommand Command = new NpgsqlCommand
-                    (QueryString, sqlConnect.CreateConnection.Connection);
+                    (QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@ID_Staff", Convert.ToInt32(ID_Staff));
                 Command.ExecuteNonQuery();
             }
@@ -89,7 +89,7 @@ namespace DB_Course.Repos
                     "values (@Name, @Lastname, @Patronymic, @Education, @Phone," +
                     "@Registration, @Pass, @Type);";
                 NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnect.CreateConnection.Connection);
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@Name", Name); // Возможно нужно прописать Add Wit Value!
                 Command.Parameters.AddWithValue("@LastName", Lastname);
                 Command.Parameters.AddWithValue("@Patronymic", Patronymic);
@@ -110,7 +110,7 @@ namespace DB_Course.Repos
         {
             Staff staff = new Staff();
             NpgsqlCommand Command =
-                    new NpgsqlCommand("select * from staff where \"ID_Staff\" = " + Convert.ToString(id)+';', sqlConnect.CreateConnection.Connection);
+                    new NpgsqlCommand("select * from staff where \"ID_Staff\" = " + Convert.ToString(id)+';', sqlConnection.CreateConnection.Connection);
             NpgsqlDataReader dataReader = Command.ExecuteReader();
             foreach (DbDataRecord dbDataRecord in dataReader)
             {

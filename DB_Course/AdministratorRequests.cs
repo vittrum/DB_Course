@@ -5,31 +5,20 @@ namespace DB_Course
 {
     class AdministratorRequests
     {
-        
+        //Все однотабличные запросы есть (еще 3)
         #region Staff 
         
         public void Select_Concrete_Staff_By_ID(Factory factory, DataGridView dgv, int id)
         {
-            
-            dgv.Columns.Add("ID", "Номер");
-            dgv.Columns.Add("Name", "Имя");
-            dgv.Columns.Add("LastName", "Фамилия");
-            dgv.Columns.Add("Patronymic", "Отчество");
-            dgv.Columns.Add("Education", "Образование");
-            dgv.Columns.Add("Phone", "Телефон");
-            dgv.Columns.Add("Registration", "Прописка");
-            dgv.Columns.Add("Pass", "Паспортный данные");
-            dgv.Columns.Add("Type", "Тип сотрудника");
-            Staff staff = factory.Staff.GetStaffByID(id);
-            dgv.Rows.Add(staff.ID_Staff, 
-                         staff.Name, 
-                         staff.Lastname,
-                         staff.Patronymic,
-                         staff.Education,
-                         staff.Phone,
-                         staff.Registration,
-                         staff.Pass,
-                         staff.Type);
+            dgv.Rows.Add(factory.Staff.GetStaffByID(id).ID_Staff,
+                         factory.Staff.GetStaffByID(id).Name,
+                         factory.Staff.GetStaffByID(id).Lastname,
+                         factory.Staff.GetStaffByID(id).Patronymic,
+                         factory.Staff.GetStaffByID(id).Education,
+                         factory.Staff.GetStaffByID(id).Phone,
+                         factory.Staff.GetStaffByID(id).Registration,
+                         factory.Staff.GetStaffByID(id).Pass,
+                         factory.Staff.GetStaffByID(id).Type);
         }
         public void Add_Staff(Factory factory, string name, string lastname, 
                                 string patronymic, string education,
@@ -49,16 +38,6 @@ namespace DB_Course
         }
         public void Show_All_Staff(Factory factory, DataGridView dgv)
         {
-            dgv.Columns.Add("ID", "Номер");
-            dgv.Columns.Add("Name", "Имя");
-            dgv.Columns.Add("LastName", "Фамилия");
-            dgv.Columns.Add("Patronymic", "Отчество");
-            dgv.Columns.Add("Education", "Образование");
-            dgv.Columns.Add("Phone", "Телефон");
-            dgv.Columns.Add("Registration", "Прописка");
-            dgv.Columns.Add("Pass", "Паспортный данные");
-            dgv.Columns.Add("Type", "Тип сотрудника");
-
             foreach (var i in factory.RepositoryStaff.GetTable())
             {
                 dgv.Rows.Add(i.ID_Staff,i.Name, i.Lastname, i.Patronymic, i.Education, i.Phone, i.Registration, i.Pass, i.Type);
@@ -107,16 +86,41 @@ namespace DB_Course
         {
             factory.RepositoryStaff.Delete(id_staff);
         }
-        public void Show_Staff_Time_Sheet() { }
-        public void Show_Concrete_Staff_Titles() { }
+        public void Show_Staff_Time_Sheet(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.RepositoryEmployee_Sheet.GetTable())
+            {
+                dgv.Rows.Add(i.ID_Employee_Sheet, i.ID_Time_Sheet, i.ID_Staff, i.Number_of_work_days,
+                    i.Number_of_day_offs, i.Number_of_vacation_days);
+            }
+        }
+        public void Show_Concrete_Staff_Titles(Factory factory, DataGridView dgv)
+        {
+            
+        }
         public void Show_Concrete_Staff_Degrees() { }
         public void Show_Staff_Chair() { }
         public void Show_Staff_Orders() { }
-        public void Show_Staff_Contract() { }
-        public void Add_Staff_Contract() { }
-        public void Delete_Staff_Contract() { }
+        public void Show_Staff_Contract(Factory factory, DataGridView dgv)
+        {
+            //Cтолбцы
+            foreach (var i in factory.Contract.GetTable())
+            {
+                dgv.Rows.Add(i.ID_Employment_Contract, i.ID_Staff, i.ID_Chair,
+                    i.ID_Position, i.Beginn_Date, i.End_Date, i.Additional_Information);
+            }
+        }
+        public void Add_Staff_Contract(Factory factory, string ID_Staff, string ID_Chair,
+                                       string ID_Position, string Beginn_Date, string End_Date)
+        {
+            factory.RepositoryContract.Insert(ID_Staff, ID_Chair, ID_Position, Beginn_Date, End_Date);
+        }
+        public void Delete_Staff_Contract(Factory factory, string ID_Contract)
+        {
+            factory.RepositoryContract.Delete(ID_Contract);
+        }
         #endregion
-      
+        //Все запросы есть
         #region Titles
         public void Show_Titles(Factory factory, DataGridView dgv)
         {
@@ -125,29 +129,47 @@ namespace DB_Course
                 dgv.Rows.Add(i.ID_Title, i.Name);
             }
         }
-        public void Add_Title() { }
-        public void Delete_Title() { }
+        public void Add_Title(Factory factory, string Name)
+        {
+            factory.RepositoryTitle.Insert(Name);
+        }
+        public void Delete_Title(Factory factory, string ID_Title)
+        {
+            factory.RepositoryTitle.Delete(ID_Title);
+        }
         #endregion
-
+        //Все запросы есть 
         #region Degrees
-        public void Show_Degrees() { }
-        public void Add_Degree() { }
-        public void Delete_Degree() { }
+        public void Show_Degrees(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.RepositoryDegree.GetTable())
+            {
+                dgv.Rows.Add(i.ID_Degree, i.Name);
+            }
+        }
+        public void Add_Degree(Factory factory, string Name)
+        {
+            factory.RepositoryDegree.Insert(Name);
+        }
+        public void Delete_Degree(Factory factory, string ID_Degree)
+        {
+            factory.RepositoryDegree.Delete(ID_Degree);
+        }
         #endregion
-
+        //Запросов нет (еще 3)
         #region Staff_Titles
         public void Show_Staff_Titles() { }
         public void Add_Staff_Title() { }
         public void Delete_Staff_Title() { }
 
         #endregion
-
+        //Запросов нет (еще 3)
         #region Staff_Degrees
         public void Show_Staff_Degrees() { }
         public void Add_Staff_Degrees() { }
         public void Delete_Staff_Degrees() { }
         #endregion
-
+        //Запросов нет (еще 3)
         #region Orders
         public void Show_Orders() { }
         public void Select_Concrete_Order() { }
@@ -156,11 +178,29 @@ namespace DB_Course
         #endregion
 
         #region Chairs
-        public void Show_Chairs() { }
-        public void Select_Concrete_Chair() { }
-        public void Add_Chair() { }
-        public void Delete_Chair() { }
-        public void Update_Chair_Phone() { }
+        public void Show_Chairs(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.RepositoryChair.GetTable())
+                dgv.Rows.Add(i.ID_Chair, i.Name, i.Phone);
+        }
+        public void Select_Concrete_Chair(Factory factory, DataGridView dgv, string ID_Chair)
+        {
+            dgv.Rows.Add(factory.RepositoryChair.GetChair(ID_Chair).ID_Chair,
+            factory.RepositoryChair.GetChair(ID_Chair).Name,
+            factory.RepositoryChair.GetChair(ID_Chair).Phone);
+        }
+        public void Add_Chair(Factory factory, string Name, string Phone)
+        {
+            factory.RepositoryChair.Insert(Name, Phone);
+        }
+        public void Delete_Chair(Factory factory, string ID_Chair)
+        {
+            factory.RepositoryChair.Delete(ID_Chair);
+        }        
+        public void Update_Chair_Phone(Factory factory, string Phone, string ID_Chair)
+        {
+            factory.RepositoryChair.UpdatePhone(Phone, ID_Chair);
+        }
         public void Show_Chair_Time_Sheet() { }
         public void Add_Chair_Time_Sheet() { }
         public void Delete_Chair_Time_Sheet() { }
@@ -173,6 +213,6 @@ namespace DB_Course
         #endregion
 
         #region 
-
+        #endregion
     }
 }

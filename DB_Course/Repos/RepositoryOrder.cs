@@ -16,6 +16,7 @@ namespace DB_Course.Repos
         public RepositoryOrder(SqlConnection sqlConnection)
         {
             this.sqlConnection = sqlConnection;
-        }
+        }  
+        
     }
 }

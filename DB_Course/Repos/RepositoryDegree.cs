@@ -10,9 +10,9 @@ namespace DB_Course
     class RepositoryDegree
     {
         private SqlConnection sqlConnection;
-        public RepositoryDegree(SqlConnection sqlConnect)
+        public RepositoryDegree(SqlConnection sqlConnection)
         {
-            this.sqlConnection = sqlConnect;
+            this.sqlConnection = sqlConnection;
         }
         public List<Degree> GetTable()
         {
@@ -59,5 +59,23 @@ namespace DB_Course
                 MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
         }
+        public void Insert(string Name)
+        {
+            try
+            {
+                string QueryString =
+                    "insert into \"Degree\"" +
+                    "(\"Name\")" +
+                    "values (@Name);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@Name", Name);
+                
+                try { Command.ExecuteNonQuery(); }
+                catch { MessageBox.Show("Лажа с эезекьютом"); }
+            }
+            catch { MessageBox.Show("Лажа с методом"); }
+
+}
     }
 }

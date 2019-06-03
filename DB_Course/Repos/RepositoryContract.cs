@@ -68,6 +68,32 @@ namespace DB_Course.Repos
                 MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
         }
+        public void Insert(
+            string ID_Staff,
+            string ID_Chair,
+            string ID_Position,
+            string Beginn_Date,
+            string End_Date)
+        {
+            try
+            {
+                string QueryString =
+                    "insert into \"Employment_Contract\"" +
+                    "(\"ID_Staff\",\"ID_Chair\",\"ID_Position\",\"Beginn_Date\",\"End_Date\")" +
+                    "values (@ID_Staff, @ID_Chair, @ID_Position, @Beginn_Date, @End_Date);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@ID_Staff", ID_Staff);
+                Command.Parameters.AddWithValue("@ID_Chair", ID_Chair);
+                Command.Parameters.AddWithValue("@ID_Position", ID_Position);
+                Command.Parameters.AddWithValue("@Beginn_Date", Beginn_Date);
+                Command.Parameters.AddWithValue("@End_Date", End_Date);
+
+                try { Command.ExecuteNonQuery(); }
+                catch { MessageBox.Show("Лажа с эезекьютом"); }
+            }
+            catch { MessageBox.Show("Лажа с методом"); }
+        }
 
     }
 }

@@ -12,10 +12,10 @@ namespace DB_Course.Repos
 {
     class RepositoryTitle
     {
-        private SqlConnection sqlConnect;
-        public RepositoryTitle(SqlConnection sqlConnect)
+        private SqlConnection sqlConnection;
+        public RepositoryTitle(SqlConnection sqlConnection)
         {
-            this.sqlConnect = sqlConnect;
+            this.sqlConnection = sqlConnection;
         }
         public List<Title> GetTable()
         {
@@ -28,7 +28,7 @@ namespace DB_Course.Repos
                     "from \"Titles\"" +
                     "order by \"ID_Title\";";
                 NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnect.CreateConnection.Connection);
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader)
                 {
@@ -53,7 +53,7 @@ namespace DB_Course.Repos
                     "delete from \"Title\"" +
                     " where \"ID_Title\" = @ID_Title;";
                 NpgsqlCommand Command = new NpgsqlCommand
-                    (QueryString, sqlConnect.CreateConnection.Connection);
+                    (QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@ID_Title", Convert.ToInt32(ID_Title));
                 Command.ExecuteNonQuery();
             }
@@ -61,6 +61,23 @@ namespace DB_Course.Repos
             {
                 MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
+        }
+        public void Insert(string Name)
+        {
+            try
+            {
+                string QueryString =
+                    "insert into \"Titles\"" +
+                    "(\"Name\")" +
+                    "values (@Name);";
+
+                NpgsqlCommand Command =
+                        new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@Name", Name);
+                try { Command.ExecuteNonQuery(); }
+                catch { MessageBox.Show("Лажа с эезекьютом"); }
+            }
+            catch { MessageBox.Show("Лажа с методом"); }
         }
     }
 }
