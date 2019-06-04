@@ -20,7 +20,7 @@ namespace DB_Course
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
         Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
-            
+        ErrorProtector errorProtector = new ErrorProtector();
         
 
         private void Button1_Click_1(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace DB_Course
         }
         private void BtnAddStaff_Click(object sender, EventArgs e)
         {
-            AdministratorRequest.Add_Staff(factory, tbStaffInsertName.Text, tbStaffInsertLastname.Text,
+           errorProtector.Protected_Staff_Insert(factory, tbStaffInsertName.Text, tbStaffInsertLastname.Text,
                                               tbStaffInsertPatronymic.Text, tbStaffInsertEducation.Text,
                                               tbStaffInsertPhone.Text, tbStaffInsertRegistration.Text,
                                               tbStaffInsertPass.Text, tbStaffInsertType.Text);                

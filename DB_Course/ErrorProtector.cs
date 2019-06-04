@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics.Contracts;
 
 namespace DB_Course
 {
@@ -22,10 +23,22 @@ namespace DB_Course
         #endregion
 
         #region Staff Validation
-        public void Check_Insert(Factory factory, string name, string lastname, string patronymic, string education,
+        public void Protected_Staff_Insert(Factory factory, string name, string lastname, string patronymic, string education,
                                 string phone, string registration, string pass, string type)
         {
-
+            AdministratorRequests administratorRequest = new AdministratorRequests();
+            long parser;
+            Contract.Requires(name != null && name.GetType() == typeof(string));
+            Contract.Requires(lastname != null && lastname.GetType() == typeof(string));
+            Contract.Requires(patronymic != null && patronymic.GetType() == typeof(string));
+            Contract.Requires(education != null && education.GetType() == typeof(string));
+            Contract.Requires(phone != null && long.TryParse(phone, out parser));
+            Contract.Requires(registration != null);
+            Contract.Requires(pass != null);
+            Contract.Requires(factory != null);
+            Contract.Requires(factory.RepositoryStaff != null);
+            administratorRequest.Add_Staff(factory, name, lastname, patronymic,
+                education, phone, registration, pass, type);
         }
         #endregion
         /* 

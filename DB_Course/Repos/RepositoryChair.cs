@@ -119,8 +119,7 @@ namespace DB_Course.Repos
                 NpgsqlCommand Command = 
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 Command.ExecuteNonQuery();
-                NpgsqlParameter phoneparam
-                Command.Parameters.AddWithValue("@Phone", NpgsqlTypes.NpgsqlDbType.Numeric(Phone));
+                Command.Parameters.AddWithValue("@Phone");
                 Command.Parameters.AddWithValue("@textBoxPlace", Convert.ToInt32(ID_Chair));
             }
             catch (PostgresException exp)

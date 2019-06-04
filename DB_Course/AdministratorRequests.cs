@@ -176,7 +176,7 @@ namespace DB_Course
         public void Add_Order() { }
         public void Delete_Order() { }
         #endregion
-
+        //Запросы готовы (еще 1 переделать)
         #region Chairs
         public void Show_Chairs(Factory factory, DataGridView dgv)
         {
@@ -196,23 +196,42 @@ namespace DB_Course
         public void Delete_Chair(Factory factory, string ID_Chair)
         {
             factory.RepositoryChair.Delete(ID_Chair);
-        }        
+        }
+        //Переделать
         public void Update_Chair_Phone(Factory factory, string Phone, string ID_Chair)
         {
             factory.RepositoryChair.UpdatePhone(Phone, ID_Chair);
         }
-        public void Show_Chair_Time_Sheet() { }
-        public void Add_Chair_Time_Sheet() { }
-        public void Delete_Chair_Time_Sheet() { }
+        public void Show_Chair_Time_Sheet(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.RepositoryTime_Sheet.GetTable())
+                dgv.Rows.Add(i.ID_Time_Sheet, i.ID_Chair, i.Beginn_Date, i.End_Date);
+        }
+        public void Add_Chair_Time_Sheet(Factory factory, string ID_Chair, string Beginn_Date, string End_Date)
+        {
+            factory.Time_Sheet.Insert(ID_Chair, Beginn_Date, End_Date);
+        }
+        public void Delete_Chair_Time_Sheet(Factory factory, string ID_Time_Sheet)
+        {
+            factory.Time_Sheet.Delete(ID_Time_Sheet);
+        }
         #endregion
-
+        //Все запросы есть
         #region Positions
-        public void Show_Positions() { }
-        public void Add_Position() { }
-        public void Delete_Position() { }
+        public void Show_Positions(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.RepositoryPositions.GetTable())
+                dgv.Rows.Add(i.ID_Position, i.Name);
+        }
+        public void Add_Position(Factory factory, string Name)
+        {
+            factory.RepositoryPositions.Insert(Name);
+        }
+        public void Delete_Position(Factory factory, string ID_Position)
+        {
+            factory.RepositoryPositions.Delete(ID_Position);
+        }
         #endregion
 
-        #region 
-        #endregion
     }
 }
