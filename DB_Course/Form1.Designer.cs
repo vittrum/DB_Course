@@ -1767,7 +1767,7 @@
             this.btnSelectAllStaff.TabIndex = 3;
             this.btnSelectAllStaff.Text = "Выбрать всех сотрудников";
             this.btnSelectAllStaff.UseVisualStyleBackColor = true;
-            this.btnSelectAllStaff.Click += new System.EventHandler(this.btnSelectAllStaff_Click);
+            this.btnSelectAllStaff.Click += new System.EventHandler(this.BtnSelectAllStaff_Click);
             // 
             // dgvSelectedStaff
             // 

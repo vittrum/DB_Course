@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics.Contracts;
 
+
 namespace DB_Course
-{
+{    
     class ErrorProtector
     {
-        public ErrorProtector() { }
+        public ErrorProtector()
+        {
+            
+        }
+        private bool IsValidated { get; set; }
+        private void Acces_Operation() => IsValidated = true;
+        private void Deny_Operation() => IsValidated = false;
         #region Messages
         public void WrongValue() => MessageBox.Show("Значение введено неверно!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void EmptyBox() => MessageBox.Show("Поле не может быть пустым!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -21,33 +28,26 @@ namespace DB_Course
         public void Error() => MessageBox.Show("Ошибка при вводе!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         public void AccessError() => MessageBox.Show("Нет прав доступа!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         #endregion
-
+        AdministratorRequests administratorRequest = new AdministratorRequests();
+        public void CheckIndex(int index)
+        {
+            
+        }
         #region Staff Validation
-        public void Protected_Staff_Insert(Factory factory, string name, string lastname, string patronymic, string education,
+        public void Protected_Staff_Add(Factory factory, string name, string lastname, string patronymic, string education,
                                 string phone, string registration, string pass, string type)
         {
-            AdministratorRequests administratorRequest = new AdministratorRequests();
-            long parser;
-            Contract.Requires(name != null && name.GetType() == typeof(string));
-            Contract.Requires(lastname != null && lastname.GetType() == typeof(string));
-            Contract.Requires(patronymic != null && patronymic.GetType() == typeof(string));
-            Contract.Requires(education != null && education.GetType() == typeof(string));
-            Contract.Requires(phone != null && long.TryParse(phone, out parser));
-            Contract.Requires(registration != null);
-            Contract.Requires(pass != null);
-            Contract.Requires(factory != null);
-            Contract.Requires(factory.RepositoryStaff != null);
             administratorRequest.Add_Staff(factory, name, lastname, patronymic,
                 education, phone, registration, pass, type);
         }
-        #endregion
-        /* 
-         * Обработка ошибки для вывода сообщения
-         * Contract.ContractFailed += (sender, e) =>
+        public void Protected_Staff_Delete(Factory factory, string ID_Staff)
         {
-        Console.WriteLine(e.Message);
-        e.SetHandled();
-        };
-        */
+            
+        }
+        
+        
+
+        #endregion
+        
     }
 }
