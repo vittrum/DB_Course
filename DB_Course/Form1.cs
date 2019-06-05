@@ -16,10 +16,12 @@ namespace DB_Course
         public Form1()
         {
             InitializeComponent();
+            FillDgvForStaffAll();
+            AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
 
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
         
 
@@ -47,7 +49,14 @@ namespace DB_Course
         }        
         private void BtnDeleteStaff_Click(object sender, EventArgs e)
         {
-            AdministratorRequest.Delete_Staff(factory, tbStaffDeleteID.Text);
+            foreach (DataGridViewRow row in dgvSelectedStaff.SelectedRows)
+            {
+                
+                AdministratorRequest.Delete_Staff(factory, row.Cells["ID"].Value.ToString());
+                //MessageBox.Show(id.ToString());
+                dgvSelectedStaff.Rows.Remove(row);
+            }
+            
         }        
         private void BtnStaffSelectSome_Click(object sender, EventArgs e)
         {

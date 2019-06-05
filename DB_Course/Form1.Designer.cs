@@ -40,9 +40,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,6 +52,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagePositions = new System.Windows.Forms.TabPage();
             this.groupboxPositions = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -117,6 +117,9 @@
             this.ID_Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titlename = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pageChair = new System.Windows.Forms.TabPage();
+            this.tbChairUpdatePhone = new System.Windows.Forms.TextBox();
+            this.tbChairUpdateID = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.gbChair = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDeleteChair = new System.Windows.Forms.Button();
@@ -163,8 +166,6 @@
             this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.tbStaffDeleteID = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnStaffSelectSome = new System.Windows.Forms.Button();
             this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
             this.chboxStaffType = new System.Windows.Forms.CheckBox();
@@ -187,7 +188,6 @@
             this.rbtnSelectStaffByName = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.btnSelectAllStaff = new System.Windows.Forms.Button();
-            this.dgvSelectedStaff = new System.Windows.Forms.DataGridView();
             this.pageStaffDegrees = new System.Windows.Forms.TabPage();
             this.btnRefreshStaffTitle = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
@@ -230,9 +230,7 @@
             this.btnStaffShowEmployeeSheet = new System.Windows.Forms.Button();
             this.dgvStaffEmployeeSheet = new System.Windows.Forms.DataGridView();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tbChairUpdateID = new System.Windows.Forms.TextBox();
-            this.tbChairUpdatePhone = new System.Windows.Forms.TextBox();
+            this.dgvSelectedStaff = new System.Windows.Forms.DataGridView();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -266,13 +264,7 @@
             this.splitContainer3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).BeginInit();
             this.pageStaffDegrees.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -287,6 +279,7 @@
             this.pageStaffWorkingTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).BeginInit();
             this.tabControlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // pagePositions
@@ -999,6 +992,30 @@
             this.pageChair.Text = "Кафедра";
             this.pageChair.UseVisualStyleBackColor = true;
             // 
+            // tbChairUpdatePhone
+            // 
+            this.tbChairUpdatePhone.Location = new System.Drawing.Point(584, 329);
+            this.tbChairUpdatePhone.Name = "tbChairUpdatePhone";
+            this.tbChairUpdatePhone.Size = new System.Drawing.Size(100, 25);
+            this.tbChairUpdatePhone.TabIndex = 10;
+            // 
+            // tbChairUpdateID
+            // 
+            this.tbChairUpdateID.Location = new System.Drawing.Point(584, 298);
+            this.tbChairUpdateID.Name = "tbChairUpdateID";
+            this.tbChairUpdateID.Size = new System.Drawing.Size(100, 25);
+            this.tbChairUpdateID.TabIndex = 9;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(584, 253);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 39);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
             // gbChair
             // 
             this.gbChair.Controls.Add(this.panel5);
@@ -1228,7 +1245,7 @@
             this.pageStaff.Location = new System.Drawing.Point(4, 26);
             this.pageStaff.Name = "pageStaff";
             this.pageStaff.Padding = new System.Windows.Forms.Padding(3);
-            this.pageStaff.Size = new System.Drawing.Size(1087, 790);
+            this.pageStaff.Size = new System.Drawing.Size(1762, 918);
             this.pageStaff.TabIndex = 0;
             this.pageStaff.Text = "Сотрудник";
             this.pageStaff.UseVisualStyleBackColor = true;
@@ -1245,7 +1262,7 @@
             this.tabControlStaff.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlStaff.Name = "tabControlStaff";
             this.tabControlStaff.SelectedIndex = 0;
-            this.tabControlStaff.Size = new System.Drawing.Size(1081, 784);
+            this.tabControlStaff.Size = new System.Drawing.Size(1756, 912);
             this.tabControlStaff.TabIndex = 0;
             // 
             // pageStaffGeneral
@@ -1255,7 +1272,7 @@
             this.pageStaffGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.pageStaffGeneral.Name = "pageStaffGeneral";
             this.pageStaffGeneral.Padding = new System.Windows.Forms.Padding(4);
-            this.pageStaffGeneral.Size = new System.Drawing.Size(1073, 754);
+            this.pageStaffGeneral.Size = new System.Drawing.Size(1748, 882);
             this.pageStaffGeneral.TabIndex = 0;
             this.pageStaffGeneral.Text = "Общее";
             this.pageStaffGeneral.UseVisualStyleBackColor = true;
@@ -1269,18 +1286,26 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.btnStaffSelectSome);
             this.splitContainer3.Panel1.Controls.Add(this.groupBox2);
-            this.splitContainer3.Panel1.Controls.Add(this.panel8);
+            this.splitContainer3.Panel1.Controls.Add(this.chboxStaffPhone);
+            this.splitContainer3.Panel1.Controls.Add(this.groupBox4);
+            this.splitContainer3.Panel1.Controls.Add(this.chboxStaffType);
+            this.splitContainer3.Panel1.Controls.Add(this.btnSelectAllStaff);
+            this.splitContainer3.Panel1.Controls.Add(this.chboxStaffEducation);
+            this.splitContainer3.Panel1.Controls.Add(this.chboxStaffPass);
+            this.splitContainer3.Panel1.Controls.Add(this.chboxStaffRegistration);
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(1065, 746);
-            this.splitContainer3.SplitterDistance = 427;
+            this.splitContainer3.Panel2.Controls.Add(this.dgvSelectedStaff);
+            this.splitContainer3.Size = new System.Drawing.Size(1740, 874);
+            this.splitContainer3.SplitterDistance = 697;
             this.splitContainer3.TabIndex = 0;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel8);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.tbStaffInsertType);
             this.groupBox2.Controls.Add(this.label18);
@@ -1300,7 +1325,7 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(399, 486);
+            this.groupBox2.Size = new System.Drawing.Size(691, 483);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Добавить";
@@ -1457,7 +1482,7 @@
             this.panel8.Controls.Add(this.btnDeleteStaff);
             this.panel8.Controls.Add(this.tbStaffDeleteID);
             this.panel8.Controls.Add(this.label19);
-            this.panel8.Location = new System.Drawing.Point(4, 523);
+            this.panel8.Location = new System.Drawing.Point(227, 86);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(397, 124);
@@ -1494,51 +1519,10 @@
             this.label19.TabIndex = 6;
             this.label19.Text = "ID сотрудника:";
             // 
-            // splitContainer4
-            // 
-            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.Controls.Add(this.groupBox3);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.dgvSelectedStaff);
-            this.splitContainer4.Size = new System.Drawing.Size(634, 746);
-            this.splitContainer4.SplitterDistance = 448;
-            this.splitContainer4.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.AutoSize = true;
-            this.groupBox3.Controls.Add(this.btnStaffSelectSome);
-            this.groupBox3.Controls.Add(this.chboxStaffPhone);
-            this.groupBox3.Controls.Add(this.chboxStaffType);
-            this.groupBox3.Controls.Add(this.chboxStaffEducation);
-            this.groupBox3.Controls.Add(this.chboxStaffRegistration);
-            this.groupBox3.Controls.Add(this.chboxStaffPass);
-            this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.btnSelectAllStaff);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(630, 444);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Выбрать ";
-            // 
             // btnStaffSelectSome
             // 
             this.btnStaffSelectSome.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnStaffSelectSome.Location = new System.Drawing.Point(427, 90);
+            this.btnStaffSelectSome.Location = new System.Drawing.Point(443, 566);
             this.btnStaffSelectSome.Name = "btnStaffSelectSome";
             this.btnStaffSelectSome.Size = new System.Drawing.Size(156, 95);
             this.btnStaffSelectSome.TabIndex = 34;
@@ -1549,7 +1533,7 @@
             // 
             this.chboxStaffPhone.AutoSize = true;
             this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPhone.Location = new System.Drawing.Point(215, 120);
+            this.chboxStaffPhone.Location = new System.Drawing.Point(231, 596);
             this.chboxStaffPhone.Name = "chboxStaffPhone";
             this.chboxStaffPhone.Size = new System.Drawing.Size(172, 25);
             this.chboxStaffPhone.TabIndex = 39;
@@ -1560,7 +1544,7 @@
             // 
             this.chboxStaffType.AutoSize = true;
             this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffType.Location = new System.Drawing.Point(21, 120);
+            this.chboxStaffType.Location = new System.Drawing.Point(37, 596);
             this.chboxStaffType.Name = "chboxStaffType";
             this.chboxStaffType.Size = new System.Drawing.Size(143, 25);
             this.chboxStaffType.TabIndex = 38;
@@ -1571,7 +1555,7 @@
             // 
             this.chboxStaffEducation.AutoSize = true;
             this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffEducation.Location = new System.Drawing.Point(215, 90);
+            this.chboxStaffEducation.Location = new System.Drawing.Point(231, 566);
             this.chboxStaffEducation.Name = "chboxStaffEducation";
             this.chboxStaffEducation.Size = new System.Drawing.Size(127, 25);
             this.chboxStaffEducation.TabIndex = 37;
@@ -1582,7 +1566,7 @@
             // 
             this.chboxStaffRegistration.AutoSize = true;
             this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffRegistration.Location = new System.Drawing.Point(21, 150);
+            this.chboxStaffRegistration.Location = new System.Drawing.Point(37, 626);
             this.chboxStaffRegistration.Name = "chboxStaffRegistration";
             this.chboxStaffRegistration.Size = new System.Drawing.Size(102, 25);
             this.chboxStaffRegistration.TabIndex = 35;
@@ -1593,7 +1577,7 @@
             // 
             this.chboxStaffPass.AutoSize = true;
             this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPass.Location = new System.Drawing.Point(21, 90);
+            this.chboxStaffPass.Location = new System.Drawing.Point(37, 566);
             this.chboxStaffPass.Name = "chboxStaffPass";
             this.chboxStaffPass.Size = new System.Drawing.Size(178, 25);
             this.chboxStaffPass.TabIndex = 36;
@@ -1616,7 +1600,7 @@
             this.groupBox4.Controls.Add(this.rbtnSelectStaffByID);
             this.groupBox4.Controls.Add(this.rbtnSelectStaffByName);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(7, 191);
+            this.groupBox4.Location = new System.Drawing.Point(23, 667);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(615, 213);
             this.groupBox4.TabIndex = 10;
@@ -1678,35 +1662,35 @@
             // 
             this.tbStaffSelectByChair.Location = new System.Drawing.Point(328, 122);
             this.tbStaffSelectByChair.Name = "tbStaffSelectByChair";
-            this.tbStaffSelectByChair.Size = new System.Drawing.Size(247, 27);
+            this.tbStaffSelectByChair.Size = new System.Drawing.Size(247, 25);
             this.tbStaffSelectByChair.TabIndex = 17;
             // 
             // tbStaffSelectByPatronymic
             // 
             this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(328, 86);
             this.tbStaffSelectByPatronymic.Name = "tbStaffSelectByPatronymic";
-            this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(247, 27);
+            this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(247, 25);
             this.tbStaffSelectByPatronymic.TabIndex = 16;
             // 
             // tbStaffSelectByLastname
             // 
             this.tbStaffSelectByLastname.Location = new System.Drawing.Point(328, 55);
             this.tbStaffSelectByLastname.Name = "tbStaffSelectByLastname";
-            this.tbStaffSelectByLastname.Size = new System.Drawing.Size(247, 27);
+            this.tbStaffSelectByLastname.Size = new System.Drawing.Size(247, 25);
             this.tbStaffSelectByLastname.TabIndex = 15;
             // 
             // tbStaffSelectByName
             // 
             this.tbStaffSelectByName.Location = new System.Drawing.Point(328, 24);
             this.tbStaffSelectByName.Name = "tbStaffSelectByName";
-            this.tbStaffSelectByName.Size = new System.Drawing.Size(247, 27);
+            this.tbStaffSelectByName.Size = new System.Drawing.Size(247, 25);
             this.tbStaffSelectByName.TabIndex = 14;
             // 
             // tbStaffSelectByID
             // 
             this.tbStaffSelectByID.Location = new System.Drawing.Point(208, 166);
             this.tbStaffSelectByID.Name = "tbStaffSelectByID";
-            this.tbStaffSelectByID.Size = new System.Drawing.Size(107, 27);
+            this.tbStaffSelectByID.Size = new System.Drawing.Size(107, 25);
             this.tbStaffSelectByID.TabIndex = 13;
             // 
             // rbtnSelectStaffByChair
@@ -1761,47 +1745,13 @@
             // btnSelectAllStaff
             // 
             this.btnSelectAllStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSelectAllStaff.Location = new System.Drawing.Point(7, 25);
+            this.btnSelectAllStaff.Location = new System.Drawing.Point(23, 501);
             this.btnSelectAllStaff.Name = "btnSelectAllStaff";
             this.btnSelectAllStaff.Size = new System.Drawing.Size(589, 54);
             this.btnSelectAllStaff.TabIndex = 3;
             this.btnSelectAllStaff.Text = "Выбрать всех сотрудников";
             this.btnSelectAllStaff.UseVisualStyleBackColor = true;
             this.btnSelectAllStaff.Click += new System.EventHandler(this.BtnSelectAllStaff_Click);
-            // 
-            // dgvSelectedStaff
-            // 
-            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
-            this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle41;
-            this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
-            this.dgvSelectedStaff.Name = "dgvSelectedStaff";
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
-            this.dgvSelectedStaff.RowTemplate.Height = 27;
-            this.dgvSelectedStaff.Size = new System.Drawing.Size(630, 290);
-            this.dgvSelectedStaff.TabIndex = 0;
             // 
             // pageStaffDegrees
             // 
@@ -2347,41 +2297,53 @@
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(1095, 820);
+            this.tabControlMain.Size = new System.Drawing.Size(1770, 948);
             this.tabControlMain.TabIndex = 0;
             // 
-            // button3
+            // dgvSelectedStaff
             // 
-            this.button3.Location = new System.Drawing.Point(584, 253);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 39);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
-            // 
-            // tbChairUpdateID
-            // 
-            this.tbChairUpdateID.Location = new System.Drawing.Point(584, 298);
-            this.tbChairUpdateID.Name = "tbChairUpdateID";
-            this.tbChairUpdateID.Size = new System.Drawing.Size(100, 25);
-            this.tbChairUpdateID.TabIndex = 9;
-            // 
-            // tbChairUpdatePhone
-            // 
-            this.tbChairUpdatePhone.Location = new System.Drawing.Point(584, 329);
-            this.tbChairUpdatePhone.Name = "tbChairUpdatePhone";
-            this.tbChairUpdatePhone.Size = new System.Drawing.Size(100, 25);
-            this.tbChairUpdatePhone.TabIndex = 10;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle41;
+            this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
+            this.dgvSelectedStaff.Name = "dgvSelectedStaff";
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            this.dgvSelectedStaff.RowTemplate.Height = 27;
+            this.dgvSelectedStaff.Size = new System.Drawing.Size(1035, 870);
+            this.dgvSelectedStaff.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 820);
+            this.ClientSize = new System.Drawing.Size(1770, 948);
             this.Controls.Add(this.tabControlMain);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pagePositions.ResumeLayout(false);
             this.groupboxPositions.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -2419,6 +2381,7 @@
             this.tabControlStaff.ResumeLayout(false);
             this.pageStaffGeneral.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
@@ -2426,16 +2389,8 @@
             this.groupBox2.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel1.PerformLayout();
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).EndInit();
             this.pageStaffDegrees.ResumeLayout(false);
             this.pageStaffDegrees.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -2455,6 +2410,7 @@
             this.pageStaffWorkingTime.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).EndInit();
             this.tabControlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2556,8 +2512,6 @@
         private System.Windows.Forms.Button btnDeleteStaff;
         private System.Windows.Forms.TextBox tbStaffDeleteID;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
@@ -2573,7 +2527,6 @@
         private System.Windows.Forms.RadioButton rbtnSelectStaffByName;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSelectAllStaff;
-        private System.Windows.Forms.DataGridView dgvSelectedStaff;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox tbStaffInsertType;
@@ -2639,6 +2592,7 @@
         private System.Windows.Forms.TextBox tbChairUpdatePhone;
         private System.Windows.Forms.TextBox tbChairUpdateID;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dgvSelectedStaff;
     }
 }
 

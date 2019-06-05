@@ -7,12 +7,11 @@ using Npgsql;
 using System.Data.Common;
 using System.Windows.Forms;
 using DB_Course.Tables;
-
+using System.Diagnostics.Contracts;
 namespace DB_Course.Repos
 {
     class RepositoryStaff
     {
-
         private SqlConnection sqlConnection;
         public RepositoryStaff(SqlConnection sqlConnection)
         {
