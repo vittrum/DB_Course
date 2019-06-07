@@ -19,17 +19,17 @@ namespace DB_Course
             FillDgvForStaffAll();
             AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
             FillDgvForChair();
-            AdministratorRequest.Show_Chairs(factory, dgvChairs);
+            AdministratorRequest.Show_Chairs(factory, dgvChair);
             FillDgvForDegrees();
             AdministratorRequest.Show_Degrees(factory,dgvDegrees);
-            FillDgvForOrders();
-            AdministratorRequest.Show_Orders(factory, dgvOrders);
+          /*  FillDgvForOrders();
+            AdministratorRequest.Show_Orders(factory, dgvOrders);*/
             
             
 
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
         
 
@@ -158,95 +158,93 @@ namespace DB_Course
                 dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
         }
         private void FillDgvForEmployeeSheet()
-          {
-              dgvStaffEmployeeSheet.Columns.Add("ID_Employee_Sheet", "Номер табеля сотрудника");
-              dgvStaffEmployeeSheet.Columns.Add("ID_Time_Sheet", "Номер табеля кафедры");
-              dgvStaffEmployeeSheet.Columns.Add("ID_Staff", "Номер табеля сотрудника");
-              dgvStaffEmployeeSheet.Columns.Add("Number_of_work_days", "Кол-во рабочих дней");
-              dgvStaffEmployeeSheet.Columns.Add("Number_of_day_offs", "Кол-во дней отсуствия");
-              dgvStaffEmployeeSheet.Columns.Add("Number_of_vacation_days", "Кол-во дней отпуска");
-          }
-          private void FillDgvForEmployeeContract()
-          {
-              dgvStaffContract.Columns.Add("Chair", "Кафедра");
-              dgvStaffContract.Columns.Add("Position", "Должность");
-              dgvStaffContract.Columns.Add("Beginn_Date", "Начало");
-              dgvStaffContract.Columns.Add("End_Date", "Окончание");
-          }
-          private void FillDgvForStaffTitle()
-          {
-              dgvStaffTitle.Columns.Add("Name", "Имя");
-              dgvStaffTitle.Columns.Add("LastName", "Фамилия");
-              dgvStaffTitle.Columns.Add("Patronymic", "Отчество");
-              dgvStaffTitle.Columns.Add("Title_Name", "Звание");
-
-          }
-          private void FillDgvForStaffDegree()
-          {
-              dgvStaffDegree.Columns.Add("Name", "Имя");
-              dgvStaffDegree.Columns.Add("LastName", "Фамилия");
-              dgvStaffDegree.Columns.Add("Patronymic", "Отчество");
-              dgvStaffDegree.Columns.Add("Degree_Name", "Степень");
-          }
-          //Приказы
-          private void FillDgvForOrders()
-          {
-              dgvOrders.Columns.Add("Name", "Имя");
-              dgvOrders.Columns.Add("Lastname", "Фамилия");
-              dgvOrders.Columns.Add("Patronymic", "Отчество");
-              dgvOrders.Columns.Add("Type", "Тип");
-              dgvOrders.Columns.Add("Beginn_Date", "Начало");
-              dgvOrders.Columns.Add("End_Date", "Окончание");
-          }
-          private void FillDgvForOrderBusinessTrip()
-          {            
-              dgvBusinessTrip.Columns.Add("Beginn_Date", "Начало");
-              dgvBusinessTrip.Columns.Add("End_Date", "Окончание");
-              dgvBusinessTrip.Columns.Add("Is_paid", "Оплачиваемый?");
-          }
-          private void FillDgvForOrderVacation()
-          {
-              dgvBusinessTrip.Columns.Add("Purpose", "Цель");
-              dgvBusinessTrip.Columns.Add("Place", "Место");
-              dgvBusinessTrip.Columns.Add("Beginn_Date", "Начало");
-              dgvBusinessTrip.Columns.Add("End_Date", "Окончание");
-              dgvBusinessTrip.Columns.Add("Cause", "Причина");
-              dgvBusinessTrip.Columns.Add("Payment", "К оплате");
-          }
-          private void FillDgvForOrderSick_List()
-          {
-              dgvSickList.Columns.Add("Beginn_Date", "Начало");
-              dgvSickList.Columns.Add("End_Date", "Окончание");
-              dgvSickList.Columns.Add("Cause", "Причина");
-              dgvSickList.Columns.Add("Is_paid", "Оплачиваемый?");
-          }
-          //Кафедра
-          private void FillDgvForChair()
-          {
-              dgvChair.Columns.Add("Chair_Name", "Название");
-              dgvChair.Columns.Add("Chair_Phone", "Телефон");
-          }
-          //Звания и степени
-          private void FillDgvForDegrees()
-          {
-              dgvDegrees.Columns.Add("Degree_Name", "Степень");
-          }
-          private void FillDgvForTitles()
-          {
-              dgvTitles.Columns.Add("Title_Name", "Звание");
-          }
-          //Должности 
-          private void FillDgvForPositions()
-          {
-              dgvPositions.Columns.Add("Position_Name", "Должность");
-          }
-          #endregion
-
-
-
+        {
+            dgvStaffEmployeeSheet.Columns.Clear();
+            dgvStaffEmployeeSheet.Columns.Add("ID_Employee_Sheet", "Номер табеля сотрудника");
+            dgvStaffEmployeeSheet.Columns.Add("ID_Time_Sheet", "Номер табеля кафедры");
+            dgvStaffEmployeeSheet.Columns.Add("ID_Staff", "Номер табеля сотрудника");
+            dgvStaffEmployeeSheet.Columns.Add("Number_of_work_days", "Кол-во рабочих дней");
+            dgvStaffEmployeeSheet.Columns.Add("Number_of_day_offs", "Кол-во дней отсуствия");
+            dgvStaffEmployeeSheet.Columns.Add("Number_of_vacation_days", "Кол-во дней отпуска");
+        }
+        private void FillDgvForEmployeeContract()
+        {
+            dgvStaffContract.Columns.Add("Chair", "Кафедра");
+            dgvStaffContract.Columns.Add("Position", "Должность");
+            dgvStaffContract.Columns.Add("Beginn_Date", "Начало");
+            dgvStaffContract.Columns.Add("End_Date", "Окончание");
+        }
+        private void FillDgvForStaffTitle()
+        {
+            dgvStaffTitle.Columns.Add("Name", "Имя");
+            dgvStaffTitle.Columns.Add("LastName", "Фамилия");
+            dgvStaffTitle.Columns.Add("Patronymic", "Отчество");
+            dgvStaffTitle.Columns.Add("Title_Name", "Звание");
+        }
+        private void FillDgvForStaffDegree()
+        {
+            dgvStaffDegree.Columns.Add("Name", "Имя");
+            dgvStaffDegree.Columns.Add("LastName", "Фамилия");
+            dgvStaffDegree.Columns.Add("Patronymic", "Отчество");
+            dgvStaffDegree.Columns.Add("Degree_Name", "Степень");
+        }
+        //Приказы
+        private void FillDgvForOrders()
+        {
+            dgvOrders.Columns.Add("Name", "Имя");
+            dgvOrders.Columns.Add("Lastname", "Фамилия");
+            dgvOrders.Columns.Add("Patronymic", "Отчество");
+            dgvOrders.Columns.Add("Type", "Тип");
+            dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            dgvOrders.Columns.Add("End_Date", "Окончание");
+        }
+        private void FillDgvForOrderBusinessTrip()
+        {
+            dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            dgvOrders.Columns.Add("End_Date", "Окончание");
+            dgvOrders.Columns.Add("Is_paid", "Оплачиваемый?");
+        }
+        private void FillDgvForOrderVacation()
+        {
+            dgvOrders.Columns.Add("Purpose", "Цель");
+            dgvOrders.Columns.Add("Place", "Место");
+            dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            dgvOrders.Columns.Add("End_Date", "Окончание");
+            dgvOrders.Columns.Add("Cause", "Причина");
+            dgvOrders.Columns.Add("Payment", "К оплате");
+        }
+        private void FillDgvForOrderSick_List()
+        {
+            dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            dgvOrders.Columns.Add("End_Date", "Окончание");
+            dgvOrders.Columns.Add("Cause", "Причина");
+            dgvOrders.Columns.Add("Is_paid", "Оплачиваемый?");
+        }
+        //Кафедра
+        private void FillDgvForChair()
+        {
+            dgvChair.Columns.Add("Chair_Name", "Название");
+            dgvChair.Columns.Add("Chair_Phone", "Телефон");
+        }
+        //Звания и степени
+        private void FillDgvForDegrees()
+        {
+            dgvDegrees.Columns.Add("Degree_Name", "Степень");
+        }
+        private void FillDgvForTitles()
+        {
+            dgvTitles.Columns.Add("Title_Name", "Звание");
+        }
+        //Должности 
+        private void FillDgvForPositions()
+        {
+            dgvPositions.Columns.Add("Position_Name", "Должность");
+        }
+       #endregion
+               
         private void BtnStaffShowEmployeeSheet_Click(object sender, EventArgs e)
         {
-            //FillDgvForEmployeeSheet();
+            FillDgvForEmployeeSheet();
             AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
         }
         private void Button1_Click_1(object sender, EventArgs e)
@@ -259,14 +257,67 @@ namespace DB_Course
         {
             factory.RepositoryChair.UpdatePhone(tbChairUpdatePhone.Text, tbChairUpdateID.Text);
         }
-
         private void BtnAddStaffOrder_Click(object sender, EventArgs e)
         {
             if (comboOrderTypeAdd.SelectedItem.ToString() == "Командировка")
             {
                 panelSickListOrder.Visible = false;
                 panelBusinessTripOrder.Visible = true;
+
             }
+            if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
+            {
+                panelSickListOrder.Visible = false;
+                panelBusinessTripOrder.Visible = false;
+            }
+            if (comboOrderTypeAdd.SelectedItem.ToString() == "Больничный")
+            {
+                panelSickListOrder.Visible = true;
+                panelBusinessTripOrder.Visible = false;
+            }
+            else MessageBox.Show("Выберите тип приказа!");
+            
+
+
+        }
+
+        private void BtnAddPosition_Click(object sender, EventArgs e)
+        {
+            FillDgvForPositions();
+            AdministratorRequest.Add_Position(factory, tbAddPosition.Text);
+            AdministratorRequest.Show_Positions(factory, dgvPositions);
+        }
+
+        private void BtnAddChair_Click(object sender, EventArgs e)
+        {
+            FillDgvForChair();
+            AdministratorRequest.Add_Chair(factory, tbAddChair.Text, tbAddChairPhone.Text);
+            AdministratorRequest.Show_Chairs(factory, dgvChair);
+        }
+
+        private void BtnShowStaffOrders_Click(object sender, EventArgs e)
+        {
+            if (comboOrderTypes.SelectedItem.ToString() == "Командировка")
+            {
+                FillDgvForOrderBusinessTrip();
+                AdministratorRequest.Show_Staff_Business_Trips(factory, dgvOrders);                
+            }
+            if (comboOrderTypes.SelectedItem.ToString() == "Больничный")
+            {
+                FillDgvForOrderSick_List();
+                AdministratorRequest.Show_Staff_Sick_List(factory, dgvOrders);
+            }
+            if (comboOrderTypes.SelectedItem.ToString() == "Отпуск")
+            {
+                FillDgvForOrderVacation();
+                AdministratorRequest.Show_Staff_Vacations(factory, dgvOrders);
+            }
+        }
+
+        private void BtnShowAllOrders_Click(object sender, EventArgs e)
+        {
+            FillDgvForOrders();
+            AdministratorRequest.Show_Orders(factory, dgvOrders);
         }
     }
 }

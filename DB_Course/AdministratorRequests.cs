@@ -149,7 +149,7 @@ namespace DB_Course
         #endregion
         //Запросов нет (еще 3)
         #region Orders
-        public void Show_Orders() { }
+        public void Show_Orders(Factory factory, DataGridView dgv) { }
         public void Select_Concrete_Order() { }
         public void Add_Order() { }
         public void Delete_Order() { }
