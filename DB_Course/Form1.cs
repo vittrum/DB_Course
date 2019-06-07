@@ -18,10 +18,18 @@ namespace DB_Course
             InitializeComponent();
             FillDgvForStaffAll();
             AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
+            FillDgvForChair();
+            AdministratorRequest.Show_Chairs(factory, dgvChairs);
+            FillDgvForDegrees();
+            AdministratorRequest.Show_Degrees(factory,dgvDegrees);
+            FillDgvForOrders();
+            AdministratorRequest.Show_Orders(factory, dgvOrders);
+            
+            
 
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "Viktor_db"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
         
 
@@ -31,6 +39,7 @@ namespace DB_Course
             FillDgvForStaffAll();
             AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
         }       
+
         private void BtnAddStaff_Click(object sender, EventArgs e)
         {
            if (!Check_Staff_Insert_Textboxes())
@@ -47,6 +56,7 @@ namespace DB_Course
                     tbStaffInsertPass.Text, 
                     tbStaffInsertType.Text);                
         }        
+
         private void BtnDeleteStaff_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dgvSelectedStaff.SelectedRows)
@@ -58,31 +68,38 @@ namespace DB_Course
             }
             
         }        
+
         private void BtnStaffSelectSome_Click(object sender, EventArgs e)
         {
             AdministratorRequest.Select_Some_Staff(factory, dgvSelectedStaff, chboxStaffPass.Checked, chboxStaffEducation.Checked,
                 chboxStaffPhone.Checked, chboxStaffType.Checked, chboxStaffRegistration.Checked);
-
         }
-        private void BtnSelectStaffById_Click(object sender, EventArgs e)
-        {
-            FillDgvForStaffAll();
-            if (rbtnSelectStaffByID.Checked)
-                AdministratorRequest.Select_Concrete_Staff_By_ID(factory, dgvSelectedStaff, Convert.ToInt32(tbStaffSelectByID.Text));
-        }
+       
         private void BtnStaffDegreeAdd_Click(object sender, EventArgs e)
         {
 
         }
+
         private void BtnRefreshStaffTitle_Click(object sender, EventArgs e)
         {
             //AdministratorRequest
         }
+
+        private void BtnAddStaffDegree_Click(object sender, EventArgs e)
+        {
+            if (true)
+                AdministratorRequest.Add_Staff_Degrees();
+        }
+
+        private void BtnAddStaffTitle_Click(object sender, EventArgs e)
+        {
+            if (true)
+                AdministratorRequest.Add_Staff_Title();
+        }
         #endregion
-
-
-        #region Textbox validation
         
+        #region Insert validation
+
         private bool Check_Staff_Insert_Textboxes()
         {
             if
@@ -124,35 +141,112 @@ namespace DB_Course
             dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
         }
         private void FillDgvForStaffWithParameters(bool needPass, bool needEducation, 
-            bool needPhone, bool needType, bool needRegistration) { }
-        private void FillDgvForEmployeeSheet()
+            bool needPhone, bool needType, bool needRegistration)
         {
-            dgvStaffEmployeeSheet.Columns.Add("ID_Employee_Sheet", "Номер табеля сотрудника");
-            dgvStaffEmployeeSheet.Columns.Add("ID_Time_Sheet", "Номер табеля кафедры");
-            dgvStaffEmployeeSheet.Columns.Add("ID_Staff", "Номер табеля сотрудника");
-            dgvStaffEmployeeSheet.Columns.Add("Number_of_work_days", "Кол-во рабочих дней");
-            dgvStaffEmployeeSheet.Columns.Add("Number_of_day_offs", "Кол-во дней отсуствия");
-            dgvStaffEmployeeSheet.Columns.Add("Number_of_vacation_days", "Кол-во дней отпуска");
+            dgvSelectedStaff.Columns.Add("Name", "Имя");
+            dgvSelectedStaff.Columns.Add("LastName", "Фамилия");
+            dgvSelectedStaff.Columns.Add("Patronymic", "Отчество");
+            if (needEducation)
+                dgvSelectedStaff.Columns.Add("Education", "Образование");
+            if (needPhone)
+                dgvSelectedStaff.Columns.Add("Phone", "Телефон");
+            if (needRegistration)
+                dgvSelectedStaff.Columns.Add("Registration", "Прописка");
+            if (needPass)
+                dgvSelectedStaff.Columns.Add("Pass", "Паспортный данные");
+            if (needType)
+                dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
         }
-        private void FillDgvForEmployeeContract() { }
-        private void FillDgvForStaffTitle() { }
-        private void FillDgvForStaffDegree() { }
-        //Приказы
-        private void FillDgvForOrderBusinessTrip() { }
-        private void FillDgvForOrderVacation() { }
-        private void FillDgvForOrderSick_List() { }
-        //Кафедра
-        private void FillDgvForChair() { }
-        //Звания и степени
-        private void FillDgvForDegrees() { }
-        private void FillDgvForTitles() { }
-        //Должности 
-        private void FillDgvForPositions() { }
-        #endregion
+        private void FillDgvForEmployeeSheet()
+          {
+              dgvStaffEmployeeSheet.Columns.Add("ID_Employee_Sheet", "Номер табеля сотрудника");
+              dgvStaffEmployeeSheet.Columns.Add("ID_Time_Sheet", "Номер табеля кафедры");
+              dgvStaffEmployeeSheet.Columns.Add("ID_Staff", "Номер табеля сотрудника");
+              dgvStaffEmployeeSheet.Columns.Add("Number_of_work_days", "Кол-во рабочих дней");
+              dgvStaffEmployeeSheet.Columns.Add("Number_of_day_offs", "Кол-во дней отсуствия");
+              dgvStaffEmployeeSheet.Columns.Add("Number_of_vacation_days", "Кол-во дней отпуска");
+          }
+          private void FillDgvForEmployeeContract()
+          {
+              dgvStaffContract.Columns.Add("Chair", "Кафедра");
+              dgvStaffContract.Columns.Add("Position", "Должность");
+              dgvStaffContract.Columns.Add("Beginn_Date", "Начало");
+              dgvStaffContract.Columns.Add("End_Date", "Окончание");
+          }
+          private void FillDgvForStaffTitle()
+          {
+              dgvStaffTitle.Columns.Add("Name", "Имя");
+              dgvStaffTitle.Columns.Add("LastName", "Фамилия");
+              dgvStaffTitle.Columns.Add("Patronymic", "Отчество");
+              dgvStaffTitle.Columns.Add("Title_Name", "Звание");
+
+          }
+          private void FillDgvForStaffDegree()
+          {
+              dgvStaffDegree.Columns.Add("Name", "Имя");
+              dgvStaffDegree.Columns.Add("LastName", "Фамилия");
+              dgvStaffDegree.Columns.Add("Patronymic", "Отчество");
+              dgvStaffDegree.Columns.Add("Degree_Name", "Степень");
+          }
+          //Приказы
+          private void FillDgvForOrders()
+          {
+              dgvOrders.Columns.Add("Name", "Имя");
+              dgvOrders.Columns.Add("Lastname", "Фамилия");
+              dgvOrders.Columns.Add("Patronymic", "Отчество");
+              dgvOrders.Columns.Add("Type", "Тип");
+              dgvOrders.Columns.Add("Beginn_Date", "Начало");
+              dgvOrders.Columns.Add("End_Date", "Окончание");
+          }
+          private void FillDgvForOrderBusinessTrip()
+          {            
+              dgvBusinessTrip.Columns.Add("Beginn_Date", "Начало");
+              dgvBusinessTrip.Columns.Add("End_Date", "Окончание");
+              dgvBusinessTrip.Columns.Add("Is_paid", "Оплачиваемый?");
+          }
+          private void FillDgvForOrderVacation()
+          {
+              dgvBusinessTrip.Columns.Add("Purpose", "Цель");
+              dgvBusinessTrip.Columns.Add("Place", "Место");
+              dgvBusinessTrip.Columns.Add("Beginn_Date", "Начало");
+              dgvBusinessTrip.Columns.Add("End_Date", "Окончание");
+              dgvBusinessTrip.Columns.Add("Cause", "Причина");
+              dgvBusinessTrip.Columns.Add("Payment", "К оплате");
+          }
+          private void FillDgvForOrderSick_List()
+          {
+              dgvSickList.Columns.Add("Beginn_Date", "Начало");
+              dgvSickList.Columns.Add("End_Date", "Окончание");
+              dgvSickList.Columns.Add("Cause", "Причина");
+              dgvSickList.Columns.Add("Is_paid", "Оплачиваемый?");
+          }
+          //Кафедра
+          private void FillDgvForChair()
+          {
+              dgvChair.Columns.Add("Chair_Name", "Название");
+              dgvChair.Columns.Add("Chair_Phone", "Телефон");
+          }
+          //Звания и степени
+          private void FillDgvForDegrees()
+          {
+              dgvDegrees.Columns.Add("Degree_Name", "Степень");
+          }
+          private void FillDgvForTitles()
+          {
+              dgvTitles.Columns.Add("Title_Name", "Звание");
+          }
+          //Должности 
+          private void FillDgvForPositions()
+          {
+              dgvPositions.Columns.Add("Position_Name", "Должность");
+          }
+          #endregion
+
+
 
         private void BtnStaffShowEmployeeSheet_Click(object sender, EventArgs e)
         {
-            FillDgvForEmployeeSheet();
+            //FillDgvForEmployeeSheet();
             AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
         }
         private void Button1_Click_1(object sender, EventArgs e)
@@ -164,6 +258,15 @@ namespace DB_Course
         private void Button3_Click(object sender, EventArgs e)
         {
             factory.RepositoryChair.UpdatePhone(tbChairUpdatePhone.Text, tbChairUpdateID.Text);
+        }
+
+        private void BtnAddStaffOrder_Click(object sender, EventArgs e)
+        {
+            if (comboOrderTypeAdd.SelectedItem.ToString() == "Командировка")
+            {
+                panelSickListOrder.Visible = false;
+                panelBusinessTripOrder.Visible = true;
+            }
         }
     }
 }

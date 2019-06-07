@@ -8,7 +8,7 @@ namespace DB_Course
         //Все однотабличные запросы есть (еще 3)
         #region Staff 
         
-        public void Select_Concrete_Staff_By_ID(Factory factory, DataGridView dgv, int id)
+       /* public void Select_Concrete_Staff_By_ID(Factory factory, DataGridView dgv, int id)
         {
             dgv.Rows.Add(factory.Staff.GetStaffByID(id).ID_Staff,
                          factory.Staff.GetStaffByID(id).Name,
@@ -19,22 +19,11 @@ namespace DB_Course
                          factory.Staff.GetStaffByID(id).Registration,
                          factory.Staff.GetStaffByID(id).Pass,
                          factory.Staff.GetStaffByID(id).Type);
-        }
-        public void Add_Staff(Factory factory, string name, string lastname, 
-                                string patronymic, string education,
-                                string phone, string registration, 
-                                string pass, string type)
-        {
-            /*Contract.ContractFailed += (sender, e) =>
-            {
-                MessageBox.Show(e.Message);
-                e.SetHandled();
-            };
-            Contract.Requires(name.GetType() != typeof(string));
-            Contract.Requires(lastname.GetType() != typeof(string));*/
-            
-            factory.RepositoryStaff.Insert(name, lastname, patronymic, education, 
-                                            phone, registration, pass, type);
+        }*/
+        public void Add_Staff(Factory factory, string name, string lastname, string patronymic, 
+            string education, string phone, string registration, string pass, string type)
+        {            
+            factory.RepositoryStaff.Insert(name, lastname, patronymic, education, phone, registration, pass, type);
         }
         public void Show_All_Staff(Factory factory, DataGridView dgv)
         {
@@ -43,24 +32,13 @@ namespace DB_Course
                 dgv.Rows.Add(i.ID_Staff,i.Name, i.Lastname, i.Patronymic, i.Education, i.Phone, i.Registration, i.Pass, i.Type);
             }
         }
-        public void Select_Some_Staff(Factory factory, DataGridView dgv, 
-                                    bool needPass, bool needEducation, 
-                                    bool needPhone, bool needType, bool needRegistration)
+        public void Select_Staff_By_Name()
         {
-            dgv.Columns.Add("ID", "Номер");
-            dgv.Columns.Add("Name", "Имя");
-            dgv.Columns.Add("LastName", "Фамилия");
-            dgv.Columns.Add("Patronymic", "Отчество");
-            if (needEducation)
-                dgv.Columns.Add("Education", "Образование");
-            if (needPhone)
-                dgv.Columns.Add("Phone", "Телефон");
-            if (needRegistration)
-                dgv.Columns.Add("Registration", "Прописка");
-            if (needPass)
-                dgv.Columns.Add("Pass", "Паспортный данные");
-            if (needType)
-                dgv.Columns.Add("Type", "Тип сотрудника");
+
+        }
+        public void Select_Some_Staff(Factory factory, DataGridView dgv, bool needPass, bool needEducation, bool needPhone, bool needType, bool needRegistration)
+        {
+           
 
             foreach (var i in factory.RepositoryStaff.GetTable())
             {
