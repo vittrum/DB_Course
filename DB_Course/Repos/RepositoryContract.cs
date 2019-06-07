@@ -34,7 +34,7 @@ namespace DB_Course.Repos
                 foreach (DbDataRecord dbDataRecord in dataReader)
                 {
                     contract = new Contract(
-                        dbDataRecord["ID_Employment_Contract"].ToString(),
+                        dbDataRecord["ID_Contract"].ToString(),
                         dbDataRecord["ID_Staff"].ToString(),
                         dbDataRecord["ID_Chair"].ToString(),
                         dbDataRecord["ID_Position"].ToString(),

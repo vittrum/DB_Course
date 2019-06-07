@@ -52,10 +52,10 @@ namespace DB_Course.Repos
             {
                 string QueryString =
                     "delete from \"Positions\"" +
-                    " where \"ID_Position\" = @Position;";
+                    " where \"ID_Position\" = @ID_Position;";
                 NpgsqlCommand Command = new NpgsqlCommand
                     (QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@ID_Staff", Convert.ToInt32(ID_Position));
+                Command.Parameters.AddWithValue("@ID_Position", Convert.ToInt32(ID_Position));
                 Command.ExecuteNonQuery();
             }
             catch (Exception ex)

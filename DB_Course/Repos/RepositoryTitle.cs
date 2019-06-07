@@ -50,7 +50,7 @@ namespace DB_Course.Repos
             try
             {
                 string QueryString =
-                    "delete from \"Title\"" +
+                    "delete from \"Titles\"" +
                     " where \"ID_Title\" = @ID_Title;";
                 NpgsqlCommand Command = new NpgsqlCommand
                     (QueryString, sqlConnection.CreateConnection.Connection);

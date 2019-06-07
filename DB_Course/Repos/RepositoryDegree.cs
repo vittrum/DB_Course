@@ -64,8 +64,8 @@ namespace DB_Course
             try
             {
                 string QueryString =
-                    "insert into \"Degree\"" +
-                    "(\"Name\")" +
+                    "insert into \"Degree\" " +
+                    "(\"Name\") " +
                     "values (@Name);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);

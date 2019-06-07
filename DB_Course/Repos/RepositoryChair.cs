@@ -64,32 +64,32 @@ namespace DB_Course.Repos
             }
         }
         public Chair GetChair(string ID_Chair)
-        {
-            Chair chair = new Chair();
-            try
-            {
-                string QueryString =
-                    "select *" +
-                    "from \"chair\"" +
-                    "where \"ID_Chair\" = " + Convert.ToString(ID_Chair)+";";
-                NpgsqlCommand Command =
-                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                NpgsqlDataReader dataReader = Command.ExecuteReader();
-                foreach (DbDataRecord dbDataRecord in dataReader)
-                {
-                    chair = new Chair(
-                        dbDataRecord["ID_Chair"].ToString(),
-                        dbDataRecord["c_name"].ToString(),
-                        dbDataRecord["Phone"].ToString());
-                }
-                dataReader.Close();
-            }
-            catch (PostgresException ex)
-            {
-                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
-            }
-            return chair;
-        }
+          {
+              Chair chair = new Chair();
+              try
+              {
+                  string QueryString =
+                      "select *" +
+                      "from \"chair\"" +
+                      "where \"ID_Chair\" = " + Convert.ToString(ID_Chair)+";";
+                  NpgsqlCommand Command =
+                      new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                  NpgsqlDataReader dataReader = Command.ExecuteReader();
+                  foreach (DbDataRecord dbDataRecord in dataReader)
+                  {
+                      chair = new Chair(
+                          dbDataRecord["ID_Chair"].ToString(),
+                          dbDataRecord["c_name"].ToString(),
+                          dbDataRecord["Phone"].ToString());
+                  }
+                  dataReader.Close();
+              }
+              catch (PostgresException ex)
+              {
+                  MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+              }
+              return chair;
+          }
         public void Insert(string Name, string Phone)
         {
             try
@@ -100,8 +100,8 @@ namespace DB_Course.Repos
                     " values (@Name, @Phone);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@Name", Name); // Возможно нужно прописать Add Wit Value!
-                Command.Parameters.AddWithValue("@Phone", Phone);
+                Command.Parameters.AddWithValue("@Name", Name); 
+                Command.Parameters.AddWithValue("@Phone", Convert.ToInt32(Phone));
 
                 try { Command.ExecuteNonQuery(); }
                 catch { MessageBox.Show("Лажа с эезекьютом"); }
