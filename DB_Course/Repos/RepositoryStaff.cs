@@ -101,28 +101,76 @@ namespace DB_Course.Repos
 
         }
 
-        public Staff GetStaffByID(int id)
+        public List<Staff> GetStaffByName(string name, string lastname, string patronymic)
         {
-            Staff staff = new Staff();
-            NpgsqlCommand Command =
-                    new NpgsqlCommand("select * from staff where \"ID_Staff\" = " + Convert.ToString(id)+';', sqlConnection.CreateConnection.Connection);
-            NpgsqlDataReader dataReader = Command.ExecuteReader();
-            foreach (DbDataRecord dbDataRecord in dataReader)
+            Staff staff;
+            List<Staff> staffs = new List<Staff>();
+            try
             {
-                staff = new Staff(
-                    dbDataRecord["ID_Staff"].ToString(),
-                    dbDataRecord["Type"].ToString(),
-                    dbDataRecord["s_name"].ToString(),
-                    dbDataRecord["LastName"].ToString(),
-                    dbDataRecord["Patronymic"].ToString(),
-                    dbDataRecord["Education"].ToString(),
-                    dbDataRecord["Phone"].ToString(),
-                    dbDataRecord["Registration"].ToString(),
-                    dbDataRecord["Pass"].ToString());
-            }
-            dataReader.Close();
-            return staff;
+                string QueryString =
+                    "select * from staff where \"s_name\" = '" + name + "'" +
+                        "and \"LastName\" = '" + lastname + "'" +
+                        "and \"Patronymic\" = '" + patronymic + "';";
+                NpgsqlCommand Command =
+                        new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+                
+                foreach (DbDataRecord dbDataRecord in dataReader)
+                {
+                    staff = new Staff(
+                        dbDataRecord["ID_Staff"].ToString(),
+                        dbDataRecord["Type"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
+                        dbDataRecord["Patronymic"].ToString(),
+                        dbDataRecord["Education"].ToString(),
+                        dbDataRecord["Phone"].ToString(),
+                        dbDataRecord["Registration"].ToString(),
+                        dbDataRecord["Pass"].ToString());
+                    staffs.Add(staff);
+                }
+                dataReader.Close();
+            } catch (Exception ex) { MessageBox.Show(ex.Message); }
+            return staffs;
         }
-        
+
+        public List<Staff> GetStaffByChair(string chair_name)
+        {
+            Staff staff;
+            List<Staff> staffs = new List<Staff>();
+            try
+            {
+                string QueryString =
+                    "select distinct \"staff\".\"ID_Staff\", \"staff\".\"s_name\", \"staff\".\"LastName\", \"staff\".\"Patronymic\", " +
+                    "\"staff\".\"Education\", \"staff\".\"Phone\", \"staff\".\"Registration\", \"staff\".\"Pass\", \"staff\".\"Type\"" +
+                    "from \"staff\", \"chair\", \"contract\"" +
+                    "where \"staff\".\"ID_Staff\" = \"contract\".\"ID_Staff\"" +
+                    "and \"contract\".\"ID_Chair\" = \"chair\".\"ID_Chair\"" +
+                    "and \"chair\".\"c_name\" = '" + chair_name + "'; "; 
+                
+                NpgsqlCommand Command =
+                        new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+
+                foreach (DbDataRecord dbDataRecord in dataReader)
+                {
+                    staff = new Staff(
+                        dbDataRecord["ID_Staff"].ToString(),
+                        dbDataRecord["Type"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
+                        dbDataRecord["Patronymic"].ToString(),
+                        dbDataRecord["Education"].ToString(),
+                        dbDataRecord["Phone"].ToString(),
+                        dbDataRecord["Registration"].ToString(),
+                        dbDataRecord["Pass"].ToString());
+                    staffs.Add(staff);
+                }
+                dataReader.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            return staffs;
+        }
+
     }
 }

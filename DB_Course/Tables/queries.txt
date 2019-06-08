@@ -1,0 +1,116 @@
+﻿
+	Отображение контракта
+create or replace view contract_display
+as
+select distinct
+con."ID_Contract", s.s_name, s."LastName", s."Patronymic", c.c_name, p."Name",
+con."Beginn_Date", con."End_Date", con."Additional_information"
+from chair as c, staff as s, contract as con, "Positions" as p
+where con."ID_Staff" = s."ID_Staff"
+and p."ID_Position" = con."ID_Position"
+and c."ID_Chair" = con."ID_Chair"
+order by "ID_Contract";
+select * from contract_display;
+
+	Отображение звания сотрудника
+create or replace view staff_title_display
+as
+select distinct 
+s.s_name, s."LastName", s."Patronymic", t."Name", st."Date_of_assignment"
+from staff as s, "Titles" as t, "Staff_Title" as st
+where s."ID_Staff" = st."ID_Staff"
+and t."ID_Title" = st."ID_Title"
+;
+select * from staff_title_display;
+
+	Отображение степени сотрудника
+create or replace view staff_degree_display
+as
+select distinct 
+s.s_name, s."LastName", s."Patronymic", d."Name", sd."Date_of_assignment"
+from staff as s, "Degree" as d, "Staff_Degree" as sd
+where s."ID_Staff" = sd."ID_Staff"
+and d."ID_Degree" = sd."ID_Degree"
+;
+select * from staff_title_display;
+
+	Отображение больничных сотрудника
+create or replace view staff_sick_list
+as
+select 
+s.s_name, s."LastName", s."Patronymic", sl."Beginn_Date", sl."End_Date",
+sl."Cause", sl."Is_paid"
+from staff as s, "Sick_List" as sl
+where sl."ID_Staff" = s."ID_Staff";
+select * from staff_sick_list;
+
+	Отображение отпусков сотрудника
+create or replace view staff_vacation
+as
+select 
+s.s_name, s."LastName", s."Patronymic", v."Beginn_Date", v."End_Date", v."Is_Paid"
+from staff as s, "Vacation" as v
+where v."ID_Staff" = s."ID_Staff";
+select * from staff_vacation;
+
+	Отображение командировок сотрудника
+create or replace view staff_business_trip
+as
+select 
+s.s_name, s."LastName", s."Patronymic", bt."Beginn_Date", bt."End_Date",
+bt."Purpose_of_the_trip", bt."Place_of_the_trip", bt."To_be_paid"
+from staff as s, "Business_Trip" as bt
+where bt."ID_Staff" = s."ID_Staff";
+select * from staff_business_trip;
+
+	Отображения табеля работы сотрудника
+create or replace view employee_sheet_display
+as
+select 
+e."ID_Employee_Sheet", s.s_name, s."LastName", s."Patronymic", c.c_name, ts."Beginn_Date", ts."End_Date",
+e."Number_of_work_days", e."Number_of_day-offs", e."Number_of_vacation_days"
+from staff as s, chair as c, "Time_Sheet" as ts, "Employee_Sheet" as e
+where e."ID_Time_Sheet" = ts."ID_Time_Sheet"
+and e."ID_Staff" = s."ID_Staff"
+and ts."ID_Chair" = c."ID_Chair";
+select * from employee_sheet_display;
+	
+	Добавить контракт
+drop function if exists add_contract;
+create or replace function add_contract
+(
+	_name char(30),
+	_lname char(30), 
+	_patr char(30), 
+	_cname char (60),
+	_pname char (40),
+	_bdate varchar,
+	_edate varchar,
+	_ainf varchar
+)
+returns void 
+as $$
+declare 
+	id_staff int;
+	id_chair int;
+	id_position int;
+begin 
+	id_staff = (select "ID_Staff" 
+				from staff 
+				where s_name = _name
+				and "LastName" = _lname
+				and "Patronymic" = _patr);
+	id_chair = (select "ID_Chair"
+				from chair
+				where c_name = _cname);
+	id_position = (select "ID_Position"
+				  from "Positions"
+				  where "Name" = _pname);
+	
+	
+	insert into "contract" ("ID_Staff", "ID_Chair", "ID_Position", "Beginn_Date", "End_Date", "Additional_information") 
+	values (id_staff, id_chair, id_position, to_date(_bdate, 'DD MM YYYY'), to_date(_edate, 'DD MM YYYY'), _ainf);
+end
+	$$
+	language
+		'plpgsql';

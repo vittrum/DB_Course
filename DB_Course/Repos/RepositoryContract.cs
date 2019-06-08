@@ -25,9 +25,7 @@ namespace DB_Course.Repos
             try
             {
                 string QueryString =
-                    "select *" +
-                    "from \"contract\"" +
-                    "order by \"ID_Contract\";";
+                    "select * from contract_display;";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
@@ -35,9 +33,11 @@ namespace DB_Course.Repos
                 {
                     contract = new Contract(
                         dbDataRecord["ID_Contract"].ToString(),
-                        dbDataRecord["ID_Staff"].ToString(),
-                        dbDataRecord["ID_Chair"].ToString(),
-                        dbDataRecord["ID_Position"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
+                        dbDataRecord["Patronymic"].ToString(),
+                        dbDataRecord["c_name"].ToString(),
+                        dbDataRecord["Name"].ToString(),
                         dbDataRecord["Beginn_Date"].ToString(),
                         dbDataRecord["End_Date"].ToString(),
                         dbDataRecord["Additional_information"].ToString());
@@ -69,28 +69,32 @@ namespace DB_Course.Repos
             }
         }
         public void Insert(
-            string ID_Staff,
-            string ID_Chair,
-            string ID_Position,
-            string Beginn_Date,
-            string End_Date)
+            string s_name,
+            string lastname,
+            string patrinymic,
+            string chair,
+            string position,
+            string begin_date,
+            string End_Date,
+            string a_info)
         {
             try
             {
                 string QueryString =
-                    "insert into \"Employment_Contract\"" +
-                    "(\"ID_Staff\",\"ID_Chair\",\"ID_Position\",\"Beginn_Date\",\"End_Date\")" +
-                    "values (@ID_Staff, @ID_Chair, @ID_Position, @Beginn_Date, @End_Date);";
+                    "select add_contract (@s_name, @LastName, @Patronymic, @c_name, @Name, @Beginn_Date, @End_Date, @Additional_information);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@ID_Staff", ID_Staff);
-                Command.Parameters.AddWithValue("@ID_Chair", ID_Chair);
-                Command.Parameters.AddWithValue("@ID_Position", ID_Position);
-                Command.Parameters.AddWithValue("@Beginn_Date", Beginn_Date);
+                Command.Parameters.AddWithValue("@s_name", s_name);
+                Command.Parameters.AddWithValue("@LastName", lastname);
+                Command.Parameters.AddWithValue("@Patronymic", patrinymic);
+                Command.Parameters.AddWithValue("@c_name", chair);
+                Command.Parameters.AddWithValue("@Name", position);
+                Command.Parameters.AddWithValue("@Beginn_Date", begin_date);
                 Command.Parameters.AddWithValue("@End_Date", End_Date);
+                Command.Parameters.AddWithValue("@Additional_information", a_info);
 
                 try { Command.ExecuteNonQuery(); }
-                catch { MessageBox.Show("Лажа с эезекьютом"); }
+                catch(PostgresException ex) { MessageBox.Show("Лажа с эезекьютом\n" + ex.ToString()); }
             }
             catch { MessageBox.Show("Лажа с методом"); }
         }

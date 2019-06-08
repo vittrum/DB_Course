@@ -16,46 +16,83 @@ namespace DB_Course
         public Form1()
         {
             InitializeComponent();
-           /* FillDgvForStaffAll();
-            AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
+            //Заполнить кафедры            
             FillDgvForChair();
-            AdministratorRequest.Show_Chairs(factory, dgvChair);*/
+            AdministratorRequest.Show_Chairs(factory, dgvChair);
+            //Вывод степеней и званий
             FillDgvForDegrees();
             AdministratorRequest.Show_Degrees(factory,dgvDegrees);
-          
-            
-            
-
+            FillDgvForTitles();
+            AdministratorRequest.Show_Titles(factory, dgvTitles);
+            //Вывод должностей
+            FillDgvForPositions();
+            AdministratorRequest.Show_Positions(factory, dgvPositions);
+            // Заполнение комбобоксов
+            AdministratorRequest.Get_Positions(factory, comboContractPositions);
+            AdministratorRequest.Get_Chairs(factory, comboContractChair);
+            AdministratorRequest.Get_Titles(factory, comboTitles);
+            AdministratorRequest.Get_Degrees(factory, comboDegrees);
+            AdministratorRequest.Get_Chairs(factory, comboStaffByChair);
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
         Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
-        
-        //
+
         #region Staff
+
+        private void BtnStaffSelectWithChoice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbtnSelectStaffByName.Checked)
+                {
+                    FillDgvForSingleStaff();
+                    AdministratorRequest.Select_Staff_By_Name(factory, dgvSelectedStaff, tbStaffSelectByName.Text,
+                                        tbStaffSelectByLastname.Text, tbStaffSelectByPatronymic.Text);
+                }
+                if (rbtnSelectStaffByChair.Checked)
+                {
+                    FillDgvForAllStaff();
+                    AdministratorRequest.Select_Staff_By_Chair(factory, dgvSelectedStaff, comboStaffByChair.SelectedItem.ToString());
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            Clear_Staff_By_Name_tb();
+        }
+
         //есть
         private void BtnSelectAllStaff_Click(object sender, EventArgs e)
         {
-            FillDgvForStaffAll();
+            FillDgvForAllStaff();
             AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
-        }       
+            FillDgvForStaffWithParameters();
+        }
+
         //есть
         private void BtnAddStaff_Click(object sender, EventArgs e)
         {
-           if (!Check_Staff_Insert_Textboxes())
-                errorProtector.EmptyBox();
-           else 
-               AdministratorRequest.Add_Staff
-                    (factory, 
-                    tbStaffInsertName.Text, 
-                    tbStaffInsertLastname.Text,
-                    tbStaffInsertPatronymic.Text, 
-                    tbStaffInsertEducation.Text,                                              
-                    tbStaffInsertPhone.Text, 
-                    tbStaffInsertRegistration.Text,                                              
-                    tbStaffInsertPass.Text, 
-                    tbStaffInsertType.Text);                
+            Clear_Staff_Insert_tb();
+            try
+            {
+                if (!Check_Staff_Insert_Textboxes())
+                    errorProtector.EmptyBox();
+                else
+                    AdministratorRequest.Add_Staff
+                         (factory,
+                         tbStaffInsertName.Text,
+                         tbStaffInsertLastname.Text,
+                         tbStaffInsertPatronymic.Text,
+                         tbStaffInsertEducation.Text,
+                         tbStaffInsertPhone.Text,
+                         tbStaffInsertRegistration.Text,
+                         tbStaffInsertPass.Text,
+                         comboStaffType.SelectedItem.ToString());
+            }
+            catch { }
+            FillDgvForAllStaff();
+            AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
         }        
+
         //есть
         private void BtnDeleteStaff_Click(object sender, EventArgs e)
         {
@@ -97,23 +134,30 @@ namespace DB_Course
 
         private void BtnAddStaffOrder_Click(object sender, EventArgs e)
         {
-            if (comboOrderTypeAdd.SelectedItem.ToString() == "Командировка")
+            try
             {
-                panelSickListOrder.Visible = false;
-                panelBusinessTripOrder.Visible = true;
+                if (comboOrderTypeAdd.SelectedItem == null)
+                {
+                    MessageBox.Show("Выберите тип приказа!");
+                }
+                if (comboOrderTypeAdd.SelectedItem.ToString() == "Командировка")
+                {
+                    panelSickListOrder.Visible = false;
+                    panelBusinessTripOrder.Visible = true;
 
+                }
+                if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
+                {
+                    panelSickListOrder.Visible = false;
+                    panelBusinessTripOrder.Visible = false;
+                }
+                if (comboOrderTypeAdd.SelectedItem.ToString() == "Больничный")
+                {
+                    panelSickListOrder.Visible = true;
+                    panelBusinessTripOrder.Visible = false;
+                }
             }
-            if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
-            {
-                panelSickListOrder.Visible = false;
-                panelBusinessTripOrder.Visible = false;
-            }
-            if (comboOrderTypeAdd.SelectedItem.ToString() == "Больничный")
-            {
-                panelSickListOrder.Visible = true;
-                panelBusinessTripOrder.Visible = false;
-            }
-            else MessageBox.Show("Выберите тип приказа!");
+            catch { }
         }
 
         private void BtnShowAllOrders_Click(object sender, EventArgs e)
@@ -140,6 +184,36 @@ namespace DB_Course
                 //AdministratorRequest.Show_Staff_Vacations(factory, dgvOrders);
             }
         }
+
+        private void BtnShowStaffDegree_Click(object sender, EventArgs e)
+        {
+            FillDgvForStaffDegree();
+            AdministratorRequest.Show_Staff_Degrees(factory, dgvStaffDegree);
+        }
+
+        private void BtnShowStaffTitle_Click(object sender, EventArgs e)
+        {
+            FillDgvForStaffTitle();
+            AdministratorRequest.Show_Staff_Titles(factory, dgvStaffTitle);
+        }
+
+        private void BtnSelectAllContracts_Click(object sender, EventArgs e)
+        {
+            FillDgvForEmployeeContract();
+            AdministratorRequest.Show_Staff_Contract(factory, dgvStaffContract);
+        }
+
+        private void BtnContractAdd_Click(object sender, EventArgs e)
+        {
+            AdministratorRequest.Add_Staff_Contract(factory, tbContractAddStaffName.Text,
+                                                    tbContractAddStaffLastname.Text,
+                                                    tbContractAddStaffPatronymic.Text,
+                                                    comboContractChair.SelectedItem.ToString(),
+                                                    comboContractPositions.SelectedItem.ToString(),
+                                                    dateContractBeginn.Value.ToShortDateString(),
+                                                    dateContractEnd.Value.ToShortDateString(),
+                                                    "No info");
+        }
         #endregion
         //Все работает, нужен апдейт телефона
         #region Chair
@@ -148,12 +222,13 @@ namespace DB_Course
             FillDgvForChair();
             AdministratorRequest.Add_Chair(factory, tbAddChair.Text, tbAddChairPhone.Text);
             AdministratorRequest.Show_Chairs(factory, dgvChair);
+
         }
-        private void BtnShowChairs_Click(object sender, EventArgs e)
+        /*private void BtnShowChairs_Click(object sender, EventArgs e)
         {
             FillDgvForChair();
             AdministratorRequest.Show_Chairs(factory, dgvChair);
-        }
+        }*/
 
         private void BtnDeleteChair_Click(object sender, EventArgs e)
         {
@@ -194,14 +269,18 @@ namespace DB_Course
         private void BtnAddDegree_Click(object sender, EventArgs e)
         {
             AdministratorRequest.Add_Degree(factory, tbAddDegree.Text);
+            FillDgvForDegrees();
+            AdministratorRequest.Show_Degrees(factory, dgvDegrees);
         }
 
         private void BtnAddTitle_Click(object sender, EventArgs e)
         {
             AdministratorRequest.Add_Title(factory, tbAddTitle.Text);
+            FillDgvForTitles();
+            AdministratorRequest.Show_Titles(factory, dgvTitles);
         }
 
-        private void BtnShowAllDegrees_Click(object sender, EventArgs e)
+        /* private void BtnShowAllDegrees_Click(object sender, EventArgs e)
         {
             FillDgvForDegrees();
             AdministratorRequest.Show_Degrees(factory, dgvDegrees);
@@ -211,7 +290,7 @@ namespace DB_Course
         {
             FillDgvForTitles();
             AdministratorRequest.Show_Titles(factory, dgvTitles);
-        }
+        }*/
 
         private void BtnDeleteDegree_Click(object sender, EventArgs e)
         {
@@ -252,7 +331,7 @@ namespace DB_Course
                 &&
                 tbStaffInsertPass.Text != string.Empty
                 &&
-                tbStaffInsertType.Text != string.Empty
+                comboStaffType.SelectedItem.ToString() != string.Empty
             )
                 return true;
             else
@@ -262,8 +341,18 @@ namespace DB_Course
 
         #region DataGridView control
         //Сотрудник
-        private void FillDgvForStaffAll()
+        private void FillDgvForSingleStaff()
         {
+            dgvSelectedStaff.Columns.Clear();
+            dgvSelectedStaff.Columns.Add("Education", "Образование");
+            dgvSelectedStaff.Columns.Add("Phone", "Телефон");
+            dgvSelectedStaff.Columns.Add("Registration", "Прописка");
+            dgvSelectedStaff.Columns.Add("Pass", "Паспортный данные");
+            dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
+        }
+        private void FillDgvForAllStaff()
+        {
+            dgvSelectedStaff.Columns.Clear();
             dgvSelectedStaff.Columns.Add("ID", "Номер");
             dgvSelectedStaff.Columns.Add("Name", "Имя");
             dgvSelectedStaff.Columns.Add("LastName", "Фамилия");
@@ -273,23 +362,24 @@ namespace DB_Course
             dgvSelectedStaff.Columns.Add("Registration", "Прописка");
             dgvSelectedStaff.Columns.Add("Pass", "Паспортный данные");
             dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
+
         }
-        private void FillDgvForStaffWithParameters(bool needPass, bool needEducation, 
-            bool needPhone, bool needType, bool needRegistration)
+        private void FillDgvForStaffWithParameters()
         {
+            /*dgvSelectedStaff.Columns.Clear();
             dgvSelectedStaff.Columns.Add("Name", "Имя");
             dgvSelectedStaff.Columns.Add("LastName", "Фамилия");
-            dgvSelectedStaff.Columns.Add("Patronymic", "Отчество");
-            if (needEducation)
-                dgvSelectedStaff.Columns.Add("Education", "Образование");
-            if (needPhone)
-                dgvSelectedStaff.Columns.Add("Phone", "Телефон");
-            if (needRegistration)
-                dgvSelectedStaff.Columns.Add("Registration", "Прописка");
-            if (needPass)
-                dgvSelectedStaff.Columns.Add("Pass", "Паспортный данные");
-            if (needType)
-                dgvSelectedStaff.Columns.Add("Type", "Тип сотрудника");
+            dgvSelectedStaff.Columns.Add("Patronymic", "Отчество");*/
+            if (!chboxStaffEducation.Checked)
+                dgvSelectedStaff.Columns.Remove("Education");
+            if (!chboxStaffPhone.Checked)
+                dgvSelectedStaff.Columns.Remove("Phone");
+            if (!chboxStaffRegistration.Checked)
+                dgvSelectedStaff.Columns.Remove("Registration");
+            if (!chboxStaffPass.Checked)
+                dgvSelectedStaff.Columns.Remove("Pass");
+            if (!chboxStaffType.Checked)
+                dgvSelectedStaff.Columns.Remove("Type");
         }
         private void FillDgvForEmployeeSheet()
         {
@@ -305,28 +395,35 @@ namespace DB_Course
         {
             dgvStaffContract.Columns.Clear();
             dgvStaffContract.Columns.Add("ID_Contract", "Номер");
-            dgvStaffContract.Columns.Add("Chair", "Кафедра");
-            dgvStaffContract.Columns.Add("Position", "Должность");
+            dgvStaffContract.Columns.Add("s_name", "Имя");
+            dgvStaffContract.Columns.Add("LastName", "Фамилия");
+            dgvStaffContract.Columns.Add("Patronymic", "Отчество");
+            dgvStaffContract.Columns.Add("c_name", "Кафедра");
+            dgvStaffContract.Columns.Add("Name", "Должность");
             dgvStaffContract.Columns.Add("Beginn_Date", "Начало");
             dgvStaffContract.Columns.Add("End_Date", "Окончание");
+            dgvStaffContract.Columns.Add("Additional_information", "Доп. информация");
         }
         private void FillDgvForStaffTitle()
         {
             dgvStaffTitle.Columns.Clear();
-            dgvStaffTitle.Columns.Add("ID_Title", "Номер");
+            //dgvStaffTitle.Columns.Add("ID_Title", "Номер");
             dgvStaffTitle.Columns.Add("Name", "Имя");
             dgvStaffTitle.Columns.Add("LastName", "Фамилия");
             dgvStaffTitle.Columns.Add("Patronymic", "Отчество");
             dgvStaffTitle.Columns.Add("Title_Name", "Звание");
+            dgvStaffTitle.Columns.Add("Date_of_assignment", "Дата присвоения");
+
         }
         private void FillDgvForStaffDegree()
         {
             dgvStaffDegree.Columns.Clear();
-            dgvStaffDegree.Columns.Add("ID_Degree", "Номер");
+            //dgvStaffDegree.Columns.Add("ID_Degree", "Номер");
             dgvStaffDegree.Columns.Add("Name", "Имя");
             dgvStaffDegree.Columns.Add("LastName", "Фамилия");
             dgvStaffDegree.Columns.Add("Patronymic", "Отчество");
             dgvStaffDegree.Columns.Add("Degree_Name", "Степень");
+            dgvStaffDegree.Columns.Add("Date_of_assignment", "Дата присвоения");
         }
         //Приказы
         private void FillDgvForOrders()
@@ -392,25 +489,29 @@ namespace DB_Course
             dgvPositions.Columns.Add("ID_Position", "Номер");
             dgvPositions.Columns.Add("Name", "Должность");
         }
-       #endregion
-               
+
+        #endregion
+
+        #region TextBox control
+        private void Clear_Staff_Insert_tb()
+        {
+            tbStaffInsertEducation.Clear();
+            tbStaffInsertLastname.Clear();
+            tbStaffInsertName.Clear();
+            tbStaffInsertPass.Clear();
+            tbStaffInsertPatronymic.Clear();
+            tbStaffInsertPhone.Clear();
+            tbStaffInsertRegistration.Clear();
+        }
+
+        public void Clear_Staff_By_Name_tb()
+        {
+            tbStaffSelectByLastname.Clear();
+            tbStaffSelectByName.Clear();
+            tbStaffSelectByPatronymic.Clear();
+        }
+        #endregion  
+
         
-        //Непонятная дичь
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            AdministratorRequest.Show_Titles(factory, dgvTitles);
-            if (dgvTitles.CurrentRow != null)
-                dgvTitles.Rows[dgvTitles.CurrentRow.Index].Selected = false;
-        }
-
-        //Переделать
-        private void BtnSelectAllContracts_Click(object sender, EventArgs e)
-        {
-            FillDgvForEmployeeContract();
-            AdministratorRequest.Show_Staff_Contract(factory, dgvStaffContract);
-        }
-
-
-
     }
 }

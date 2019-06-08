@@ -73,9 +73,7 @@ namespace DB_Course.Repos
                     "values (@Name);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@Name", Name); // Возможно нужно прописать Add Wit Value!
-                
-
+                Command.Parameters.AddWithValue("@Name", Name); 
                 try { Command.ExecuteNonQuery(); }
                 catch { MessageBox.Show("Лажа с эезекьютом"); }
             }
