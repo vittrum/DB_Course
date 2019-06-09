@@ -35,7 +35,7 @@ namespace DB_Course
             AdministratorRequest.Get_Chairs(factory, comboStaffByChair);
         }
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "postgres", "1", "University personnel department"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "observer", "3333", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
 
         #region Staff
@@ -109,21 +109,24 @@ namespace DB_Course
                 chboxStaffPhone.Checked, chboxStaffType.Checked, chboxStaffRegistration.Checked);
         }
        
-        private void BtnStaffDegreeAdd_Click(object sender, EventArgs e)
-        {
-
-        }
+     //   private void BtnStaffDegreeAdd_Click(object sender, EventArgs e)       
                 
         private void BtnAddStaffDegree_Click(object sender, EventArgs e)
         {
             if (true)
-                AdministratorRequest.Add_Staff_Degrees();
+                AdministratorRequest.Add_Staff_Degrees(factory, tbStaffDegreeAddName.Text,
+                    tbStaffDegreeAddLastname.Text, tbStaffDegreeAddPatronymic.Text, comboDegrees.SelectedItem.ToString(), dateStaffDegreeAdd.Value.ToShortDateString());
+            FillDgvForStaffDegree();
+            AdministratorRequest.Show_Staff_Degrees(factory, dgvStaffDegree);
         }
 
         private void BtnAddStaffTitle_Click(object sender, EventArgs e)
         {
             if (true)
-                AdministratorRequest.Add_Staff_Title();
+                AdministratorRequest.Add_Staff_Title(factory, tbStaffTitleAddName.Text, tbStaffTitleAddLastname.Text,
+                    tbStaffTitleAddPatronymic.Text, comboTitles.SelectedItem.ToString(), dateStaffTitleAdd.Value.ToShortDateString());
+            FillDgvForStaffTitle();
+            AdministratorRequest.Show_Staff_Titles(factory, dgvStaffTitle);
         }
 
         private void BtnStaffShowEmployeeSheet_Click(object sender, EventArgs e)
@@ -435,6 +438,7 @@ namespace DB_Course
             dgvOrders.Columns.Add("Type", "Тип");
             dgvOrders.Columns.Add("Beginn_Date", "Начало");
             dgvOrders.Columns.Add("End_Date", "Окончание");
+            dgvOrders.Columns.Add("Info", "Текст приказа");
         }
         private void FillDgvForOrderBusinessTrip()
         {
@@ -510,8 +514,33 @@ namespace DB_Course
             tbStaffSelectByName.Clear();
             tbStaffSelectByPatronymic.Clear();
         }
-        #endregion  
 
-        
+        #endregion
+
+        private void BtnDeleteStaffDegree_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvStaffDegree.SelectedRows)
+            {
+                AdministratorRequest.Delete_Staff_Degree(factory, row.Cells["Name"].Value.ToString(),
+                                                                  row.Cells["LastName"].Value.ToString(),
+                                                                  row.Cells["Patronymic"].Value.ToString(),
+                                                                  row.Cells["Degree_Name"].Value.ToString(),
+                                                                  row.Cells["Date_of_assignment"].Value.ToString());
+                dgvStaffDegree.Rows.Remove(row);
+            }
+        }
+
+        private void BtnDeleteStaffTitle_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvStaffTitle.SelectedRows)
+            {
+                AdministratorRequest.Delete_Staff_Title(factory, row.Cells["Name"].Value.ToString(),
+                                                                  row.Cells["LastName"].Value.ToString(),
+                                                                  row.Cells["Patronymic"].Value.ToString(),
+                                                                  row.Cells["Title_Name"].Value.ToString(),
+                                                                  row.Cells["Date_of_assignment"].Value.ToString());
+                dgvStaffTitle.Rows.Remove(row);
+            }
+        }
     }
 }

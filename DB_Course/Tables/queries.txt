@@ -34,6 +34,7 @@ and d."ID_Degree" = sd."ID_Degree"
 ;
 select * from staff_title_display;
 
+
 	Отображение больничных сотрудника
 create or replace view staff_sick_list
 as
@@ -110,6 +111,138 @@ begin
 	
 	insert into "contract" ("ID_Staff", "ID_Chair", "ID_Position", "Beginn_Date", "End_Date", "Additional_information") 
 	values (id_staff, id_chair, id_position, to_date(_bdate, 'DD MM YYYY'), to_date(_edate, 'DD MM YYYY'), _ainf);
+end
+	$$
+	language
+		'plpgsql';
+
+
+	Добавить степень сотрудника
+	drop function if exists add_staff_degree;
+create or replace function add_staff_degree
+(
+	_name char(30),
+	_lname char(30), 
+	_patr char(30), 
+	_dname varchar,
+	_date varchar
+)
+returns void 
+as $$
+declare 
+	id_degree int;
+	id_staff int;
+begin 
+	id_staff = (select "ID_Staff" 
+				from staff 
+				where s_name = _name
+				and "LastName" = _lname
+				and "Patronymic" = _patr);
+	id_degree = (select "ID_Degree"
+				from "Degree"
+				where "Name" = _dname);		
+	insert into "Staff_Degree" ("ID_Staff", "ID_Degree", "Date_of_assignment") 
+	values (id_staff, id_degree, to_date(_date, 'DD MM YYYY'));
+end
+	$$
+	language
+		'plpgsql';
+select add_staff_degree('ааа','ааа','ааа','Кандидат наук', '03-05-2019');
+
+	Удалить степень сотрудника
+drop function if exists delete_staff_degree;
+create or replace function delete_staff_degree
+(
+	_name char(30),
+	_lname char(30), 
+	_patr char(30), 
+	_dname varchar,
+	_date varchar
+)
+returns void 
+as $$
+declare 
+	id_degree int;
+	id_staff int;
+begin 
+	id_staff = (select "ID_Staff" 
+				from staff 
+				where s_name = _name
+				and "LastName" = _lname
+				and "Patronymic" = _patr);
+	id_degree = (select "ID_Degree"
+				from "Degree"
+				where "Name" = _dname);	
+	delete from "Staff_Degree"
+	where "ID_Staff" = id_staff
+	and "ID_Degree" = id_degree
+	and	"Date_of_assignment" = to_date(_date, 'DD MM YYYY');	
+end
+	$$
+	language
+		'plpgsql';
+select delete_staff_degree('ааа','ааа','ааа','Кандидат наук', '21-06-2019');
+
+	Добавить звание сотрудника
+drop function if exists add_staff_title;
+create or replace function add_staff_title
+(
+	_name char(30),
+	_lname char(30), 
+	_patr char(30), 
+	_dname varchar,
+	_date varchar
+)
+returns void 
+as $$
+declare 
+	id_title int;
+	id_staff int;
+begin 
+	id_staff = (select "ID_Staff" 
+				from staff 
+				where s_name = _name
+				and "LastName" = _lname
+				and "Patronymic" = _patr);
+	id_title = (select "ID_Title"
+				from "Titles"
+				where "Name" = _dname);		
+	insert into "Staff_Title" ("ID_Staff", "ID_Title", "Date_of_assignment") 
+	values (id_staff, id_title, to_date(_date, 'DD MM YYYY'));
+end
+	$$
+	language
+		'plpgsql';
+select add_staff_title('ааа','ааа','ааа','Доцент', '03-05-2019');
+
+	Удалить звание сотрудника
+drop function if exists delete_staff_title;
+create or replace function delete_staff_title
+(
+	_name char(30),
+	_lname char(30), 
+	_patr char(30), 
+	_dname varchar,
+	_date varchar
+)
+returns void 
+as $$
+declare 
+	id_title int;
+	id_staff int;
+begin 
+	id_staff = (select "ID_Staff" 
+				from staff 
+				where s_name = _name
+				and "LastName" = _lname
+				and "Patronymic" = _patr);
+	id_title = (select "ID_Title"
+				from "Titles"
+				where "Name" = _dname);	
+	delete from "Staff_Title"
+	where "ID_Staff" = id_staff
+	and "ID_Title" = id_title
+	and	"Date_of_assignment" = to_date(_date, 'DD MM YYYY');	
 end
 	$$
 	language

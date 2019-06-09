@@ -70,7 +70,7 @@ namespace DB_Course
         {
             
         }
-        public void Show_Concrete_Staff_Degrees() { }
+        //public void Show_Concrete_Staff_Degrees() { }
         public void Show_Staff_Chair() { }
         public void Show_Staff_Orders() { }
         public void Show_Staff_Contract(Factory factory, DataGridView dgv)
@@ -134,8 +134,14 @@ namespace DB_Course
             foreach (var i in factory.Staff_Title.GetTable())
                 dgv.Rows.Add(i.s_name, i.Lastname, i.Patronymic, i.Name, i.Date_of_assignment);
         }
-        public void Add_Staff_Title() { }
-        public void Delete_Staff_Title() { }
+        public void Add_Staff_Title(Factory factory, string name, string lastname, string patronymic, string degree, string date)
+        {
+            factory.Staff_Title.Add(name, lastname, patronymic, degree, date);
+        }
+        public void Delete_Staff_Title(Factory factory, string name, string lastname, string patronymic, string degree, string date)
+        {
+            factory.Staff_Title.Delete(name, lastname, patronymic, degree, date);
+        }
 
         #endregion
         //еще 2
@@ -145,12 +151,21 @@ namespace DB_Course
             foreach (var i in factory.Staff_Degree.GetTable())
                 dgv.Rows.Add(i.s_name, i.Lastname, i.Patronymic, i.Name, i.Date_of_assignment);
         }
-        public void Add_Staff_Degrees() { }
-        public void Delete_Staff_Degrees() { }
+        public void Add_Staff_Degrees(Factory factory, string name, string lastname, string patronymic, string degree, string date)
+        {
+            factory.Staff_Degree.Add(name, lastname, patronymic, degree, date);
+        }
+        public void Delete_Staff_Degree(Factory factory, string name, string lastname, string patronymic, string degree, string date)
+        {
+            factory.Staff_Degree.Delete(name, lastname, patronymic, degree, date);
+        }
         #endregion
         //еще 4
         #region Orders
-        public void Show_Orders(Factory factory, DataGridView dgv) { }
+        public void Show_Orders(Factory factory, DataGridView dgv)
+        {
+
+        }
         public void Select_Concrete_Order() { }
         public void Add_Order() { }
         public void Delete_Order() { }

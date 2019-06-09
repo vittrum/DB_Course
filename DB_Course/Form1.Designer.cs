@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagePositions = new System.Windows.Forms.TabPage();
             this.groupboxPositions = new System.Windows.Forms.GroupBox();
             this.btnShowAllPositions = new System.Windows.Forms.Button();
@@ -75,10 +75,32 @@
             this.btnAddTitle = new System.Windows.Forms.Button();
             this.dgvTitles = new System.Windows.Forms.DataGridView();
             this.pageChair = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.gbChair = new System.Windows.Forms.GroupBox();
             this.btnDeleteChair = new System.Windows.Forms.Button();
             this.BtnShowChairs = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbAddChairPhone = new System.Windows.Forms.TextBox();
+            this.tbAddChair = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAddChair = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.btnUpdChairPhone = new System.Windows.Forms.Button();
             this.dgvChair = new System.Windows.Forms.DataGridView();
             this.pageStaff = new System.Windows.Forms.TabPage();
             this.tabControlStaff = new System.Windows.Forms.TabControl();
@@ -86,7 +108,13 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
+            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.btnSelectAllStaff = new System.Windows.Forms.Button();
+            this.chboxStaffType = new System.Windows.Forms.CheckBox();
+            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
+            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboStaffType = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -107,12 +135,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboStaffByChair = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
-            this.chboxStaffPhone = new System.Windows.Forms.CheckBox();
-            this.chboxStaffPass = new System.Windows.Forms.CheckBox();
-            this.chboxStaffEducation = new System.Windows.Forms.CheckBox();
-            this.chboxStaffType = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnStaffSelectWithChoice = new System.Windows.Forms.Button();
@@ -132,9 +154,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.tbStaffTitleAddPatronymic = new System.Windows.Forms.TextBox();
+            this.tbStaffTitleAddLastname = new System.Windows.Forms.TextBox();
+            this.tbStaffTitleAddName = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.BtnAddStaffTitle = new System.Windows.Forms.Button();
@@ -144,9 +166,9 @@
             this.dgvStaffDegree = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbStaffDegreeAddPatronymic = new System.Windows.Forms.TextBox();
+            this.tbStaffDegreeAddLastname = new System.Windows.Forms.TextBox();
+            this.tbStaffDegreeAddName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.BtnAddStaffDegree = new System.Windows.Forms.Button();
@@ -250,28 +272,10 @@
             this.label63 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.btnUpdChairPhone = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbAddChairPhone = new System.Windows.Forms.TextBox();
-            this.tbAddChair = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAddChair = new System.Windows.Forms.Button();
+            this.dateStaffDegreeAdd = new System.Windows.Forms.DateTimePicker();
+            this.dateStaffTitleAdd = new System.Windows.Forms.DateTimePicker();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -286,8 +290,13 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTitles)).BeginInit();
             this.pageChair.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbChair.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChair)).BeginInit();
             this.pageStaff.SuspendLayout();
             this.tabControlStaff.SuspendLayout();
@@ -322,11 +331,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).BeginInit();
             this.tabControlMain.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // pagePositions
@@ -394,34 +398,34 @@
             // 
             // dgvPositions
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPositions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPositions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dgvPositions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPositions.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPositions.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgvPositions.Location = new System.Drawing.Point(2, 2);
             this.dgvPositions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPositions.Name = "dgvPositions";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPositions.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPositions.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dgvPositions.RowTemplate.Height = 27;
             this.dgvPositions.Size = new System.Drawing.Size(373, 372);
             this.dgvPositions.TabIndex = 4;
@@ -536,34 +540,34 @@
             // 
             // dgvDegrees
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDegrees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.dgvDegrees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDegrees.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDegrees.DefaultCellStyle = dataGridViewCellStyle41;
             this.dgvDegrees.Location = new System.Drawing.Point(2, 2);
             this.dgvDegrees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDegrees.Name = "dgvDegrees";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDegrees.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dgvDegrees.RowTemplate.Height = 27;
             this.dgvDegrees.Size = new System.Drawing.Size(373, 257);
             this.dgvDegrees.TabIndex = 4;
@@ -647,34 +651,34 @@
             // 
             // dgvTitles
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTitles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvTitles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTitles.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTitles.DefaultCellStyle = dataGridViewCellStyle44;
             this.dgvTitles.Location = new System.Drawing.Point(2, 2);
             this.dgvTitles.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTitles.Name = "dgvTitles";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTitles.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.dgvTitles.RowTemplate.Height = 27;
             this.dgvTitles.Size = new System.Drawing.Size(373, 257);
             this.dgvTitles.TabIndex = 4;
@@ -691,6 +695,110 @@
             this.pageChair.TabIndex = 1;
             this.pageChair.Text = "Кафедра";
             this.pageChair.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.button1);
+            this.groupBox10.Controls.Add(this.button2);
+            this.groupBox10.Controls.Add(this.panel1);
+            this.groupBox10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox10.Location = new System.Drawing.Point(607, 8);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(596, 616);
+            this.groupBox10.TabIndex = 9;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Табель кафедры";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(438, 566);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 44);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(3, 566);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(152, 44);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Показать все";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Location = new System.Drawing.Point(6, 19);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(584, 541);
+            this.panel1.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(14, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Телефон";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(17, 112);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(170, 31);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Location = new System.Drawing.Point(17, 47);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(170, 31);
+            this.textBox2.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(14, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(212, 23);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Наименование кафедры:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 284);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(584, 257);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(203, 84);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 44);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Добавить кафедру";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // gbChair
             // 
@@ -737,6 +845,128 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(584, 541);
             this.panel6.TabIndex = 5;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.label3);
+            this.groupBox12.Controls.Add(this.tbAddChairPhone);
+            this.groupBox12.Controls.Add(this.tbAddChair);
+            this.groupBox12.Controls.Add(this.label9);
+            this.groupBox12.Controls.Add(this.btnAddChair);
+            this.groupBox12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox12.Location = new System.Drawing.Point(3, 7);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(280, 272);
+            this.groupBox12.TabIndex = 14;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Добавить кафедру";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(6, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 23);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Телефон:";
+            // 
+            // tbAddChairPhone
+            // 
+            this.tbAddChairPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbAddChairPhone.Location = new System.Drawing.Point(10, 139);
+            this.tbAddChairPhone.Name = "tbAddChairPhone";
+            this.tbAddChairPhone.Size = new System.Drawing.Size(208, 31);
+            this.tbAddChairPhone.TabIndex = 10;
+            // 
+            // tbAddChair
+            // 
+            this.tbAddChair.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbAddChair.Location = new System.Drawing.Point(10, 79);
+            this.tbAddChair.Name = "tbAddChair";
+            this.tbAddChair.Size = new System.Drawing.Size(208, 31);
+            this.tbAddChair.TabIndex = 8;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(6, 53);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(212, 23);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Наименование кафедры:";
+            // 
+            // btnAddChair
+            // 
+            this.btnAddChair.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddChair.Location = new System.Drawing.Point(10, 176);
+            this.btnAddChair.Name = "btnAddChair";
+            this.btnAddChair.Size = new System.Drawing.Size(208, 53);
+            this.btnAddChair.TabIndex = 7;
+            this.btnAddChair.Text = "Добавить кафедру";
+            this.btnAddChair.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label65);
+            this.groupBox11.Controls.Add(this.textBox3);
+            this.groupBox11.Controls.Add(this.textBox10);
+            this.groupBox11.Controls.Add(this.label66);
+            this.groupBox11.Controls.Add(this.btnUpdChairPhone);
+            this.groupBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox11.Location = new System.Drawing.Point(289, 3);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(292, 276);
+            this.groupBox11.TabIndex = 13;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Обновить телефон";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label65.Location = new System.Drawing.Point(6, 117);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(82, 23);
+            this.label65.TabIndex = 17;
+            this.label65.Text = "Телефон:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(10, 143);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(208, 31);
+            this.textBox3.TabIndex = 16;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox10.Location = new System.Drawing.Point(10, 83);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(208, 31);
+            this.textBox10.TabIndex = 14;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label66.Location = new System.Drawing.Point(6, 57);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(212, 23);
+            this.label66.TabIndex = 15;
+            this.label66.Text = "Наименование кафедры:";
+            // 
+            // btnUpdChairPhone
+            // 
+            this.btnUpdChairPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdChairPhone.Location = new System.Drawing.Point(10, 180);
+            this.btnUpdChairPhone.Name = "btnUpdChairPhone";
+            this.btnUpdChairPhone.Size = new System.Drawing.Size(208, 53);
+            this.btnUpdChairPhone.TabIndex = 13;
+            this.btnUpdChairPhone.Text = "Обновить телефон";
+            this.btnUpdChairPhone.UseVisualStyleBackColor = true;
             // 
             // dgvChair
             // 
@@ -835,6 +1065,44 @@
             this.panel8.Size = new System.Drawing.Size(579, 145);
             this.panel8.TabIndex = 40;
             // 
+            // chboxStaffPass
+            // 
+            this.chboxStaffPass.AutoSize = true;
+            this.chboxStaffPass.Checked = true;
+            this.chboxStaffPass.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffPass.Location = new System.Drawing.Point(372, 68);
+            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffPass.Name = "chboxStaffPass";
+            this.chboxStaffPass.Size = new System.Drawing.Size(193, 27);
+            this.chboxStaffPass.TabIndex = 36;
+            this.chboxStaffPass.Text = "Паспортные данные";
+            this.chboxStaffPass.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffRegistration
+            // 
+            this.chboxStaffRegistration.AutoSize = true;
+            this.chboxStaffRegistration.Checked = true;
+            this.chboxStaffRegistration.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffRegistration.Location = new System.Drawing.Point(227, 68);
+            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffRegistration.Name = "chboxStaffRegistration";
+            this.chboxStaffRegistration.Size = new System.Drawing.Size(107, 27);
+            this.chboxStaffRegistration.TabIndex = 35;
+            this.chboxStaffRegistration.Text = "Прописка";
+            this.chboxStaffRegistration.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(217, 12);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(156, 23);
+            this.label19.TabIndex = 40;
+            this.label19.Text = "Показать данные:";
+            // 
             // btnSelectAllStaff
             // 
             this.btnSelectAllStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -846,6 +1114,48 @@
             this.btnSelectAllStaff.Text = "Выбрать всех сотрудников";
             this.btnSelectAllStaff.UseVisualStyleBackColor = true;
             this.btnSelectAllStaff.Click += new System.EventHandler(this.BtnSelectAllStaff_Click);
+            // 
+            // chboxStaffType
+            // 
+            this.chboxStaffType.AutoSize = true;
+            this.chboxStaffType.Checked = true;
+            this.chboxStaffType.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffType.Location = new System.Drawing.Point(227, 37);
+            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffType.Name = "chboxStaffType";
+            this.chboxStaffType.Size = new System.Drawing.Size(153, 27);
+            this.chboxStaffType.TabIndex = 38;
+            this.chboxStaffType.Text = "Тип сотрудника";
+            this.chboxStaffType.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffEducation
+            // 
+            this.chboxStaffEducation.AutoSize = true;
+            this.chboxStaffEducation.Checked = true;
+            this.chboxStaffEducation.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffEducation.Location = new System.Drawing.Point(27, 68);
+            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffEducation.Name = "chboxStaffEducation";
+            this.chboxStaffEducation.Size = new System.Drawing.Size(136, 27);
+            this.chboxStaffEducation.TabIndex = 37;
+            this.chboxStaffEducation.Text = "Образование";
+            this.chboxStaffEducation.UseVisualStyleBackColor = true;
+            // 
+            // chboxStaffPhone
+            // 
+            this.chboxStaffPhone.AutoSize = true;
+            this.chboxStaffPhone.Checked = true;
+            this.chboxStaffPhone.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.chboxStaffPhone.Location = new System.Drawing.Point(27, 37);
+            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.chboxStaffPhone.Name = "chboxStaffPhone";
+            this.chboxStaffPhone.Size = new System.Drawing.Size(185, 27);
+            this.chboxStaffPhone.TabIndex = 39;
+            this.chboxStaffPhone.Text = "Телефонный номер";
+            this.chboxStaffPhone.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -1082,86 +1392,6 @@
             this.comboStaffByChair.Size = new System.Drawing.Size(391, 31);
             this.comboStaffByChair.TabIndex = 43;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(217, 12);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(156, 23);
-            this.label19.TabIndex = 40;
-            this.label19.Text = "Показать данные:";
-            // 
-            // chboxStaffRegistration
-            // 
-            this.chboxStaffRegistration.AutoSize = true;
-            this.chboxStaffRegistration.Checked = true;
-            this.chboxStaffRegistration.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffRegistration.Location = new System.Drawing.Point(227, 68);
-            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffRegistration.Name = "chboxStaffRegistration";
-            this.chboxStaffRegistration.Size = new System.Drawing.Size(107, 27);
-            this.chboxStaffRegistration.TabIndex = 35;
-            this.chboxStaffRegistration.Text = "Прописка";
-            this.chboxStaffRegistration.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffPhone
-            // 
-            this.chboxStaffPhone.AutoSize = true;
-            this.chboxStaffPhone.Checked = true;
-            this.chboxStaffPhone.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPhone.Location = new System.Drawing.Point(27, 37);
-            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffPhone.Name = "chboxStaffPhone";
-            this.chboxStaffPhone.Size = new System.Drawing.Size(185, 27);
-            this.chboxStaffPhone.TabIndex = 39;
-            this.chboxStaffPhone.Text = "Телефонный номер";
-            this.chboxStaffPhone.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffPass
-            // 
-            this.chboxStaffPass.AutoSize = true;
-            this.chboxStaffPass.Checked = true;
-            this.chboxStaffPass.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffPass.Location = new System.Drawing.Point(372, 68);
-            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffPass.Name = "chboxStaffPass";
-            this.chboxStaffPass.Size = new System.Drawing.Size(193, 27);
-            this.chboxStaffPass.TabIndex = 36;
-            this.chboxStaffPass.Text = "Паспортные данные";
-            this.chboxStaffPass.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffEducation
-            // 
-            this.chboxStaffEducation.AutoSize = true;
-            this.chboxStaffEducation.Checked = true;
-            this.chboxStaffEducation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffEducation.Location = new System.Drawing.Point(27, 68);
-            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffEducation.Name = "chboxStaffEducation";
-            this.chboxStaffEducation.Size = new System.Drawing.Size(136, 27);
-            this.chboxStaffEducation.TabIndex = 37;
-            this.chboxStaffEducation.Text = "Образование";
-            this.chboxStaffEducation.UseVisualStyleBackColor = true;
-            // 
-            // chboxStaffType
-            // 
-            this.chboxStaffType.AutoSize = true;
-            this.chboxStaffType.Checked = true;
-            this.chboxStaffType.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.chboxStaffType.Location = new System.Drawing.Point(227, 37);
-            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2);
-            this.chboxStaffType.Name = "chboxStaffType";
-            this.chboxStaffType.Size = new System.Drawing.Size(153, 27);
-            this.chboxStaffType.TabIndex = 38;
-            this.chboxStaffType.Text = "Тип сотрудника";
-            this.chboxStaffType.UseVisualStyleBackColor = true;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -1257,35 +1487,35 @@
             // 
             // dgvSelectedStaff
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
             this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle53;
             this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
             this.dgvSelectedStaff.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSelectedStaff.Name = "dgvSelectedStaff";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
             this.dgvSelectedStaff.RowTemplate.Height = 27;
             this.dgvSelectedStaff.Size = new System.Drawing.Size(441, 723);
             this.dgvSelectedStaff.TabIndex = 1;
@@ -1341,6 +1571,7 @@
             this.BtnDeleteStaffTitle.TabIndex = 27;
             this.BtnDeleteStaffTitle.Text = "Удалить";
             this.BtnDeleteStaffTitle.UseVisualStyleBackColor = true;
+            this.BtnDeleteStaffTitle.Click += new System.EventHandler(this.BtnDeleteStaffTitle_Click);
             // 
             // BtnDeleteStaffDegree
             // 
@@ -1351,6 +1582,7 @@
             this.BtnDeleteStaffDegree.TabIndex = 26;
             this.BtnDeleteStaffDegree.Text = "Удалить";
             this.BtnDeleteStaffDegree.UseVisualStyleBackColor = true;
+            this.BtnDeleteStaffDegree.Click += new System.EventHandler(this.BtnDeleteStaffDegree_Click);
             // 
             // label36
             // 
@@ -1374,10 +1606,12 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.label67);
+            this.groupBox6.Controls.Add(this.dateStaffTitleAdd);
             this.groupBox6.Controls.Add(this.label26);
-            this.groupBox6.Controls.Add(this.textBox7);
-            this.groupBox6.Controls.Add(this.textBox8);
-            this.groupBox6.Controls.Add(this.textBox9);
+            this.groupBox6.Controls.Add(this.tbStaffTitleAddPatronymic);
+            this.groupBox6.Controls.Add(this.tbStaffTitleAddLastname);
+            this.groupBox6.Controls.Add(this.tbStaffTitleAddName);
             this.groupBox6.Controls.Add(this.label30);
             this.groupBox6.Controls.Add(this.label31);
             this.groupBox6.Controls.Add(this.BtnAddStaffTitle);
@@ -1401,32 +1635,32 @@
             this.label26.TabIndex = 25;
             this.label26.Text = "Фамилия";
             // 
-            // textBox7
+            // tbStaffTitleAddPatronymic
             // 
-            this.textBox7.Location = new System.Drawing.Point(101, 101);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(144, 20);
-            this.textBox7.TabIndex = 24;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffTitleAddPatronymic.Location = new System.Drawing.Point(101, 101);
+            this.tbStaffTitleAddPatronymic.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffTitleAddPatronymic.Name = "tbStaffTitleAddPatronymic";
+            this.tbStaffTitleAddPatronymic.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffTitleAddPatronymic.TabIndex = 24;
+            this.tbStaffTitleAddPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox8
+            // tbStaffTitleAddLastname
             // 
-            this.textBox8.Location = new System.Drawing.Point(101, 60);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(144, 20);
-            this.textBox8.TabIndex = 23;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffTitleAddLastname.Location = new System.Drawing.Point(101, 60);
+            this.tbStaffTitleAddLastname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffTitleAddLastname.Name = "tbStaffTitleAddLastname";
+            this.tbStaffTitleAddLastname.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffTitleAddLastname.TabIndex = 23;
+            this.tbStaffTitleAddLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox9
+            // tbStaffTitleAddName
             // 
-            this.textBox9.Location = new System.Drawing.Point(101, 26);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(144, 20);
-            this.textBox9.TabIndex = 22;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffTitleAddName.Location = new System.Drawing.Point(101, 26);
+            this.tbStaffTitleAddName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffTitleAddName.Name = "tbStaffTitleAddName";
+            this.tbStaffTitleAddName.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffTitleAddName.TabIndex = 22;
+            this.tbStaffTitleAddName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label30
             // 
@@ -1481,74 +1715,76 @@
             // 
             // dgvStaffTitle
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffTitle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
             this.dgvStaffTitle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaffTitle.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffTitle.DefaultCellStyle = dataGridViewCellStyle47;
             this.dgvStaffTitle.Location = new System.Drawing.Point(554, 280);
             this.dgvStaffTitle.Name = "dgvStaffTitle";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffTitle.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitle.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
             this.dgvStaffTitle.Size = new System.Drawing.Size(547, 282);
             this.dgvStaffTitle.TabIndex = 16;
             // 
             // dgvStaffDegree
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffDegree.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegree.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
             this.dgvStaffDegree.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaffDegree.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffDegree.DefaultCellStyle = dataGridViewCellStyle50;
             this.dgvStaffDegree.Location = new System.Drawing.Point(6, 280);
             this.dgvStaffDegree.Name = "dgvStaffDegree";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffDegree.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegree.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
             this.dgvStaffDegree.Size = new System.Drawing.Size(542, 282);
             this.dgvStaffDegree.TabIndex = 15;
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label64);
+            this.groupBox5.Controls.Add(this.dateStaffDegreeAdd);
             this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox6);
+            this.groupBox5.Controls.Add(this.tbStaffDegreeAddPatronymic);
+            this.groupBox5.Controls.Add(this.tbStaffDegreeAddLastname);
+            this.groupBox5.Controls.Add(this.tbStaffDegreeAddName);
             this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.label25);
             this.groupBox5.Controls.Add(this.BtnAddStaffDegree);
@@ -1572,32 +1808,32 @@
             this.label21.TabIndex = 25;
             this.label21.Text = "Фамилия";
             // 
-            // textBox4
+            // tbStaffDegreeAddPatronymic
             // 
-            this.textBox4.Location = new System.Drawing.Point(104, 101);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 20);
-            this.textBox4.TabIndex = 24;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffDegreeAddPatronymic.Location = new System.Drawing.Point(104, 101);
+            this.tbStaffDegreeAddPatronymic.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffDegreeAddPatronymic.Name = "tbStaffDegreeAddPatronymic";
+            this.tbStaffDegreeAddPatronymic.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffDegreeAddPatronymic.TabIndex = 24;
+            this.tbStaffDegreeAddPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // tbStaffDegreeAddLastname
             // 
-            this.textBox5.Location = new System.Drawing.Point(104, 60);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(144, 20);
-            this.textBox5.TabIndex = 23;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffDegreeAddLastname.Location = new System.Drawing.Point(104, 60);
+            this.tbStaffDegreeAddLastname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffDegreeAddLastname.Name = "tbStaffDegreeAddLastname";
+            this.tbStaffDegreeAddLastname.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffDegreeAddLastname.TabIndex = 23;
+            this.tbStaffDegreeAddLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // tbStaffDegreeAddName
             // 
-            this.textBox6.Location = new System.Drawing.Point(104, 26);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(144, 20);
-            this.textBox6.TabIndex = 22;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbStaffDegreeAddName.Location = new System.Drawing.Point(104, 26);
+            this.tbStaffDegreeAddName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffDegreeAddName.Name = "tbStaffDegreeAddName";
+            this.tbStaffDegreeAddName.Size = new System.Drawing.Size(144, 20);
+            this.tbStaffDegreeAddName.TabIndex = 22;
+            this.tbStaffDegreeAddName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label24
             // 
@@ -2726,231 +2962,37 @@
             this.tabControlMain.Size = new System.Drawing.Size(1257, 789);
             this.tabControlMain.TabIndex = 0;
             // 
-            // groupBox10
+            // dateStaffDegreeAdd
             // 
-            this.groupBox10.Controls.Add(this.button1);
-            this.groupBox10.Controls.Add(this.button2);
-            this.groupBox10.Controls.Add(this.panel1);
-            this.groupBox10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox10.Location = new System.Drawing.Point(607, 8);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(596, 616);
-            this.groupBox10.TabIndex = 9;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Табель кафедры";
+            this.dateStaffDegreeAdd.Location = new System.Drawing.Point(287, 101);
+            this.dateStaffDegreeAdd.Name = "dateStaffDegreeAdd";
+            this.dateStaffDegreeAdd.Size = new System.Drawing.Size(200, 20);
+            this.dateStaffDegreeAdd.TabIndex = 26;
             // 
-            // button1
+            // dateStaffTitleAdd
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(438, 566);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 44);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dateStaffTitleAdd.Location = new System.Drawing.Point(260, 101);
+            this.dateStaffTitleAdd.Name = "dateStaffTitleAdd";
+            this.dateStaffTitleAdd.Size = new System.Drawing.Size(200, 20);
+            this.dateStaffTitleAdd.TabIndex = 27;
             // 
-            // button2
+            // label64
             // 
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(3, 566);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 44);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Показать все";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(284, 69);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(96, 13);
+            this.label64.TabIndex = 27;
+            this.label64.Text = "Дата присвоения";
             // 
-            // panel1
+            // label67
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(6, 19);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 541);
-            this.panel1.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(14, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 23);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Телефон";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(17, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 31);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(17, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 31);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(14, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(212, 23);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Наименование кафедры:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 284);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(584, 257);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(203, 84);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 44);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Добавить кафедру";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.label65);
-            this.groupBox11.Controls.Add(this.textBox3);
-            this.groupBox11.Controls.Add(this.textBox10);
-            this.groupBox11.Controls.Add(this.label66);
-            this.groupBox11.Controls.Add(this.btnUpdChairPhone);
-            this.groupBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox11.Location = new System.Drawing.Point(289, 3);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(292, 276);
-            this.groupBox11.TabIndex = 13;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Обновить телефон";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label65.Location = new System.Drawing.Point(6, 117);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(82, 23);
-            this.label65.TabIndex = 17;
-            this.label65.Text = "Телефон:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(10, 143);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 31);
-            this.textBox3.TabIndex = 16;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox10.Location = new System.Drawing.Point(10, 83);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(208, 31);
-            this.textBox10.TabIndex = 14;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label66.Location = new System.Drawing.Point(6, 57);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(212, 23);
-            this.label66.TabIndex = 15;
-            this.label66.Text = "Наименование кафедры:";
-            // 
-            // btnUpdChairPhone
-            // 
-            this.btnUpdChairPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdChairPhone.Location = new System.Drawing.Point(10, 180);
-            this.btnUpdChairPhone.Name = "btnUpdChairPhone";
-            this.btnUpdChairPhone.Size = new System.Drawing.Size(208, 53);
-            this.btnUpdChairPhone.TabIndex = 13;
-            this.btnUpdChairPhone.Text = "Обновить телефон";
-            this.btnUpdChairPhone.UseVisualStyleBackColor = true;
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Controls.Add(this.tbAddChairPhone);
-            this.groupBox12.Controls.Add(this.tbAddChair);
-            this.groupBox12.Controls.Add(this.label9);
-            this.groupBox12.Controls.Add(this.btnAddChair);
-            this.groupBox12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox12.Location = new System.Drawing.Point(3, 7);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(280, 272);
-            this.groupBox12.TabIndex = 14;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Добавить кафедру";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(6, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 23);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Телефон:";
-            // 
-            // tbAddChairPhone
-            // 
-            this.tbAddChairPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbAddChairPhone.Location = new System.Drawing.Point(10, 139);
-            this.tbAddChairPhone.Name = "tbAddChairPhone";
-            this.tbAddChairPhone.Size = new System.Drawing.Size(208, 31);
-            this.tbAddChairPhone.TabIndex = 10;
-            // 
-            // tbAddChair
-            // 
-            this.tbAddChair.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbAddChair.Location = new System.Drawing.Point(10, 79);
-            this.tbAddChair.Name = "tbAddChair";
-            this.tbAddChair.Size = new System.Drawing.Size(208, 31);
-            this.tbAddChair.TabIndex = 8;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(6, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 23);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Наименование кафедры:";
-            // 
-            // btnAddChair
-            // 
-            this.btnAddChair.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddChair.Location = new System.Drawing.Point(10, 176);
-            this.btnAddChair.Name = "btnAddChair";
-            this.btnAddChair.Size = new System.Drawing.Size(208, 53);
-            this.btnAddChair.TabIndex = 7;
-            this.btnAddChair.Text = "Добавить кафедру";
-            this.btnAddChair.UseVisualStyleBackColor = true;
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(257, 69);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(96, 13);
+            this.label67.TabIndex = 28;
+            this.label67.Text = "Дата присвоения";
             // 
             // Form1
             // 
@@ -2980,8 +3022,16 @@
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTitles)).EndInit();
             this.pageChair.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbChair.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChair)).EndInit();
             this.pageStaff.ResumeLayout(false);
             this.tabControlStaff.ResumeLayout(false);
@@ -3030,14 +3080,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3122,18 +3164,18 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox tbStaffTitleAddPatronymic;
+        private System.Windows.Forms.TextBox tbStaffTitleAddLastname;
+        private System.Windows.Forms.TextBox tbStaffTitleAddName;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Button BtnAddStaffTitle;
         private System.Windows.Forms.ComboBox comboTitles;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbStaffDegreeAddPatronymic;
+        private System.Windows.Forms.TextBox tbStaffDegreeAddLastname;
+        private System.Windows.Forms.TextBox tbStaffDegreeAddName;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button BtnAddStaffDegree;
@@ -3270,6 +3312,10 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button btnUpdChairPhone;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.DateTimePicker dateStaffTitleAdd;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.DateTimePicker dateStaffDegreeAdd;
     }
 }
 

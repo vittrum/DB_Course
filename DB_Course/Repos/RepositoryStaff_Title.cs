@@ -49,5 +49,44 @@ namespace DB_Course.Repos
             }
             return staff_titles;
         }
+
+        public void Add(string s_name, string LastName, string Patronymic, string name, string date)
+        {
+            try
+            {
+                string QueryString =
+                    "select add_staff_title(@s_name, @LastName, @Patronymic, @name, @date);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@s_name", s_name);
+                Command.Parameters.AddWithValue("@LastName", LastName);
+                Command.Parameters.AddWithValue("@Patronymic", Patronymic);
+                Command.Parameters.AddWithValue("@name", name);
+                Command.Parameters.AddWithValue("@date", date);
+
+                try { Command.ExecuteNonQuery(); }
+                catch (PostgresException ex) { MessageBox.Show(ex.Message); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+        public void Delete(string s_name, string LastName, string Patronymic, string name, string date)
+        {
+            try
+            {
+                string QueryString =
+                    "select delete_staff_title(@s_name, @LastName, @Patronymic, @name, @date);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@s_name", s_name);
+                Command.Parameters.AddWithValue("@LastName", LastName);
+                Command.Parameters.AddWithValue("@Patronymic", Patronymic);
+                Command.Parameters.AddWithValue("@name", name);
+                Command.Parameters.AddWithValue("@date", date);
+
+                try { Command.ExecuteNonQuery(); }
+                catch (PostgresException ex) { MessageBox.Show(ex.Message); }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 }
