@@ -95,37 +95,48 @@ namespace DB_Course.Repos
             try
             {
                 string QueryString =
-                    "insert into chair" +
-                    "(c_name, \"Phone\")" +
+                    "insert into \"chair\"" +
+                    "(\"c_name\", \"Phone\")" +
                     " values (@Name, @Phone);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@Name", Name); 
                 Command.Parameters.AddWithValue("@Phone", Convert.ToInt32(Phone));
 
-                try { Command.ExecuteNonQuery(); }
-                catch { MessageBox.Show("Лажа с эезекьютом"); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка выполнения операции. \nПроверьте корректность введенных данных");
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ошибка выполнения операции." + e.Message);
+            }
         }
-        public void UpdatePhone(string Phone, string ID_Chair)
+        public void UpdatePhone(string Phone, string c_name)
         {
             try
             {
+                //MessageBox.Show(c_name);
                 string QueryString =
-                    "update chair" +
-                    "set \"Phone\" = @Phone"  +
-                    "where \"ID_Chair\" = @ID_Chair ;";
+                    "update \"chair\"" +
+                    "set \"Phone\" = @Phone " +
+                    "where \"c_name\" = @c_name;";
                 NpgsqlCommand Command = 
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@Phone", Convert.ToInt64(Phone));
+                Command.Parameters.AddWithValue("@c_name", c_name);
                 Command.ExecuteNonQuery();
-                Command.Parameters.AddWithValue("@Phone");
-                Command.Parameters.AddWithValue("@textBoxPlace", Convert.ToInt32(ID_Chair));
+                
             }
-            catch (PostgresException exp)
+            catch (PostgresException e)
             {
                 // MessageBox.Show("Не удалось выполнить запрос!");
-                MessageBox.Show("Произошла ошибка на уровне БД.\r\nКод ошибки: " + Convert.ToString(exp.SqlState));
+                MessageBox.Show("Произошла ошибка на уровне БД.\r\nКод ошибки: " + e.Message);
             }
 
         }

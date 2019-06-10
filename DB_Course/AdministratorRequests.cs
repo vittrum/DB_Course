@@ -81,6 +81,16 @@ namespace DB_Course
                     i.Name, i.Beginn_Date, i.End_Date, i.Additional_Information);               
             }
         }
+
+        public void Show_Concrete_Staff_Contract(Factory factory, DataGridView dgv, string s_name, string lastname, string patronymic)
+        {
+            foreach (var i in factory.Contract.GetContract(s_name, lastname, patronymic))
+            {
+                dgv.Rows.Add(i.ID_Employment_Contract, i.s_name, i.Lastname, i.Patronymic, i.c_name,
+                    i.Name, i.Beginn_Date, i.End_Date, i.Additional_Information);
+            }
+            
+        }
         public void Add_Staff_Contract(Factory factory, string s_name, string lastname,
                                        string patronymic, string chair, string position, string Beginn_Date, string End_Date, string a_info)
         {

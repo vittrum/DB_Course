@@ -64,10 +64,16 @@ namespace DB_Course.Repos
                 Command.Parameters.AddWithValue("@name", name);
                 Command.Parameters.AddWithValue("@date", date);
 
-                try { Command.ExecuteNonQuery(); }
-                catch (PostgresException ex) { MessageBox.Show(ex.Message); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch (PostgresException ex)
+                {
+                    MessageBox.Show("Ошибка на уровне базы данных. \n Проверьте корректность введенных данных");
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch { MessageBox.Show("Ошибка выполнения операции"); }
         }
         public void Delete(string s_name, string LastName, string Patronymic, string name, string date)
         {
@@ -89,12 +95,12 @@ namespace DB_Course.Repos
                 }
                 catch (PostgresException e)
                 {
-                    MessageBox.Show(e.Message);
+                    MessageBox.Show("Ошибка выполнения операции");
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("Ошибка выполнения операции");
             }
         }
     }

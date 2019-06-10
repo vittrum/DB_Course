@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 using DB_Course.Repos;
 
 namespace DB_Course
@@ -40,6 +41,8 @@ namespace DB_Course
             AdministratorRequest.Get_Titles(factory, comboTitles);
             AdministratorRequest.Get_Degrees(factory, comboDegrees);
             AdministratorRequest.Get_Chairs(factory, comboStaffByChair);
+            AdministratorRequest.Get_Chairs(factory, comboChairSheet);
+            AdministratorRequest.Get_Chairs(factory, comboChairUpd);
         }
         
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
@@ -105,11 +108,13 @@ namespace DB_Course
         //есть
         private void BtnDeleteStaff_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvSelectedStaff.SelectedRows)
-            {                
-                AdministratorRequest.Delete_Staff(factory, row.Cells["ID"].Value.ToString());                
-                dgvSelectedStaff.Rows.Remove(row);
-            }            
+            
+                foreach (DataGridViewRow row in dgvSelectedStaff.SelectedRows)
+                {
+                    AdministratorRequest.Delete_Staff(factory, row.Cells["ID"].Value.ToString());
+                    dgvSelectedStaff.Rows.Remove(row);
+                }
+            
         }        
 
         private void BtnStaffSelectSome_Click(object sender, EventArgs e)
@@ -122,9 +127,11 @@ namespace DB_Course
                 
         private void BtnAddStaffDegree_Click(object sender, EventArgs e)
         {
-            if (true)
-                AdministratorRequest.Add_Staff_Degrees(factory, tbStaffDegreeAddName.Text,
-                    tbStaffDegreeAddLastname.Text, tbStaffDegreeAddPatronymic.Text, comboDegrees.SelectedItem.ToString(), dateStaffDegreeAdd.Value.ToShortDateString());
+            AdministratorRequest.Add_Staff_Degrees(factory, tbStaffDegreeAddName.Text,
+                                                    tbStaffDegreeAddLastname.Text, 
+                                                    tbStaffDegreeAddPatronymic.Text, 
+                                                    comboDegrees.SelectedItem.ToString(), 
+                                                    dateStaffDegreeAdd.Value.ToShortDateString());
             FillDgvForStaffDegree();
             AdministratorRequest.Show_Staff_Degrees(factory, dgvStaffDegree);
         }
@@ -226,15 +233,40 @@ namespace DB_Course
                                                     dateContractEnd.Value.ToShortDateString(),
                                                     "No info");
         }
+
+        private void BtnDeleteStaffDegree_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvStaffDegree.SelectedRows)
+            {
+                AdministratorRequest.Delete_Staff_Degree(factory, row.Cells["Name"].Value.ToString(),
+                                                                  row.Cells["LastName"].Value.ToString(),
+                                                                  row.Cells["Patronymic"].Value.ToString(),
+                                                                  row.Cells["Degree_Name"].Value.ToString(),
+                                                                  row.Cells["Date_of_assignment"].Value.ToString());
+                dgvStaffDegree.Rows.Remove(row);
+            }
+        }
+
+        private void BtnDeleteStaffTitle_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvStaffTitle.SelectedRows)
+            {
+                AdministratorRequest.Delete_Staff_Title(factory, row.Cells["Name"].Value.ToString(),
+                                                                  row.Cells["LastName"].Value.ToString(),
+                                                                  row.Cells["Patronymic"].Value.ToString(),
+                                                                  row.Cells["Title_Name"].Value.ToString(),
+                                                                  row.Cells["Date_of_assignment"].Value.ToString());
+                dgvStaffTitle.Rows.Remove(row);
+            }
+        }
         #endregion
         //Все работает, нужен апдейт телефона
         #region Chair
-        private void BtnAddChair_Click(object sender, EventArgs e)
+        private void BtnAddChair_Click_1(object sender, EventArgs e)
         {
             FillDgvForChair();
             AdministratorRequest.Add_Chair(factory, tbAddChair.Text, tbAddChairPhone.Text);
             AdministratorRequest.Show_Chairs(factory, dgvChair);
-
         }
         /*private void BtnShowChairs_Click(object sender, EventArgs e)
         {
@@ -249,6 +281,12 @@ namespace DB_Course
                 AdministratorRequest.Delete_Chair(factory, row.Cells["ID_Chair"].Value.ToString());
                 dgvChair.Rows.Remove(row);
             }
+        }
+        private void BtnUpdChairPhone_Click(object sender, EventArgs e)
+        {
+            FillDgvForChair();
+            AdministratorRequest.Show_Chairs(factory, dgvChair);
+            AdministratorRequest.Update_Chair_Phone(factory, tbChairPhoneUpd.Text, comboChairUpd.SelectedItem.ToString());
         }
 
 
@@ -526,42 +564,29 @@ namespace DB_Course
 
         #endregion
 
-        private void BtnDeleteStaffDegree_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dgvStaffDegree.SelectedRows)
-            {
-                AdministratorRequest.Delete_Staff_Degree(factory, row.Cells["Name"].Value.ToString(),
-                                                                  row.Cells["LastName"].Value.ToString(),
-                                                                  row.Cells["Patronymic"].Value.ToString(),
-                                                                  row.Cells["Degree_Name"].Value.ToString(),
-                                                                  row.Cells["Date_of_assignment"].Value.ToString());
-                dgvStaffDegree.Rows.Remove(row);
-            }
-        }
+        
+               
 
-        private void BtnDeleteStaffTitle_Click(object sender, EventArgs e)
+        private void BtnLogin_Click_2(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvStaffTitle.SelectedRows)
+            try
             {
-                AdministratorRequest.Delete_Staff_Title(factory, row.Cells["Name"].Value.ToString(),
-                                                                  row.Cells["LastName"].Value.ToString(),
-                                                                  row.Cells["Patronymic"].Value.ToString(),
-                                                                  row.Cells["Title_Name"].Value.ToString(),
-                                                                  row.Cells["Date_of_assignment"].Value.ToString());
-                dgvStaffTitle.Rows.Remove(row);
+                factory = new Factory("127.0.0.1", "5432", comboLogin.SelectedItem.ToString(), tbLogin.Text, "University personnel department");
+                tabControlMain.Visible = true;
+                gbLogin.Dispose();
             }
-        }
-
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
+            catch (Exception ex)
+            {
+                MessageBox.Show("Проверьте соединение и корректность введенных данных");
+            }
             
+
         }
 
-        private void BtnLogin_Click_1(object sender, EventArgs e)
+        private void BtnContractShow_Click(object sender, EventArgs e)
         {
-            factory = new Factory("127.0.0.1", "5432", comboLogin.SelectedItem.ToString(), tbLogin.Text, "University personnel department");
-            tabControlMain.Visible = true;
-            gbLogin.Dispose();
+            AdministratorRequest.Show_Concrete_Staff_Contract(factory, dgvStaffContract, tbContractSelectName.Text,
+                tbContractSelectLastname.Text, tbContractSelectPatronymic.Text);
         }
     }
 }

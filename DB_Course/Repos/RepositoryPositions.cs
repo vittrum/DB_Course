@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DB_Course.Tables;
 using Npgsql;
+using System;
+using System.Collections.Generic;
 using System.Data.Common;
 using System.Windows.Forms;
-using DB_Course.Tables;
 
 namespace DB_Course.Repos
 {
@@ -41,7 +38,7 @@ namespace DB_Course.Repos
             }
             catch (PostgresException ex)
             {
-                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+                MessageBox.Show("Ошибка выполнения операции.");
             }
             return positions;
         }
@@ -60,7 +57,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
+                MessageBox.Show("Ошибка выполнения операции. \n Нельзя удалить должность, пока ее занимает сотрудник");
             }
         }
         public void Insert(string Name)
@@ -74,10 +71,19 @@ namespace DB_Course.Repos
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@Name", Name); 
-                try { Command.ExecuteNonQuery(); }
-                catch { MessageBox.Show("Лажа с эезекьютом"); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка выполнения операции.");
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch
+            {
+                MessageBox.Show("Ошибка выполнения операции.");
+            }
         }
     }
 }

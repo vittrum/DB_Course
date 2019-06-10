@@ -99,5 +99,44 @@ namespace DB_Course.Repos
             catch { MessageBox.Show("Лажа с методом"); }
         }
 
+        public List<Contract> GetContract(string s_name, string lastname, string patronymic)
+        {
+            Contract contract;
+            List<Contract> contracts = new List<Contract>();
+            MessageBox.Show(s_name +' '+ lastname + ' ' + patronymic);
+            try
+            {
+                string QueryString =
+                    "select * from contract_display" +
+                    "where \"s_name\" = '" + s_name + "'"+ //"%" +
+                    " and \"LastName\" = '"+ lastname + "'" +//"%" +
+                    " and \"Patronymic\" = '" + patronymic + "'" + ";"; //???????????????
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+                foreach (DbDataRecord dbDataRecord in dataReader)
+                {
+                    contract = new Contract(
+                        dbDataRecord["ID_Contract"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
+                        dbDataRecord["Patronymic"].ToString(),
+                        dbDataRecord["c_name"].ToString(),
+                        dbDataRecord["Name"].ToString(),
+                        dbDataRecord["Beginn_Date"].ToString(),
+                        dbDataRecord["End_Date"].ToString(),
+                        dbDataRecord["Additional_information"].ToString());
+                    contracts.Add(contract);
+                }
+                dataReader.Close();
+            }
+            catch (PostgresException ex)
+            {
+                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+            }
+            return contracts;
+        }
+
     }
 }

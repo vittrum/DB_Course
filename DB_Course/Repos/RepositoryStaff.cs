@@ -62,7 +62,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
             }
         }
         public void Insert(
@@ -94,10 +94,19 @@ namespace DB_Course.Repos
                 Command.Parameters.AddWithValue("@Pass", Pass);
                 Command.Parameters.AddWithValue("@Type", Type);
 
-                try { Command.ExecuteNonQuery(); }
-                catch { MessageBox.Show("Лажа с эезекьютом"); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch
+                {
+                    MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch
+            {
+                MessageBox.Show("Ошибка выполнения операции");
+            }
 
         }
 
@@ -130,7 +139,11 @@ namespace DB_Course.Repos
                     staffs.Add(staff);
                 }
                 dataReader.Close();
-            } catch (Exception ex) { MessageBox.Show(ex.Message); }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+            }
             return staffs;
         }
 
@@ -168,7 +181,10 @@ namespace DB_Course.Repos
                 }
                 dataReader.Close();
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+            }
             return staffs;
         }
 
