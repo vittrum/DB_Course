@@ -16,7 +16,14 @@ namespace DB_Course
         public Form1()
         {
             InitializeComponent();
+            #region login
+            tabControlMain.Visible = false;
+            //panelLogin.Visible = true;
+            
+            #endregion
+
             //Заполнить кафедры            
+
             FillDgvForChair();
             AdministratorRequest.Show_Chairs(factory, dgvChair);
             //Вывод степеней и званий
@@ -34,6 +41,7 @@ namespace DB_Course
             AdministratorRequest.Get_Degrees(factory, comboDegrees);
             AdministratorRequest.Get_Chairs(factory, comboStaffByChair);
         }
+        
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
         Factory factory = new Factory("127.0.0.1", "5432", "observer", "3333", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
@@ -71,12 +79,12 @@ namespace DB_Course
         //есть
         private void BtnAddStaff_Click(object sender, EventArgs e)
         {
-            Clear_Staff_Insert_tb();
+            
             try
             {
-                if (!Check_Staff_Insert_Textboxes())
+                 if (!Check_Staff_Insert_Textboxes())
                     errorProtector.EmptyBox();
-                else
+                 else
                     AdministratorRequest.Add_Staff
                          (factory,
                          tbStaffInsertName.Text,
@@ -89,6 +97,7 @@ namespace DB_Course
                          comboStaffType.SelectedItem.ToString());
             }
             catch { }
+            Clear_Staff_Insert_tb();
             FillDgvForAllStaff();
             AdministratorRequest.Show_All_Staff(factory, dgvSelectedStaff);
         }        
@@ -541,6 +550,18 @@ namespace DB_Course
                                                                   row.Cells["Date_of_assignment"].Value.ToString());
                 dgvStaffTitle.Rows.Remove(row);
             }
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnLogin_Click_1(object sender, EventArgs e)
+        {
+            factory = new Factory("127.0.0.1", "5432", comboLogin.SelectedItem.ToString(), tbLogin.Text, "University personnel department");
+            tabControlMain.Visible = true;
+            gbLogin.Dispose();
         }
     }
 }
