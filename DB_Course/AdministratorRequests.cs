@@ -71,7 +71,7 @@ namespace DB_Course
             
         }
         //public void Show_Concrete_Staff_Degrees() { }
-        public void Show_Staff_Chair() { }
+        //public void Show_Staff_Chair() { }
         public void Show_Staff_Orders() { }
         public void Show_Staff_Contract(Factory factory, DataGridView dgv)
         {
@@ -100,6 +100,12 @@ namespace DB_Course
         {
             factory.Contract.Delete(ID_Contract);
         }
+
+        public void Add_Staff_Sheet(Factory factory, string ID_Time_Sheet, string ID_Staff, string workd, string doffs, string vacationd)
+        {
+            factory.Employee_Sheet.Insert(ID_Time_Sheet, ID_Staff, workd, doffs, vacationd);
+        }
+        
         #endregion
         
         #region Titles
@@ -201,7 +207,7 @@ namespace DB_Course
         {
             factory.Chair.Delete(ID_Chair);
         }
-        //Переделать
+        
         public void Update_Chair_Phone(Factory factory, string Phone, string ID_Chair)
         {
             factory.Chair.UpdatePhone(Phone, ID_Chair);

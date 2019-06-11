@@ -28,24 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pagePositions = new System.Windows.Forms.TabPage();
             this.groupboxPositions = new System.Windows.Forms.GroupBox();
             this.btnShowAllPositions = new System.Windows.Forms.Button();
@@ -77,24 +74,29 @@
             this.pageChair = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnShowChairTimeSheet = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAddSheet = new System.Windows.Forms.Panel();
+            this.dateTimeSheetEnd = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeSheetBegin = new System.Windows.Forms.DateTimePicker();
+            this.label58 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboChairSheet = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAddTimeSheet = new System.Windows.Forms.Button();
+            this.dgvTimeSheet = new System.Windows.Forms.DataGridView();
             this.gbChair = new System.Windows.Forms.GroupBox();
             this.btnDeleteChair = new System.Windows.Forms.Button();
             this.BtnShowChairs = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.gbAddChair = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbAddChairPhone = new System.Windows.Forms.TextBox();
             this.tbAddChair = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAddChair = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.gbUpdPhone = new System.Windows.Forms.GroupBox();
+            this.comboChairUpd = new System.Windows.Forms.ComboBox();
             this.label65 = new System.Windows.Forms.Label();
             this.tbChairPhoneUpd = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
@@ -105,7 +107,7 @@
             this.pageStaffGeneral = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.btnDeleteStaff = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelAllStaff = new System.Windows.Forms.Panel();
             this.chboxStaffPass = new System.Windows.Forms.CheckBox();
             this.chboxStaffRegistration = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -190,13 +192,13 @@
             this.label35 = new System.Windows.Forms.Label();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panelBusinessTripOrder = new System.Windows.Forms.Panel();
             this.panelSickListOrder = new System.Windows.Forms.Panel();
             this.rbtnSickListNo = new System.Windows.Forms.RadioButton();
             this.rbtnSickListYes = new System.Windows.Forms.RadioButton();
             this.label46 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
+            this.panelBusinessTripOrder = new System.Windows.Forms.Panel();
             this.label43 = new System.Windows.Forms.Label();
             this.tbBusinessTripToBePaid = new System.Windows.Forms.TextBox();
             this.tbBusinessTripPurpose = new System.Windows.Forms.TextBox();
@@ -235,44 +237,42 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.panelContractSelect = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbContractSelectPatronymic = new System.Windows.Forms.TextBox();
+            this.tbContractSelectLastname = new System.Windows.Forms.TextBox();
+            this.btnContractShow = new System.Windows.Forms.Button();
+            this.tbContractSelectName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnSelectAllContracts = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvStaffContract = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnContractShow = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbContractSelectName = new System.Windows.Forms.TextBox();
-            this.tbContractSelectLastname = new System.Windows.Forms.TextBox();
-            this.tbContractSelectPatronymic = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.pageStaffWorkingTime = new System.Windows.Forms.TabPage();
             this.BtnDeleteStaffTimeSheet = new System.Windows.Forms.Button();
             this.gbAddTimeSheet = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbAddStaffSheetVacations = new System.Windows.Forms.TextBox();
+            this.tbAddStaffSheetDayOffs = new System.Windows.Forms.TextBox();
+            this.btnAddStaffSheet = new System.Windows.Forms.Button();
             this.label54 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.tbAddStaffSheetWorkdays = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.tbAddStaffSheetTimeSheet = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.tb = new System.Windows.Forms.TextBox();
-            this.label59 = new System.Windows.Forms.Label();
+            this.tbAddStaffSheetId = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvStaffEmployeeSheet = new System.Windows.Forms.DataGridView();
+            this.panelSelectStaffSheet = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvStaffEmployeeSheet = new System.Windows.Forms.DataGridView();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -280,9 +280,7 @@
             this.comboLogin = new System.Windows.Forms.ComboBox();
             this.label69 = new System.Windows.Forms.Label();
             this.label68 = new System.Windows.Forms.Label();
-            this.comboChairUpd = new System.Windows.Forms.ComboBox();
-            this.comboChairSheet = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnShowAllEmployeeSheet = new System.Windows.Forms.Button();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -299,11 +297,12 @@
             this.pageChair.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panelAddSheet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeSheet)).BeginInit();
             this.gbChair.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox11.SuspendLayout();
+            this.gbAddChair.SuspendLayout();
+            this.gbUpdPhone.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChair)).BeginInit();
             this.pageStaff.SuspendLayout();
             this.tabControlStaff.SuspendLayout();
@@ -312,7 +311,7 @@
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelAllStaff.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).BeginInit();
@@ -325,16 +324,18 @@
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.panelBusinessTripOrder.SuspendLayout();
             this.panelSickListOrder.SuspendLayout();
+            this.panelBusinessTripOrder.SuspendLayout();
             this.pageStaffContract.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.panelContractSelect.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffContract)).BeginInit();
             this.pageStaffWorkingTime.SuspendLayout();
             this.gbAddTimeSheet.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panelSelectStaffSheet.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).BeginInit();
             this.tabControlMain.SuspendLayout();
@@ -346,7 +347,7 @@
             this.pagePositions.Controls.Add(this.groupboxPositions);
             this.pagePositions.Location = new System.Drawing.Point(4, 22);
             this.pagePositions.Name = "pagePositions";
-            this.pagePositions.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pagePositions.Padding = new System.Windows.Forms.Padding(3);
             this.pagePositions.Size = new System.Drawing.Size(1249, 763);
             this.pagePositions.TabIndex = 4;
             this.pagePositions.Text = "Должности";
@@ -360,18 +361,20 @@
             this.groupboxPositions.Controls.Add(this.panel3);
             this.groupboxPositions.Controls.Add(this.BtnAddPosition);
             this.groupboxPositions.Controls.Add(this.tbAddPosition);
-            this.groupboxPositions.Location = new System.Drawing.Point(6, 7);
+            this.groupboxPositions.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupboxPositions.Location = new System.Drawing.Point(6, -3);
             this.groupboxPositions.Name = "groupboxPositions";
-            this.groupboxPositions.Size = new System.Drawing.Size(761, 402);
+            this.groupboxPositions.Size = new System.Drawing.Size(774, 439);
             this.groupboxPositions.TabIndex = 6;
             this.groupboxPositions.TabStop = false;
             this.groupboxPositions.Text = "Должности";
             // 
             // btnShowAllPositions
             // 
-            this.btnShowAllPositions.Location = new System.Drawing.Point(386, 199);
+            this.btnShowAllPositions.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowAllPositions.Location = new System.Drawing.Point(390, 122);
             this.btnShowAllPositions.Name = "btnShowAllPositions";
-            this.btnShowAllPositions.Size = new System.Drawing.Size(169, 23);
+            this.btnShowAllPositions.Size = new System.Drawing.Size(182, 33);
             this.btnShowAllPositions.TabIndex = 7;
             this.btnShowAllPositions.Text = "Показать все";
             this.btnShowAllPositions.UseVisualStyleBackColor = true;
@@ -379,9 +382,10 @@
             // 
             // btnDeletePosition
             // 
-            this.btnDeletePosition.Location = new System.Drawing.Point(389, 370);
+            this.btnDeletePosition.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDeletePosition.Location = new System.Drawing.Point(386, 398);
             this.btnDeletePosition.Name = "btnDeletePosition";
-            this.btnDeletePosition.Size = new System.Drawing.Size(169, 23);
+            this.btnDeletePosition.Size = new System.Drawing.Size(182, 33);
             this.btnDeletePosition.TabIndex = 6;
             this.btnDeletePosition.Text = "Удалить";
             this.btnDeletePosition.UseVisualStyleBackColor = true;
@@ -390,9 +394,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(386, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 13);
+            this.label4.Size = new System.Drawing.Size(228, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Наименование должности:";
             // 
@@ -401,48 +406,25 @@
             this.panel3.Controls.Add(this.dgvPositions);
             this.panel3.Location = new System.Drawing.Point(6, 19);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(377, 377);
+            this.panel3.Size = new System.Drawing.Size(377, 414);
             this.panel3.TabIndex = 5;
             // 
             // dgvPositions
             // 
-            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPositions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
             this.dgvPositions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPositions.DefaultCellStyle = dataGridViewCellStyle56;
-            this.dgvPositions.Location = new System.Drawing.Point(2, 2);
-            this.dgvPositions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPositions.Location = new System.Drawing.Point(4, 12);
+            this.dgvPositions.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPositions.Name = "dgvPositions";
-            dataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPositions.RowHeadersDefaultCellStyle = dataGridViewCellStyle57;
             this.dgvPositions.RowTemplate.Height = 27;
-            this.dgvPositions.Size = new System.Drawing.Size(373, 372);
+            this.dgvPositions.Size = new System.Drawing.Size(371, 400);
             this.dgvPositions.TabIndex = 4;
             // 
             // BtnAddPosition
             // 
-            this.BtnAddPosition.Location = new System.Drawing.Point(389, 71);
+            this.BtnAddPosition.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BtnAddPosition.Location = new System.Drawing.Point(390, 83);
             this.BtnAddPosition.Name = "BtnAddPosition";
-            this.BtnAddPosition.Size = new System.Drawing.Size(169, 23);
+            this.BtnAddPosition.Size = new System.Drawing.Size(182, 33);
             this.BtnAddPosition.TabIndex = 0;
             this.BtnAddPosition.Text = "Добавить должность";
             this.BtnAddPosition.UseVisualStyleBackColor = true;
@@ -450,9 +432,10 @@
             // 
             // tbAddPosition
             // 
+            this.tbAddPosition.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbAddPosition.Location = new System.Drawing.Point(389, 46);
             this.tbAddPosition.Name = "tbAddPosition";
-            this.tbAddPosition.Size = new System.Drawing.Size(170, 20);
+            this.tbAddPosition.Size = new System.Drawing.Size(183, 31);
             this.tbAddPosition.TabIndex = 1;
             // 
             // pageTitles
@@ -460,9 +443,9 @@
             this.pageTitles.Controls.Add(this.groupboxDegrees);
             this.pageTitles.Controls.Add(this.groupboxTitles);
             this.pageTitles.Location = new System.Drawing.Point(4, 22);
-            this.pageTitles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageTitles.Margin = new System.Windows.Forms.Padding(2);
             this.pageTitles.Name = "pageTitles";
-            this.pageTitles.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageTitles.Padding = new System.Windows.Forms.Padding(2);
             this.pageTitles.Size = new System.Drawing.Size(1249, 763);
             this.pageTitles.TabIndex = 2;
             this.pageTitles.Text = "Звания и степени";
@@ -548,34 +531,34 @@
             // 
             // dgvDegrees
             // 
-            dataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDegrees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvDegrees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDegrees.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDegrees.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvDegrees.Location = new System.Drawing.Point(2, 2);
-            this.dgvDegrees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDegrees.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDegrees.Name = "dgvDegrees";
-            dataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDegrees.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDegrees.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvDegrees.RowTemplate.Height = 27;
             this.dgvDegrees.Size = new System.Drawing.Size(373, 257);
             this.dgvDegrees.TabIndex = 4;
@@ -660,34 +643,34 @@
             // 
             // dgvTitles
             // 
-            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle61.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTitles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvTitles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTitles.DefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTitles.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgvTitles.Location = new System.Drawing.Point(2, 2);
-            this.dgvTitles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTitles.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTitles.Name = "dgvTitles";
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTitles.RowHeadersDefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTitles.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvTitles.RowTemplate.Height = 27;
             this.dgvTitles.Size = new System.Drawing.Size(373, 257);
             this.dgvTitles.TabIndex = 4;
@@ -697,9 +680,9 @@
             this.pageChair.Controls.Add(this.groupBox10);
             this.pageChair.Controls.Add(this.gbChair);
             this.pageChair.Location = new System.Drawing.Point(4, 22);
-            this.pageChair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageChair.Margin = new System.Windows.Forms.Padding(2);
             this.pageChair.Name = "pageChair";
-            this.pageChair.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageChair.Padding = new System.Windows.Forms.Padding(2);
             this.pageChair.Size = new System.Drawing.Size(1249, 763);
             this.pageChair.TabIndex = 1;
             this.pageChair.Text = "Кафедра";
@@ -708,7 +691,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.button1);
-            this.groupBox10.Controls.Add(this.button2);
+            this.groupBox10.Controls.Add(this.btnShowChairTimeSheet);
             this.groupBox10.Controls.Add(this.panel1);
             this.groupBox10.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox10.Location = new System.Drawing.Point(607, 8);
@@ -728,79 +711,115 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Удалить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
-            // button2
+            // btnShowChairTimeSheet
             // 
-            this.button2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(3, 566);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 44);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Показать все";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.btnShowChairTimeSheet.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowChairTimeSheet.Location = new System.Drawing.Point(3, 566);
+            this.btnShowChairTimeSheet.Name = "btnShowChairTimeSheet";
+            this.btnShowChairTimeSheet.Size = new System.Drawing.Size(152, 44);
+            this.btnShowChairTimeSheet.TabIndex = 7;
+            this.btnShowChairTimeSheet.Text = "Показать все";
+            this.btnShowChairTimeSheet.UseVisualStyleBackColor = true;
+            this.btnShowChairTimeSheet.Click += new System.EventHandler(this.BtnShowChairTimeSheet_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.comboChairSheet);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.panelAddSheet);
+            this.panel1.Controls.Add(this.dgvTimeSheet);
             this.panel1.Location = new System.Drawing.Point(6, 19);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(584, 541);
             this.panel1.TabIndex = 5;
             // 
+            // panelAddSheet
+            // 
+            this.panelAddSheet.Controls.Add(this.dateTimeSheetEnd);
+            this.panelAddSheet.Controls.Add(this.dateTimeSheetBegin);
+            this.panelAddSheet.Controls.Add(this.label58);
+            this.panelAddSheet.Controls.Add(this.label2);
+            this.panelAddSheet.Controls.Add(this.comboChairSheet);
+            this.panelAddSheet.Controls.Add(this.label7);
+            this.panelAddSheet.Controls.Add(this.btnAddTimeSheet);
+            this.panelAddSheet.Location = new System.Drawing.Point(3, 11);
+            this.panelAddSheet.Name = "panelAddSheet";
+            this.panelAddSheet.Size = new System.Drawing.Size(578, 268);
+            this.panelAddSheet.TabIndex = 21;
+            // 
+            // dateTimeSheetEnd
+            // 
+            this.dateTimeSheetEnd.Location = new System.Drawing.Point(10, 172);
+            this.dateTimeSheetEnd.Name = "dateTimeSheetEnd";
+            this.dateTimeSheetEnd.Size = new System.Drawing.Size(200, 31);
+            this.dateTimeSheetEnd.TabIndex = 22;
+            // 
+            // dateTimeSheetBegin
+            // 
+            this.dateTimeSheetBegin.Location = new System.Drawing.Point(11, 103);
+            this.dateTimeSheetBegin.Name = "dateTimeSheetBegin";
+            this.dateTimeSheetBegin.Size = new System.Drawing.Size(200, 31);
+            this.dateTimeSheetBegin.TabIndex = 21;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label58.Location = new System.Drawing.Point(7, 143);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(99, 23);
+            this.label58.TabIndex = 20;
+            this.label58.Text = "Окончание";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(14, 81);
+            this.label2.Location = new System.Drawing.Point(7, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 23);
+            this.label2.Size = new System.Drawing.Size(69, 23);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Телефон";
+            this.label2.Text = "Начало";
             // 
-            // textBox1
+            // comboChairSheet
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 31);
-            this.textBox1.TabIndex = 5;
+            this.comboChairSheet.FormattingEnabled = true;
+            this.comboChairSheet.Location = new System.Drawing.Point(10, 28);
+            this.comboChairSheet.Name = "comboChairSheet";
+            this.comboChairSheet.Size = new System.Drawing.Size(338, 31);
+            this.comboChairSheet.TabIndex = 19;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(14, 21);
+            this.label7.Location = new System.Drawing.Point(7, 5);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(212, 23);
             this.label7.TabIndex = 2;
             this.label7.Text = "Наименование кафедры:";
             // 
-            // dataGridView1
+            // btnAddTimeSheet
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 284);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(584, 257);
-            this.dataGridView1.TabIndex = 4;
+            this.btnAddTimeSheet.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddTimeSheet.Location = new System.Drawing.Point(238, 172);
+            this.btnAddTimeSheet.Name = "btnAddTimeSheet";
+            this.btnAddTimeSheet.Size = new System.Drawing.Size(152, 33);
+            this.btnAddTimeSheet.TabIndex = 0;
+            this.btnAddTimeSheet.Text = "Добавить кафедру";
+            this.btnAddTimeSheet.UseVisualStyleBackColor = true;
+            this.btnAddTimeSheet.Click += new System.EventHandler(this.BtnAddTimeSheet_Click);
             // 
-            // button3
+            // dgvTimeSheet
             // 
-            this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(402, 115);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 33);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Добавить кафедру";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dgvTimeSheet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTimeSheet.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTimeSheet.Location = new System.Drawing.Point(0, 284);
+            this.dgvTimeSheet.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTimeSheet.Name = "dgvTimeSheet";
+            this.dgvTimeSheet.RowTemplate.Height = 27;
+            this.dgvTimeSheet.Size = new System.Drawing.Size(584, 257);
+            this.dgvTimeSheet.TabIndex = 4;
             // 
             // gbChair
             // 
@@ -836,32 +855,31 @@
             this.BtnShowChairs.TabIndex = 7;
             this.BtnShowChairs.Text = "Показать все";
             this.BtnShowChairs.UseVisualStyleBackColor = true;
-            this.BtnShowChairs.Visible = false;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.groupBox12);
-            this.panel6.Controls.Add(this.groupBox11);
+            this.panel6.Controls.Add(this.gbAddChair);
+            this.panel6.Controls.Add(this.gbUpdPhone);
             this.panel6.Controls.Add(this.dgvChair);
             this.panel6.Location = new System.Drawing.Point(3, 19);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(584, 541);
             this.panel6.TabIndex = 5;
             // 
-            // groupBox12
+            // gbAddChair
             // 
-            this.groupBox12.Controls.Add(this.label3);
-            this.groupBox12.Controls.Add(this.tbAddChairPhone);
-            this.groupBox12.Controls.Add(this.tbAddChair);
-            this.groupBox12.Controls.Add(this.label9);
-            this.groupBox12.Controls.Add(this.btnAddChair);
-            this.groupBox12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox12.Location = new System.Drawing.Point(3, 7);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(280, 272);
-            this.groupBox12.TabIndex = 14;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Добавить кафедру";
+            this.gbAddChair.Controls.Add(this.label3);
+            this.gbAddChair.Controls.Add(this.tbAddChairPhone);
+            this.gbAddChair.Controls.Add(this.tbAddChair);
+            this.gbAddChair.Controls.Add(this.label9);
+            this.gbAddChair.Controls.Add(this.btnAddChair);
+            this.gbAddChair.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbAddChair.Location = new System.Drawing.Point(3, 7);
+            this.gbAddChair.Name = "gbAddChair";
+            this.gbAddChair.Size = new System.Drawing.Size(280, 272);
+            this.gbAddChair.TabIndex = 14;
+            this.gbAddChair.TabStop = false;
+            this.gbAddChair.Text = "Добавить кафедру";
             // 
             // label3
             // 
@@ -910,20 +928,28 @@
             this.btnAddChair.UseVisualStyleBackColor = true;
             this.btnAddChair.Click += new System.EventHandler(this.BtnAddChair_Click_1);
             // 
-            // groupBox11
+            // gbUpdPhone
             // 
-            this.groupBox11.Controls.Add(this.comboChairUpd);
-            this.groupBox11.Controls.Add(this.label65);
-            this.groupBox11.Controls.Add(this.tbChairPhoneUpd);
-            this.groupBox11.Controls.Add(this.label66);
-            this.groupBox11.Controls.Add(this.btnUpdChairPhone);
-            this.groupBox11.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox11.Location = new System.Drawing.Point(289, 3);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(292, 276);
-            this.groupBox11.TabIndex = 13;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Обновить телефон";
+            this.gbUpdPhone.Controls.Add(this.comboChairUpd);
+            this.gbUpdPhone.Controls.Add(this.label65);
+            this.gbUpdPhone.Controls.Add(this.tbChairPhoneUpd);
+            this.gbUpdPhone.Controls.Add(this.label66);
+            this.gbUpdPhone.Controls.Add(this.btnUpdChairPhone);
+            this.gbUpdPhone.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbUpdPhone.Location = new System.Drawing.Point(289, 3);
+            this.gbUpdPhone.Name = "gbUpdPhone";
+            this.gbUpdPhone.Size = new System.Drawing.Size(292, 276);
+            this.gbUpdPhone.TabIndex = 13;
+            this.gbUpdPhone.TabStop = false;
+            this.gbUpdPhone.Text = "Обновить телефон";
+            // 
+            // comboChairUpd
+            // 
+            this.comboChairUpd.FormattingEnabled = true;
+            this.comboChairUpd.Location = new System.Drawing.Point(10, 83);
+            this.comboChairUpd.Name = "comboChairUpd";
+            this.comboChairUpd.Size = new System.Drawing.Size(276, 34);
+            this.comboChairUpd.TabIndex = 18;
             // 
             // label65
             // 
@@ -969,7 +995,7 @@
             this.dgvChair.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChair.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvChair.Location = new System.Drawing.Point(0, 284);
-            this.dgvChair.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvChair.Margin = new System.Windows.Forms.Padding(2);
             this.dgvChair.Name = "dgvChair";
             this.dgvChair.RowTemplate.Height = 27;
             this.dgvChair.Size = new System.Drawing.Size(584, 257);
@@ -979,9 +1005,9 @@
             // 
             this.pageStaff.Controls.Add(this.tabControlStaff);
             this.pageStaff.Location = new System.Drawing.Point(4, 22);
-            this.pageStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageStaff.Margin = new System.Windows.Forms.Padding(2);
             this.pageStaff.Name = "pageStaff";
-            this.pageStaff.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageStaff.Padding = new System.Windows.Forms.Padding(2);
             this.pageStaff.Size = new System.Drawing.Size(1249, 763);
             this.pageStaff.TabIndex = 0;
             this.pageStaff.Text = "Сотрудник";
@@ -1006,7 +1032,7 @@
             this.pageStaffGeneral.Controls.Add(this.splitContainer3);
             this.pageStaffGeneral.Location = new System.Drawing.Point(4, 22);
             this.pageStaffGeneral.Name = "pageStaffGeneral";
-            this.pageStaffGeneral.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pageStaffGeneral.Padding = new System.Windows.Forms.Padding(3);
             this.pageStaffGeneral.Size = new System.Drawing.Size(1237, 733);
             this.pageStaffGeneral.TabIndex = 0;
             this.pageStaffGeneral.Text = "Общее";
@@ -1017,13 +1043,13 @@
             this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer3.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer3.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer3.Name = "splitContainer3";
             // 
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.btnDeleteStaff);
-            this.splitContainer3.Panel1.Controls.Add(this.panel8);
+            this.splitContainer3.Panel1.Controls.Add(this.panelAllStaff);
             this.splitContainer3.Panel1.Controls.Add(this.groupBox2);
             this.splitContainer3.Panel1.Controls.Add(this.groupBox4);
             // 
@@ -1047,19 +1073,19 @@
             this.btnDeleteStaff.UseVisualStyleBackColor = true;
             this.btnDeleteStaff.Click += new System.EventHandler(this.BtnDeleteStaff_Click);
             // 
-            // panel8
+            // panelAllStaff
             // 
-            this.panel8.Controls.Add(this.chboxStaffPass);
-            this.panel8.Controls.Add(this.chboxStaffRegistration);
-            this.panel8.Controls.Add(this.label19);
-            this.panel8.Controls.Add(this.btnSelectAllStaff);
-            this.panel8.Controls.Add(this.chboxStaffType);
-            this.panel8.Controls.Add(this.chboxStaffEducation);
-            this.panel8.Controls.Add(this.chboxStaffPhone);
-            this.panel8.Location = new System.Drawing.Point(3, 251);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(579, 145);
-            this.panel8.TabIndex = 40;
+            this.panelAllStaff.Controls.Add(this.chboxStaffPass);
+            this.panelAllStaff.Controls.Add(this.chboxStaffRegistration);
+            this.panelAllStaff.Controls.Add(this.label19);
+            this.panelAllStaff.Controls.Add(this.btnSelectAllStaff);
+            this.panelAllStaff.Controls.Add(this.chboxStaffType);
+            this.panelAllStaff.Controls.Add(this.chboxStaffEducation);
+            this.panelAllStaff.Controls.Add(this.chboxStaffPhone);
+            this.panelAllStaff.Location = new System.Drawing.Point(3, 251);
+            this.panelAllStaff.Name = "panelAllStaff";
+            this.panelAllStaff.Size = new System.Drawing.Size(579, 145);
+            this.panelAllStaff.TabIndex = 40;
             // 
             // chboxStaffPass
             // 
@@ -1068,7 +1094,7 @@
             this.chboxStaffPass.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxStaffPass.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chboxStaffPass.Location = new System.Drawing.Point(372, 68);
-            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxStaffPass.Margin = new System.Windows.Forms.Padding(2);
             this.chboxStaffPass.Name = "chboxStaffPass";
             this.chboxStaffPass.Size = new System.Drawing.Size(193, 27);
             this.chboxStaffPass.TabIndex = 36;
@@ -1082,7 +1108,7 @@
             this.chboxStaffRegistration.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxStaffRegistration.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chboxStaffRegistration.Location = new System.Drawing.Point(227, 68);
-            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxStaffRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.chboxStaffRegistration.Name = "chboxStaffRegistration";
             this.chboxStaffRegistration.Size = new System.Drawing.Size(107, 27);
             this.chboxStaffRegistration.TabIndex = 35;
@@ -1103,7 +1129,7 @@
             // 
             this.btnSelectAllStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSelectAllStaff.Location = new System.Drawing.Point(135, 99);
-            this.btnSelectAllStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelectAllStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelectAllStaff.Name = "btnSelectAllStaff";
             this.btnSelectAllStaff.Size = new System.Drawing.Size(295, 41);
             this.btnSelectAllStaff.TabIndex = 3;
@@ -1118,7 +1144,7 @@
             this.chboxStaffType.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxStaffType.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chboxStaffType.Location = new System.Drawing.Point(227, 37);
-            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxStaffType.Margin = new System.Windows.Forms.Padding(2);
             this.chboxStaffType.Name = "chboxStaffType";
             this.chboxStaffType.Size = new System.Drawing.Size(153, 27);
             this.chboxStaffType.TabIndex = 38;
@@ -1132,7 +1158,7 @@
             this.chboxStaffEducation.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxStaffEducation.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chboxStaffEducation.Location = new System.Drawing.Point(27, 68);
-            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxStaffEducation.Margin = new System.Windows.Forms.Padding(2);
             this.chboxStaffEducation.Name = "chboxStaffEducation";
             this.chboxStaffEducation.Size = new System.Drawing.Size(136, 27);
             this.chboxStaffEducation.TabIndex = 37;
@@ -1146,7 +1172,7 @@
             this.chboxStaffPhone.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chboxStaffPhone.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.chboxStaffPhone.Location = new System.Drawing.Point(27, 37);
-            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chboxStaffPhone.Margin = new System.Windows.Forms.Padding(2);
             this.chboxStaffPhone.Name = "chboxStaffPhone";
             this.chboxStaffPhone.Size = new System.Drawing.Size(185, 27);
             this.chboxStaffPhone.TabIndex = 39;
@@ -1173,9 +1199,9 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(583, 243);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -1221,7 +1247,7 @@
             // 
             this.btnAddStaff.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddStaff.Location = new System.Drawing.Point(135, 177);
-            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddStaff.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(295, 41);
             this.btnAddStaff.TabIndex = 15;
@@ -1232,7 +1258,7 @@
             // tbStaffInsertRegistration
             // 
             this.tbStaffInsertRegistration.Location = new System.Drawing.Point(417, 106);
-            this.tbStaffInsertRegistration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertRegistration.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertRegistration.Name = "tbStaffInsertRegistration";
             this.tbStaffInsertRegistration.Size = new System.Drawing.Size(162, 20);
             this.tbStaffInsertRegistration.TabIndex = 14;
@@ -1252,7 +1278,7 @@
             // tbStaffInsertPass
             // 
             this.tbStaffInsertPass.Location = new System.Drawing.Point(417, 70);
-            this.tbStaffInsertPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertPass.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertPass.Name = "tbStaffInsertPass";
             this.tbStaffInsertPass.Size = new System.Drawing.Size(162, 20);
             this.tbStaffInsertPass.TabIndex = 12;
@@ -1272,7 +1298,7 @@
             // tbStaffInsertEducation
             // 
             this.tbStaffInsertEducation.Location = new System.Drawing.Point(417, 31);
-            this.tbStaffInsertEducation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertEducation.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertEducation.Name = "tbStaffInsertEducation";
             this.tbStaffInsertEducation.Size = new System.Drawing.Size(162, 20);
             this.tbStaffInsertEducation.TabIndex = 10;
@@ -1281,7 +1307,7 @@
             // tbStaffInsertPhone
             // 
             this.tbStaffInsertPhone.Location = new System.Drawing.Point(100, 143);
-            this.tbStaffInsertPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertPhone.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertPhone.Name = "tbStaffInsertPhone";
             this.tbStaffInsertPhone.Size = new System.Drawing.Size(144, 20);
             this.tbStaffInsertPhone.TabIndex = 9;
@@ -1290,7 +1316,7 @@
             // tbStaffInsertPatronymic
             // 
             this.tbStaffInsertPatronymic.Location = new System.Drawing.Point(100, 104);
-            this.tbStaffInsertPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertPatronymic.Name = "tbStaffInsertPatronymic";
             this.tbStaffInsertPatronymic.Size = new System.Drawing.Size(144, 20);
             this.tbStaffInsertPatronymic.TabIndex = 8;
@@ -1299,7 +1325,7 @@
             // tbStaffInsertLastname
             // 
             this.tbStaffInsertLastname.Location = new System.Drawing.Point(100, 63);
-            this.tbStaffInsertLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertLastname.Name = "tbStaffInsertLastname";
             this.tbStaffInsertLastname.Size = new System.Drawing.Size(144, 20);
             this.tbStaffInsertLastname.TabIndex = 7;
@@ -1308,7 +1334,7 @@
             // tbStaffInsertName
             // 
             this.tbStaffInsertName.Location = new System.Drawing.Point(100, 29);
-            this.tbStaffInsertName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffInsertName.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffInsertName.Name = "tbStaffInsertName";
             this.tbStaffInsertName.Size = new System.Drawing.Size(144, 20);
             this.tbStaffInsertName.TabIndex = 6;
@@ -1372,9 +1398,9 @@
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.Location = new System.Drawing.Point(0, 397);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(583, 272);
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
@@ -1414,7 +1440,7 @@
             // 
             this.btnStaffSelectWithChoice.Font = new System.Drawing.Font("Calibri", 17.25F, System.Drawing.FontStyle.Bold);
             this.btnStaffSelectWithChoice.Location = new System.Drawing.Point(434, 106);
-            this.btnStaffSelectWithChoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStaffSelectWithChoice.Margin = new System.Windows.Forms.Padding(2);
             this.btnStaffSelectWithChoice.Name = "btnStaffSelectWithChoice";
             this.btnStaffSelectWithChoice.Size = new System.Drawing.Size(132, 42);
             this.btnStaffSelectWithChoice.TabIndex = 34;
@@ -1425,7 +1451,7 @@
             // tbStaffSelectByPatronymic
             // 
             this.tbStaffSelectByPatronymic.Location = new System.Drawing.Point(130, 133);
-            this.tbStaffSelectByPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffSelectByPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByPatronymic.Name = "tbStaffSelectByPatronymic";
             this.tbStaffSelectByPatronymic.Size = new System.Drawing.Size(178, 31);
             this.tbStaffSelectByPatronymic.TabIndex = 16;
@@ -1433,7 +1459,7 @@
             // tbStaffSelectByLastname
             // 
             this.tbStaffSelectByLastname.Location = new System.Drawing.Point(130, 98);
-            this.tbStaffSelectByLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffSelectByLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByLastname.Name = "tbStaffSelectByLastname";
             this.tbStaffSelectByLastname.Size = new System.Drawing.Size(178, 31);
             this.tbStaffSelectByLastname.TabIndex = 15;
@@ -1441,7 +1467,7 @@
             // tbStaffSelectByName
             // 
             this.tbStaffSelectByName.Location = new System.Drawing.Point(130, 63);
-            this.tbStaffSelectByName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffSelectByName.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffSelectByName.Name = "tbStaffSelectByName";
             this.tbStaffSelectByName.Size = new System.Drawing.Size(178, 31);
             this.tbStaffSelectByName.TabIndex = 14;
@@ -1483,35 +1509,35 @@
             // 
             // dgvSelectedStaff
             // 
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvSelectedStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle65.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSelectedStaff.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvSelectedStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSelectedStaff.Location = new System.Drawing.Point(0, 0);
-            this.dgvSelectedStaff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSelectedStaff.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSelectedStaff.Name = "dgvSelectedStaff";
-            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle66.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle66.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle66;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSelectedStaff.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvSelectedStaff.RowTemplate.Height = 27;
             this.dgvSelectedStaff.Size = new System.Drawing.Size(442, 723);
             this.dgvSelectedStaff.TabIndex = 1;
@@ -1530,7 +1556,7 @@
             this.pageStaffDegrees.Controls.Add(this.groupBox5);
             this.pageStaffDegrees.Location = new System.Drawing.Point(4, 22);
             this.pageStaffDegrees.Name = "pageStaffDegrees";
-            this.pageStaffDegrees.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.pageStaffDegrees.Padding = new System.Windows.Forms.Padding(3);
             this.pageStaffDegrees.Size = new System.Drawing.Size(1237, 733);
             this.pageStaffDegrees.TabIndex = 1;
             this.pageStaffDegrees.Text = "Звания и степени сотрудника";
@@ -1650,7 +1676,7 @@
             // tbStaffTitleAddPatronymic
             // 
             this.tbStaffTitleAddPatronymic.Location = new System.Drawing.Point(101, 101);
-            this.tbStaffTitleAddPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffTitleAddPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffTitleAddPatronymic.Name = "tbStaffTitleAddPatronymic";
             this.tbStaffTitleAddPatronymic.Size = new System.Drawing.Size(144, 20);
             this.tbStaffTitleAddPatronymic.TabIndex = 24;
@@ -1659,7 +1685,7 @@
             // tbStaffTitleAddLastname
             // 
             this.tbStaffTitleAddLastname.Location = new System.Drawing.Point(101, 60);
-            this.tbStaffTitleAddLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffTitleAddLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffTitleAddLastname.Name = "tbStaffTitleAddLastname";
             this.tbStaffTitleAddLastname.Size = new System.Drawing.Size(144, 20);
             this.tbStaffTitleAddLastname.TabIndex = 23;
@@ -1668,7 +1694,7 @@
             // tbStaffTitleAddName
             // 
             this.tbStaffTitleAddName.Location = new System.Drawing.Point(101, 26);
-            this.tbStaffTitleAddName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffTitleAddName.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffTitleAddName.Name = "tbStaffTitleAddName";
             this.tbStaffTitleAddName.Size = new System.Drawing.Size(144, 20);
             this.tbStaffTitleAddName.TabIndex = 22;
@@ -1727,65 +1753,65 @@
             // 
             // dgvStaffTitle
             // 
-            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle67.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle67.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle67.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle67.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle67.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffTitle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle67;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitle.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvStaffTitle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle68.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle68.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle68.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaffTitle.DefaultCellStyle = dataGridViewCellStyle68;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffTitle.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvStaffTitle.Location = new System.Drawing.Point(554, 280);
             this.dgvStaffTitle.Name = "dgvStaffTitle";
-            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle69.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle69.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle69.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffTitle.RowHeadersDefaultCellStyle = dataGridViewCellStyle69;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffTitle.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvStaffTitle.Size = new System.Drawing.Size(547, 282);
             this.dgvStaffTitle.TabIndex = 16;
             // 
             // dgvStaffDegree
             // 
-            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle70.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle70.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle70.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle70.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffDegree.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle70;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegree.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvStaffDegree.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle71.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle71.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle71.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle71.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle71.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaffDegree.DefaultCellStyle = dataGridViewCellStyle71;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaffDegree.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvStaffDegree.Location = new System.Drawing.Point(6, 280);
             this.dgvStaffDegree.Name = "dgvStaffDegree";
-            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle72.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle72.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle72.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle72.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaffDegree.RowHeadersDefaultCellStyle = dataGridViewCellStyle72;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaffDegree.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvStaffDegree.Size = new System.Drawing.Size(542, 282);
             this.dgvStaffDegree.TabIndex = 15;
             // 
@@ -1839,7 +1865,7 @@
             // tbStaffDegreeAddPatronymic
             // 
             this.tbStaffDegreeAddPatronymic.Location = new System.Drawing.Point(104, 101);
-            this.tbStaffDegreeAddPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffDegreeAddPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffDegreeAddPatronymic.Name = "tbStaffDegreeAddPatronymic";
             this.tbStaffDegreeAddPatronymic.Size = new System.Drawing.Size(144, 20);
             this.tbStaffDegreeAddPatronymic.TabIndex = 24;
@@ -1848,7 +1874,7 @@
             // tbStaffDegreeAddLastname
             // 
             this.tbStaffDegreeAddLastname.Location = new System.Drawing.Point(104, 60);
-            this.tbStaffDegreeAddLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffDegreeAddLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffDegreeAddLastname.Name = "tbStaffDegreeAddLastname";
             this.tbStaffDegreeAddLastname.Size = new System.Drawing.Size(144, 20);
             this.tbStaffDegreeAddLastname.TabIndex = 23;
@@ -1857,7 +1883,7 @@
             // tbStaffDegreeAddName
             // 
             this.tbStaffDegreeAddName.Location = new System.Drawing.Point(104, 26);
-            this.tbStaffDegreeAddName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbStaffDegreeAddName.Margin = new System.Windows.Forms.Padding(2);
             this.tbStaffDegreeAddName.Name = "tbStaffDegreeAddName";
             this.tbStaffDegreeAddName.Size = new System.Drawing.Size(144, 20);
             this.tbStaffDegreeAddName.TabIndex = 22;
@@ -1923,8 +1949,8 @@
             this.pageStaffOrders.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.pageStaffOrders.Location = new System.Drawing.Point(4, 22);
             this.pageStaffOrders.Name = "pageStaffOrders";
-            this.pageStaffOrders.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.pageStaffOrders.Size = new System.Drawing.Size(1238, 736);
+            this.pageStaffOrders.Padding = new System.Windows.Forms.Padding(3);
+            this.pageStaffOrders.Size = new System.Drawing.Size(1237, 733);
             this.pageStaffOrders.TabIndex = 2;
             this.pageStaffOrders.Text = "Приказы по сотруднику";
             this.pageStaffOrders.UseVisualStyleBackColor = true;
@@ -1972,7 +1998,7 @@
             // tbOrderShowPatronymic
             // 
             this.tbOrderShowPatronymic.Location = new System.Drawing.Point(104, 101);
-            this.tbOrderShowPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderShowPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderShowPatronymic.Name = "tbOrderShowPatronymic";
             this.tbOrderShowPatronymic.Size = new System.Drawing.Size(144, 21);
             this.tbOrderShowPatronymic.TabIndex = 24;
@@ -1981,7 +2007,7 @@
             // tbOrderShowLastname
             // 
             this.tbOrderShowLastname.Location = new System.Drawing.Point(104, 60);
-            this.tbOrderShowLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderShowLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderShowLastname.Name = "tbOrderShowLastname";
             this.tbOrderShowLastname.Size = new System.Drawing.Size(144, 21);
             this.tbOrderShowLastname.TabIndex = 23;
@@ -1990,7 +2016,7 @@
             // tbOrderShowName
             // 
             this.tbOrderShowName.Location = new System.Drawing.Point(104, 26);
-            this.tbOrderShowName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderShowName.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderShowName.Name = "tbOrderShowName";
             this.tbOrderShowName.Size = new System.Drawing.Size(144, 21);
             this.tbOrderShowName.TabIndex = 22;
@@ -2065,6 +2091,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.panelSickListOrder);
             this.groupBox3.Controls.Add(this.panelBusinessTripOrder);
             this.groupBox3.Controls.Add(this.label42);
             this.groupBox3.Controls.Add(this.label41);
@@ -2086,21 +2113,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Добавить приказ";
             // 
-            // panelBusinessTripOrder
-            // 
-            this.panelBusinessTripOrder.Controls.Add(this.panelSickListOrder);
-            this.panelBusinessTripOrder.Controls.Add(this.label43);
-            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripToBePaid);
-            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripPurpose);
-            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripPlace);
-            this.panelBusinessTripOrder.Controls.Add(this.label44);
-            this.panelBusinessTripOrder.Controls.Add(this.label45);
-            this.panelBusinessTripOrder.Location = new System.Drawing.Point(6, 243);
-            this.panelBusinessTripOrder.Name = "panelBusinessTripOrder";
-            this.panelBusinessTripOrder.Size = new System.Drawing.Size(324, 128);
-            this.panelBusinessTripOrder.TabIndex = 30;
-            this.panelBusinessTripOrder.Visible = false;
-            // 
             // panelSickListOrder
             // 
             this.panelSickListOrder.Controls.Add(this.rbtnSickListNo);
@@ -2108,7 +2120,7 @@
             this.panelSickListOrder.Controls.Add(this.label46);
             this.panelSickListOrder.Controls.Add(this.textBox12);
             this.panelSickListOrder.Controls.Add(this.label48);
-            this.panelSickListOrder.Location = new System.Drawing.Point(3, 3);
+            this.panelSickListOrder.Location = new System.Drawing.Point(6, 377);
             this.panelSickListOrder.Name = "panelSickListOrder";
             this.panelSickListOrder.Size = new System.Drawing.Size(318, 82);
             this.panelSickListOrder.TabIndex = 32;
@@ -2149,7 +2161,7 @@
             // textBox12
             // 
             this.textBox12.Location = new System.Drawing.Point(95, 11);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(144, 21);
             this.textBox12.TabIndex = 28;
@@ -2166,6 +2178,20 @@
             this.label48.TabIndex = 26;
             this.label48.Text = "Причина";
             // 
+            // panelBusinessTripOrder
+            // 
+            this.panelBusinessTripOrder.Controls.Add(this.label43);
+            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripToBePaid);
+            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripPurpose);
+            this.panelBusinessTripOrder.Controls.Add(this.tbBusinessTripPlace);
+            this.panelBusinessTripOrder.Controls.Add(this.label44);
+            this.panelBusinessTripOrder.Controls.Add(this.label45);
+            this.panelBusinessTripOrder.Location = new System.Drawing.Point(6, 243);
+            this.panelBusinessTripOrder.Name = "panelBusinessTripOrder";
+            this.panelBusinessTripOrder.Size = new System.Drawing.Size(318, 128);
+            this.panelBusinessTripOrder.TabIndex = 30;
+            this.panelBusinessTripOrder.Visible = false;
+            // 
             // label43
             // 
             this.label43.AutoSize = true;
@@ -2180,7 +2206,7 @@
             // tbBusinessTripToBePaid
             // 
             this.tbBusinessTripToBePaid.Location = new System.Drawing.Point(98, 88);
-            this.tbBusinessTripToBePaid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbBusinessTripToBePaid.Margin = new System.Windows.Forms.Padding(2);
             this.tbBusinessTripToBePaid.Name = "tbBusinessTripToBePaid";
             this.tbBusinessTripToBePaid.Size = new System.Drawing.Size(144, 21);
             this.tbBusinessTripToBePaid.TabIndex = 30;
@@ -2189,7 +2215,7 @@
             // tbBusinessTripPurpose
             // 
             this.tbBusinessTripPurpose.Location = new System.Drawing.Point(98, 47);
-            this.tbBusinessTripPurpose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbBusinessTripPurpose.Margin = new System.Windows.Forms.Padding(2);
             this.tbBusinessTripPurpose.Name = "tbBusinessTripPurpose";
             this.tbBusinessTripPurpose.Size = new System.Drawing.Size(144, 21);
             this.tbBusinessTripPurpose.TabIndex = 29;
@@ -2198,7 +2224,7 @@
             // tbBusinessTripPlace
             // 
             this.tbBusinessTripPlace.Location = new System.Drawing.Point(98, 13);
-            this.tbBusinessTripPlace.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbBusinessTripPlace.Margin = new System.Windows.Forms.Padding(2);
             this.tbBusinessTripPlace.Name = "tbBusinessTripPlace";
             this.tbBusinessTripPlace.Size = new System.Drawing.Size(144, 21);
             this.tbBusinessTripPlace.TabIndex = 28;
@@ -2302,7 +2328,7 @@
             // tbOrderPatronymic
             // 
             this.tbOrderPatronymic.Location = new System.Drawing.Point(104, 101);
-            this.tbOrderPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderPatronymic.Name = "tbOrderPatronymic";
             this.tbOrderPatronymic.Size = new System.Drawing.Size(144, 21);
             this.tbOrderPatronymic.TabIndex = 24;
@@ -2311,7 +2337,7 @@
             // tbOrderLastname
             // 
             this.tbOrderLastname.Location = new System.Drawing.Point(104, 60);
-            this.tbOrderLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderLastname.Name = "tbOrderLastname";
             this.tbOrderLastname.Size = new System.Drawing.Size(144, 21);
             this.tbOrderLastname.TabIndex = 23;
@@ -2320,7 +2346,7 @@
             // tbOrderName
             // 
             this.tbOrderName.Location = new System.Drawing.Point(104, 26);
-            this.tbOrderName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderName.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderName.Name = "tbOrderName";
             this.tbOrderName.Size = new System.Drawing.Size(144, 21);
             this.tbOrderName.TabIndex = 22;
@@ -2365,9 +2391,9 @@
             this.pageStaffContract.Controls.Add(this.groupBox9);
             this.pageStaffContract.Controls.Add(this.groupBox8);
             this.pageStaffContract.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffContract.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageStaffContract.Margin = new System.Windows.Forms.Padding(2);
             this.pageStaffContract.Name = "pageStaffContract";
-            this.pageStaffContract.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageStaffContract.Padding = new System.Windows.Forms.Padding(2);
             this.pageStaffContract.Size = new System.Drawing.Size(1237, 733);
             this.pageStaffContract.TabIndex = 3;
             this.pageStaffContract.Text = "Трудовой договор";
@@ -2382,6 +2408,8 @@
             this.btnDeleteContract.TabIndex = 36;
             this.btnDeleteContract.Text = "Удалить";
             this.btnDeleteContract.UseVisualStyleBackColor = true;
+            this.btnDeleteContract.Visible = false;
+            this.btnDeleteContract.Click += new System.EventHandler(this.BtnDeleteContract_Click);
             // 
             // groupBox9
             // 
@@ -2459,7 +2487,7 @@
             // dateContractEnd
             // 
             this.dateContractEnd.Location = new System.Drawing.Point(109, 248);
-            this.dateContractEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateContractEnd.Margin = new System.Windows.Forms.Padding(2);
             this.dateContractEnd.Name = "dateContractEnd";
             this.dateContractEnd.Size = new System.Drawing.Size(144, 20);
             this.dateContractEnd.TabIndex = 60;
@@ -2467,7 +2495,7 @@
             // dateContractBeginn
             // 
             this.dateContractBeginn.Location = new System.Drawing.Point(109, 210);
-            this.dateContractBeginn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateContractBeginn.Margin = new System.Windows.Forms.Padding(2);
             this.dateContractBeginn.Name = "dateContractBeginn";
             this.dateContractBeginn.Size = new System.Drawing.Size(144, 20);
             this.dateContractBeginn.TabIndex = 59;
@@ -2508,7 +2536,7 @@
             // tbContractAddStaffPatronymic
             // 
             this.tbContractAddStaffPatronymic.Location = new System.Drawing.Point(109, 95);
-            this.tbContractAddStaffPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbContractAddStaffPatronymic.Margin = new System.Windows.Forms.Padding(2);
             this.tbContractAddStaffPatronymic.Name = "tbContractAddStaffPatronymic";
             this.tbContractAddStaffPatronymic.Size = new System.Drawing.Size(273, 20);
             this.tbContractAddStaffPatronymic.TabIndex = 53;
@@ -2517,7 +2545,7 @@
             // tbContractAddStaffLastname
             // 
             this.tbContractAddStaffLastname.Location = new System.Drawing.Point(109, 56);
-            this.tbContractAddStaffLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbContractAddStaffLastname.Margin = new System.Windows.Forms.Padding(2);
             this.tbContractAddStaffLastname.Name = "tbContractAddStaffLastname";
             this.tbContractAddStaffLastname.Size = new System.Drawing.Size(273, 20);
             this.tbContractAddStaffLastname.TabIndex = 52;
@@ -2526,7 +2554,7 @@
             // tbContractAddStaffName
             // 
             this.tbContractAddStaffName.Location = new System.Drawing.Point(109, 21);
-            this.tbContractAddStaffName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbContractAddStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.tbContractAddStaffName.Name = "tbContractAddStaffName";
             this.tbContractAddStaffName.Size = new System.Drawing.Size(273, 20);
             this.tbContractAddStaffName.TabIndex = 51;
@@ -2556,21 +2584,101 @@
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.panelContractSelect);
             this.groupBox8.Controls.Add(this.btnSelectAllContracts);
             this.groupBox8.Controls.Add(this.panel4);
-            this.groupBox8.Controls.Add(this.label8);
-            this.groupBox8.Controls.Add(this.btnContractShow);
-            this.groupBox8.Controls.Add(this.label6);
-            this.groupBox8.Controls.Add(this.tbContractSelectName);
-            this.groupBox8.Controls.Add(this.tbContractSelectLastname);
-            this.groupBox8.Controls.Add(this.tbContractSelectPatronymic);
-            this.groupBox8.Controls.Add(this.label5);
             this.groupBox8.Location = new System.Drawing.Point(5, 5);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(557, 728);
             this.groupBox8.TabIndex = 49;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Показать";
+            // 
+            // panelContractSelect
+            // 
+            this.panelContractSelect.Controls.Add(this.label8);
+            this.panelContractSelect.Controls.Add(this.label5);
+            this.panelContractSelect.Controls.Add(this.tbContractSelectPatronymic);
+            this.panelContractSelect.Controls.Add(this.tbContractSelectLastname);
+            this.panelContractSelect.Controls.Add(this.btnContractShow);
+            this.panelContractSelect.Controls.Add(this.tbContractSelectName);
+            this.panelContractSelect.Controls.Add(this.label6);
+            this.panelContractSelect.Location = new System.Drawing.Point(22, 21);
+            this.panelContractSelect.Name = "panelContractSelect";
+            this.panelContractSelect.Size = new System.Drawing.Size(502, 130);
+            this.panelContractSelect.TabIndex = 34;
+            this.panelContractSelect.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(8, 6);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(38, 19);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Имя";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(8, 40);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 19);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Фамилия";
+            // 
+            // tbContractSelectPatronymic
+            // 
+            this.tbContractSelectPatronymic.Location = new System.Drawing.Point(103, 78);
+            this.tbContractSelectPatronymic.Margin = new System.Windows.Forms.Padding(2);
+            this.tbContractSelectPatronymic.Name = "tbContractSelectPatronymic";
+            this.tbContractSelectPatronymic.Size = new System.Drawing.Size(144, 20);
+            this.tbContractSelectPatronymic.TabIndex = 31;
+            this.tbContractSelectPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbContractSelectLastname
+            // 
+            this.tbContractSelectLastname.Location = new System.Drawing.Point(103, 37);
+            this.tbContractSelectLastname.Margin = new System.Windows.Forms.Padding(2);
+            this.tbContractSelectLastname.Name = "tbContractSelectLastname";
+            this.tbContractSelectLastname.Size = new System.Drawing.Size(144, 20);
+            this.tbContractSelectLastname.TabIndex = 30;
+            this.tbContractSelectLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnContractShow
+            // 
+            this.btnContractShow.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnContractShow.Location = new System.Drawing.Point(298, 49);
+            this.btnContractShow.Name = "btnContractShow";
+            this.btnContractShow.Size = new System.Drawing.Size(177, 48);
+            this.btnContractShow.TabIndex = 26;
+            this.btnContractShow.Text = "Показать";
+            this.btnContractShow.UseVisualStyleBackColor = true;
+            this.btnContractShow.Click += new System.EventHandler(this.BtnContractShow_Click);
+            // 
+            // tbContractSelectName
+            // 
+            this.tbContractSelectName.Location = new System.Drawing.Point(103, 3);
+            this.tbContractSelectName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbContractSelectName.Name = "tbContractSelectName";
+            this.tbContractSelectName.Size = new System.Drawing.Size(144, 20);
+            this.tbContractSelectName.TabIndex = 29;
+            this.tbContractSelectName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(8, 78);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 19);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Отчество";
             // 
             // btnSelectAllContracts
             // 
@@ -2596,93 +2704,23 @@
             this.dgvStaffContract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaffContract.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaffContract.Location = new System.Drawing.Point(0, 0);
-            this.dgvStaffContract.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStaffContract.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStaffContract.Name = "dgvStaffContract";
             this.dgvStaffContract.RowTemplate.Height = 27;
             this.dgvStaffContract.Size = new System.Drawing.Size(551, 511);
             this.dgvStaffContract.TabIndex = 33;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(19, 27);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 19);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Имя";
-            // 
-            // btnContractShow
-            // 
-            this.btnContractShow.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnContractShow.Location = new System.Drawing.Point(309, 70);
-            this.btnContractShow.Name = "btnContractShow";
-            this.btnContractShow.Size = new System.Drawing.Size(177, 48);
-            this.btnContractShow.TabIndex = 26;
-            this.btnContractShow.Text = "Показать";
-            this.btnContractShow.UseVisualStyleBackColor = true;
-            this.btnContractShow.Click += new System.EventHandler(this.BtnContractShow_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(19, 99);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 19);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Отчество";
-            // 
-            // tbContractSelectName
-            // 
-            this.tbContractSelectName.Location = new System.Drawing.Point(114, 24);
-            this.tbContractSelectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbContractSelectName.Name = "tbContractSelectName";
-            this.tbContractSelectName.Size = new System.Drawing.Size(144, 20);
-            this.tbContractSelectName.TabIndex = 29;
-            this.tbContractSelectName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbContractSelectLastname
-            // 
-            this.tbContractSelectLastname.Location = new System.Drawing.Point(114, 58);
-            this.tbContractSelectLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbContractSelectLastname.Name = "tbContractSelectLastname";
-            this.tbContractSelectLastname.Size = new System.Drawing.Size(144, 20);
-            this.tbContractSelectLastname.TabIndex = 30;
-            this.tbContractSelectLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tbContractSelectPatronymic
-            // 
-            this.tbContractSelectPatronymic.Location = new System.Drawing.Point(114, 99);
-            this.tbContractSelectPatronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbContractSelectPatronymic.Name = "tbContractSelectPatronymic";
-            this.tbContractSelectPatronymic.Size = new System.Drawing.Size(144, 20);
-            this.tbContractSelectPatronymic.TabIndex = 31;
-            this.tbContractSelectPatronymic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(19, 61);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 19);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Фамилия";
-            // 
             // pageStaffWorkingTime
             // 
+            this.pageStaffWorkingTime.Controls.Add(this.btnShowAllEmployeeSheet);
             this.pageStaffWorkingTime.Controls.Add(this.BtnDeleteStaffTimeSheet);
             this.pageStaffWorkingTime.Controls.Add(this.gbAddTimeSheet);
             this.pageStaffWorkingTime.Controls.Add(this.groupBox1);
             this.pageStaffWorkingTime.Location = new System.Drawing.Point(4, 22);
-            this.pageStaffWorkingTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pageStaffWorkingTime.Margin = new System.Windows.Forms.Padding(2);
             this.pageStaffWorkingTime.Name = "pageStaffWorkingTime";
-            this.pageStaffWorkingTime.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pageStaffWorkingTime.Size = new System.Drawing.Size(1238, 736);
+            this.pageStaffWorkingTime.Padding = new System.Windows.Forms.Padding(2);
+            this.pageStaffWorkingTime.Size = new System.Drawing.Size(1237, 733);
             this.pageStaffWorkingTime.TabIndex = 4;
             this.pageStaffWorkingTime.Text = "Табель рабочего времени";
             this.pageStaffWorkingTime.UseVisualStyleBackColor = true;
@@ -2696,64 +2734,62 @@
             this.BtnDeleteStaffTimeSheet.TabIndex = 89;
             this.BtnDeleteStaffTimeSheet.Text = "Удалить";
             this.BtnDeleteStaffTimeSheet.UseVisualStyleBackColor = true;
+            this.BtnDeleteStaffTimeSheet.Visible = false;
             // 
             // gbAddTimeSheet
             // 
-            this.gbAddTimeSheet.Controls.Add(this.textBox25);
-            this.gbAddTimeSheet.Controls.Add(this.textBox24);
-            this.gbAddTimeSheet.Controls.Add(this.button4);
+            this.gbAddTimeSheet.Controls.Add(this.tbAddStaffSheetVacations);
+            this.gbAddTimeSheet.Controls.Add(this.tbAddStaffSheetDayOffs);
+            this.gbAddTimeSheet.Controls.Add(this.btnAddStaffSheet);
             this.gbAddTimeSheet.Controls.Add(this.label54);
             this.gbAddTimeSheet.Controls.Add(this.label55);
-            this.gbAddTimeSheet.Controls.Add(this.textBox16);
+            this.gbAddTimeSheet.Controls.Add(this.tbAddStaffSheetWorkdays);
             this.gbAddTimeSheet.Controls.Add(this.label56);
-            this.gbAddTimeSheet.Controls.Add(this.textBox17);
+            this.gbAddTimeSheet.Controls.Add(this.tbAddStaffSheetTimeSheet);
             this.gbAddTimeSheet.Controls.Add(this.label57);
-            this.gbAddTimeSheet.Controls.Add(this.label58);
-            this.gbAddTimeSheet.Controls.Add(this.textBox18);
-            this.gbAddTimeSheet.Controls.Add(this.textBox19);
-            this.gbAddTimeSheet.Controls.Add(this.tb);
-            this.gbAddTimeSheet.Controls.Add(this.label59);
+            this.gbAddTimeSheet.Controls.Add(this.tbAddStaffSheetId);
             this.gbAddTimeSheet.Controls.Add(this.label60);
             this.gbAddTimeSheet.Location = new System.Drawing.Point(578, 5);
             this.gbAddTimeSheet.Name = "gbAddTimeSheet";
-            this.gbAddTimeSheet.Size = new System.Drawing.Size(274, 345);
+            this.gbAddTimeSheet.Size = new System.Drawing.Size(323, 345);
             this.gbAddTimeSheet.TabIndex = 75;
             this.gbAddTimeSheet.TabStop = false;
             this.gbAddTimeSheet.Text = "Добавить";
             // 
-            // textBox25
+            // tbAddStaffSheetVacations
             // 
-            this.textBox25.Location = new System.Drawing.Point(118, 246);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(144, 20);
-            this.textBox25.TabIndex = 88;
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddStaffSheetVacations.Location = new System.Drawing.Point(144, 163);
+            this.tbAddStaffSheetVacations.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddStaffSheetVacations.Name = "tbAddStaffSheetVacations";
+            this.tbAddStaffSheetVacations.Size = new System.Drawing.Size(144, 20);
+            this.tbAddStaffSheetVacations.TabIndex = 88;
+            this.tbAddStaffSheetVacations.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox24
+            // tbAddStaffSheetDayOffs
             // 
-            this.textBox24.Location = new System.Drawing.Point(118, 208);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(144, 20);
-            this.textBox24.TabIndex = 87;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddStaffSheetDayOffs.Location = new System.Drawing.Point(144, 125);
+            this.tbAddStaffSheetDayOffs.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddStaffSheetDayOffs.Name = "tbAddStaffSheetDayOffs";
+            this.tbAddStaffSheetDayOffs.Size = new System.Drawing.Size(144, 20);
+            this.tbAddStaffSheetDayOffs.TabIndex = 87;
+            this.tbAddStaffSheetDayOffs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button4
+            // btnAddStaffSheet
             // 
-            this.button4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(118, 281);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 48);
-            this.button4.TabIndex = 86;
-            this.button4.Text = "Добавить";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAddStaffSheet.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddStaffSheet.Location = new System.Drawing.Point(144, 198);
+            this.btnAddStaffSheet.Name = "btnAddStaffSheet";
+            this.btnAddStaffSheet.Size = new System.Drawing.Size(144, 48);
+            this.btnAddStaffSheet.TabIndex = 86;
+            this.btnAddStaffSheet.Text = "Добавить";
+            this.btnAddStaffSheet.UseVisualStyleBackColor = true;
+            this.btnAddStaffSheet.Click += new System.EventHandler(this.BtnAddStaffSheet_Click);
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label54.Location = new System.Drawing.Point(5, 247);
+            this.label54.Location = new System.Drawing.Point(5, 164);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(82, 19);
@@ -2764,101 +2800,61 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label55.Location = new System.Drawing.Point(5, 209);
+            this.label55.Location = new System.Drawing.Point(5, 126);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(80, 19);
             this.label55.TabIndex = 84;
             this.label55.Text = "Выходных";
             // 
-            // textBox16
+            // tbAddStaffSheetWorkdays
             // 
-            this.textBox16.Location = new System.Drawing.Point(118, 175);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(144, 20);
-            this.textBox16.TabIndex = 83;
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddStaffSheetWorkdays.Location = new System.Drawing.Point(144, 92);
+            this.tbAddStaffSheetWorkdays.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddStaffSheetWorkdays.Name = "tbAddStaffSheetWorkdays";
+            this.tbAddStaffSheetWorkdays.Size = new System.Drawing.Size(144, 20);
+            this.tbAddStaffSheetWorkdays.TabIndex = 83;
+            this.tbAddStaffSheetWorkdays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label56.Location = new System.Drawing.Point(5, 175);
+            this.label56.Location = new System.Drawing.Point(5, 92);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(105, 19);
             this.label56.TabIndex = 82;
             this.label56.Text = "Рабочих дней";
             // 
-            // textBox17
+            // tbAddStaffSheetTimeSheet
             // 
-            this.textBox17.Location = new System.Drawing.Point(118, 138);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(144, 20);
-            this.textBox17.TabIndex = 81;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbAddStaffSheetTimeSheet.Location = new System.Drawing.Point(144, 55);
+            this.tbAddStaffSheetTimeSheet.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddStaffSheetTimeSheet.Name = "tbAddStaffSheetTimeSheet";
+            this.tbAddStaffSheetTimeSheet.Size = new System.Drawing.Size(144, 20);
+            this.tbAddStaffSheetTimeSheet.TabIndex = 81;
+            this.tbAddStaffSheetTimeSheet.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label57
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label57.Location = new System.Drawing.Point(5, 137);
+            this.label57.Location = new System.Drawing.Point(5, 54);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(105, 19);
             this.label57.TabIndex = 80;
             this.label57.Text = "Номер табеля";
             // 
-            // label58
+            // tbAddStaffSheetId
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label58.Location = new System.Drawing.Point(5, 55);
-            this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(73, 19);
-            this.label58.TabIndex = 79;
-            this.label58.Text = "Фамилия";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(118, 95);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(144, 20);
-            this.textBox18.TabIndex = 78;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(118, 56);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(144, 20);
-            this.textBox19.TabIndex = 77;
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb
-            // 
-            this.tb.Location = new System.Drawing.Point(118, 20);
-            this.tb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tb.Name = "tb";
-            this.tb.Size = new System.Drawing.Size(144, 20);
-            this.tb.TabIndex = 76;
-            this.tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label59.Location = new System.Drawing.Point(5, 94);
-            this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(71, 19);
-            this.label59.TabIndex = 75;
-            this.label59.Text = "Отчество";
+            this.tbAddStaffSheetId.Location = new System.Drawing.Point(144, 20);
+            this.tbAddStaffSheetId.Margin = new System.Windows.Forms.Padding(2);
+            this.tbAddStaffSheetId.Name = "tbAddStaffSheetId";
+            this.tbAddStaffSheetId.Size = new System.Drawing.Size(144, 20);
+            this.tbAddStaffSheetId.TabIndex = 76;
+            this.tbAddStaffSheetId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label60
             // 
@@ -2867,26 +2863,105 @@
             this.label60.Location = new System.Drawing.Point(5, 21);
             this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(38, 19);
+            this.label60.Size = new System.Drawing.Size(135, 19);
             this.label60.TabIndex = 74;
-            this.label60.Text = "Имя";
+            this.label60.Text = "Номер сотрудника";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panelSelectStaffSheet);
             this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.label61);
-            this.groupBox1.Controls.Add(this.textBox21);
-            this.groupBox1.Controls.Add(this.textBox22);
-            this.groupBox1.Controls.Add(this.textBox23);
-            this.groupBox1.Controls.Add(this.label62);
-            this.groupBox1.Controls.Add(this.label63);
-            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(567, 723);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбор ";
+            // 
+            // panelSelectStaffSheet
+            // 
+            this.panelSelectStaffSheet.Controls.Add(this.label63);
+            this.panelSelectStaffSheet.Controls.Add(this.label61);
+            this.panelSelectStaffSheet.Controls.Add(this.button5);
+            this.panelSelectStaffSheet.Controls.Add(this.textBox21);
+            this.panelSelectStaffSheet.Controls.Add(this.label62);
+            this.panelSelectStaffSheet.Controls.Add(this.textBox22);
+            this.panelSelectStaffSheet.Controls.Add(this.textBox23);
+            this.panelSelectStaffSheet.Location = new System.Drawing.Point(9, 12);
+            this.panelSelectStaffSheet.Name = "panelSelectStaffSheet";
+            this.panelSelectStaffSheet.Size = new System.Drawing.Size(483, 120);
+            this.panelSelectStaffSheet.TabIndex = 65;
+            this.panelSelectStaffSheet.Visible = false;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label63.Location = new System.Drawing.Point(1, 8);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(38, 19);
+            this.label63.TabIndex = 58;
+            this.label63.Text = "Имя";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label61.Location = new System.Drawing.Point(1, 42);
+            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(73, 19);
+            this.label61.TabIndex = 63;
+            this.label61.Text = "Фамилия";
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(245, 53);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(177, 48);
+            this.button5.TabIndex = 57;
+            this.button5.Text = "Показать";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox21
+            // 
+            this.textBox21.Location = new System.Drawing.Point(96, 81);
+            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(144, 20);
+            this.textBox21.TabIndex = 62;
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label62.Location = new System.Drawing.Point(1, 81);
+            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(71, 19);
+            this.label62.TabIndex = 59;
+            this.label62.Text = "Отчество";
+            // 
+            // textBox22
+            // 
+            this.textBox22.Location = new System.Drawing.Point(96, 39);
+            this.textBox22.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(144, 20);
+            this.textBox22.TabIndex = 61;
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox23
+            // 
+            this.textBox23.Location = new System.Drawing.Point(96, 6);
+            this.textBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(144, 20);
+            this.textBox23.TabIndex = 60;
+            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -2901,81 +2976,11 @@
             this.dgvStaffEmployeeSheet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStaffEmployeeSheet.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaffEmployeeSheet.Location = new System.Drawing.Point(0, 0);
-            this.dgvStaffEmployeeSheet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStaffEmployeeSheet.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStaffEmployeeSheet.Name = "dgvStaffEmployeeSheet";
             this.dgvStaffEmployeeSheet.RowTemplate.Height = 27;
             this.dgvStaffEmployeeSheet.Size = new System.Drawing.Size(555, 579);
             this.dgvStaffEmployeeSheet.TabIndex = 64;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label61.Location = new System.Drawing.Point(5, 56);
-            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(73, 19);
-            this.label61.TabIndex = 63;
-            this.label61.Text = "Фамилия";
-            // 
-            // textBox21
-            // 
-            this.textBox21.Location = new System.Drawing.Point(100, 95);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(144, 20);
-            this.textBox21.TabIndex = 62;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(100, 53);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(144, 20);
-            this.textBox22.TabIndex = 61;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Location = new System.Drawing.Point(100, 20);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(144, 20);
-            this.textBox23.TabIndex = 60;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(5, 95);
-            this.label62.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(71, 19);
-            this.label62.TabIndex = 59;
-            this.label62.Text = "Отчество";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label63.Location = new System.Drawing.Point(5, 22);
-            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(38, 19);
-            this.label63.TabIndex = 58;
-            this.label63.Text = "Имя";
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(249, 67);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(177, 48);
-            this.button5.TabIndex = 57;
-            this.button5.Text = "Показать";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // tabControlMain
             // 
@@ -2985,7 +2990,7 @@
             this.tabControlMain.Controls.Add(this.pagePositions);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
-            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1257, 789);
@@ -3065,37 +3070,25 @@
             this.label68.TabIndex = 10;
             this.label68.Text = "Логин";
             // 
-            // comboChairUpd
+            // btnShowAllEmployeeSheet
             // 
-            this.comboChairUpd.FormattingEnabled = true;
-            this.comboChairUpd.Location = new System.Drawing.Point(10, 87);
-            this.comboChairUpd.Name = "comboChairUpd";
-            this.comboChairUpd.Size = new System.Drawing.Size(276, 34);
-            this.comboChairUpd.TabIndex = 18;
-            // 
-            // comboChairSheet
-            // 
-            this.comboChairSheet.FormattingEnabled = true;
-            this.comboChairSheet.Location = new System.Drawing.Point(17, 44);
-            this.comboChairSheet.Name = "comboChairSheet";
-            this.comboChairSheet.Size = new System.Drawing.Size(338, 31);
-            this.comboChairSheet.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(18, 163);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 31);
-            this.textBox2.TabIndex = 20;
+            this.btnShowAllEmployeeSheet.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowAllEmployeeSheet.Location = new System.Drawing.Point(571, 364);
+            this.btnShowAllEmployeeSheet.Name = "btnShowAllEmployeeSheet";
+            this.btnShowAllEmployeeSheet.Size = new System.Drawing.Size(177, 48);
+            this.btnShowAllEmployeeSheet.TabIndex = 64;
+            this.btnShowAllEmployeeSheet.Text = "Показать все";
+            this.btnShowAllEmployeeSheet.UseVisualStyleBackColor = true;
+            this.btnShowAllEmployeeSheet.Click += new System.EventHandler(this.BtnShowAllEmployeeSheet_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 789);
-            this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.tabControlMain);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.gbLogin);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -3119,14 +3112,15 @@
             this.pageChair.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panelAddSheet.ResumeLayout(false);
+            this.panelAddSheet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTimeSheet)).EndInit();
             this.gbChair.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
+            this.gbAddChair.ResumeLayout(false);
+            this.gbAddChair.PerformLayout();
+            this.gbUpdPhone.ResumeLayout(false);
+            this.gbUpdPhone.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChair)).EndInit();
             this.pageStaff.ResumeLayout(false);
             this.tabControlStaff.ResumeLayout(false);
@@ -3135,8 +3129,8 @@
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelAllStaff.ResumeLayout(false);
+            this.panelAllStaff.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -3156,22 +3150,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.panelBusinessTripOrder.ResumeLayout(false);
-            this.panelBusinessTripOrder.PerformLayout();
             this.panelSickListOrder.ResumeLayout(false);
             this.panelSickListOrder.PerformLayout();
+            this.panelBusinessTripOrder.ResumeLayout(false);
+            this.panelBusinessTripOrder.PerformLayout();
             this.pageStaffContract.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.panelContractSelect.ResumeLayout(false);
+            this.panelContractSelect.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffContract)).EndInit();
             this.pageStaffWorkingTime.ResumeLayout(false);
             this.gbAddTimeSheet.ResumeLayout(false);
             this.gbAddTimeSheet.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panelSelectStaffSheet.ResumeLayout(false);
+            this.panelSelectStaffSheet.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).EndInit();
             this.tabControlMain.ResumeLayout(false);
@@ -3258,7 +3254,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView dgvSelectedStaff;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelAllStaff;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox tbStaffTitleAddPatronymic;
@@ -3346,20 +3342,16 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button BtnDeleteStaffTimeSheet;
         private System.Windows.Forms.GroupBox gbAddTimeSheet;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox tbAddStaffSheetVacations;
+        private System.Windows.Forms.TextBox tbAddStaffSheetDayOffs;
+        private System.Windows.Forms.Button btnAddStaffSheet;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox tbAddStaffSheetWorkdays;
         private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox tbAddStaffSheetTimeSheet;
         private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox tb;
-        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox tbAddStaffSheetId;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
@@ -3389,20 +3381,19 @@
         private System.Windows.Forms.ComboBox comboStaffType;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnShowChairTimeSheet;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.DataGridView dgvTimeSheet;
+        private System.Windows.Forms.Button btnAddTimeSheet;
+        private System.Windows.Forms.GroupBox gbAddChair;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbAddChairPhone;
         private System.Windows.Forms.TextBox tbAddChair;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAddChair;
-        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox gbUpdPhone;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox tbChairPhoneUpd;
         private System.Windows.Forms.Label label66;
@@ -3417,9 +3408,15 @@
         private System.Windows.Forms.ComboBox comboLogin;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox comboChairSheet;
         private System.Windows.Forms.ComboBox comboChairUpd;
+        private System.Windows.Forms.Panel panelAddSheet;
+        private System.Windows.Forms.Panel panelContractSelect;
+        private System.Windows.Forms.Panel panelSelectStaffSheet;
+        private System.Windows.Forms.DateTimePicker dateTimeSheetEnd;
+        private System.Windows.Forms.DateTimePicker dateTimeSheetBegin;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Button btnShowAllEmployeeSheet;
     }
 }
 

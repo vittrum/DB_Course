@@ -33,8 +33,8 @@ namespace DB_Course
         public RepositoryTime_Sheet Time_Sheet => RepositoryTime_Sheet;
         public RepositoryTitle RepositoryTitle { private get; set; }
         public RepositoryTitle Title => RepositoryTitle;        
-        public RepositoryTransfer_Training RepositoryTransfer_Training { private get; set; }
-        public RepositoryTransfer_Training Transfer_Training => RepositoryTransfer_Training;
+        //public RepositoryTransfer_Training RepositoryTransfer_Training { private get; set; }
+        //public RepositoryTransfer_Training Transfer_Training => RepositoryTransfer_Training;
         public RepositoryVacations RepositoryVacations { private get; set; }
         public RepositoryVacations Vacations => RepositoryVacations;
     
@@ -59,7 +59,7 @@ namespace DB_Course
             RepositoryStaff_Title = new RepositoryStaff_Title(SqlConnection);
             RepositoryTime_Sheet = new RepositoryTime_Sheet(SqlConnection);
             RepositoryTitle = new RepositoryTitle(SqlConnection);
-            RepositoryTransfer_Training = new RepositoryTransfer_Training(SqlConnection);
+            //RepositoryTransfer_Training = new RepositoryTransfer_Training(SqlConnection);
             RepositoryVacations = new RepositoryVacations(SqlConnection);
         }
 

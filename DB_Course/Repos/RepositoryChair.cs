@@ -130,8 +130,7 @@ namespace DB_Course.Repos
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 Command.Parameters.AddWithValue("@Phone", Convert.ToInt64(Phone));
                 Command.Parameters.AddWithValue("@c_name", c_name);
-                Command.ExecuteNonQuery();
-                
+                Command.ExecuteNonQuery();                
             }
             catch (PostgresException e)
             {

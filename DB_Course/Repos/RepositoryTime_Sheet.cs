@@ -47,24 +47,31 @@ namespace DB_Course.Repos
             }
             return time_sheets;
         }
-        public void Insert(string ID_Chair, string Beginn_Date, string End_Date)
+        public void Insert(string c_name, string Beginn_Date, string End_Date)
         {
-            try { 
+            try
+            { 
             string QueryString =
-                "insert into \"Time_Sheet\"" +
-                "(\"ID_Chair\", \"Beginn_Date\", \"End_Date\")" +
-                "values (@ID_Chair, @Beginn_Date, @End_Date);";
+                "select add_time_sheet(@c_name, @Beginn_Date, @End_Date)";
             NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-            Command.Parameters.AddWithValue("@ID_Chair", ID_Chair); // Возможно нужно прописать Add Wit Value!
+            Command.Parameters.AddWithValue("@c_name", c_name); 
             Command.Parameters.AddWithValue("@Beginn_Date", Beginn_Date);
-            Command.Parameters.AddWithValue("@End_Date", End_Date);
-            
+            Command.Parameters.AddWithValue("@End_Date", End_Date);            
 
-            try { Command.ExecuteNonQuery(); }
-            catch { MessageBox.Show("Лажа с эезекьютом"); }
-        }
-            catch { MessageBox.Show("Лажа с методом"); }
+            try
+                {
+                    Command.ExecuteNonQuery();
+                }
+            catch
+                {
+                    MessageBox.Show("Ошибка базы данных. Проверьте корректность ввода");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка выполнения операции" + ex.Message);
+            }
 }
         public void Delete(string ID_Time_Sheet)
         {

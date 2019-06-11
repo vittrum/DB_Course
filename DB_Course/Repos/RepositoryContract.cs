@@ -93,10 +93,19 @@ namespace DB_Course.Repos
                 Command.Parameters.AddWithValue("@End_Date", End_Date);
                 Command.Parameters.AddWithValue("@Additional_information", a_info);
 
-                try { Command.ExecuteNonQuery(); }
-                catch(PostgresException ex) { MessageBox.Show("Лажа с эезекьютом\n" + ex.ToString()); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch(PostgresException ex)
+                {
+                    MessageBox.Show("Проверьте корректность ввода.\n Возможно, сотрудник уже совмещает две должности");
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch
+            {
+                MessageBox.Show("Проверьте корректность ввода.\n Возможно, сотрудник уже совмещает две должности");
+            }
         }
 
         public List<Contract> GetContract(string s_name, string lastname, string patronymic)

@@ -49,6 +49,8 @@ namespace DB_Course
         Factory factory = new Factory("127.0.0.1", "5432", "observer", "3333", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
 
+       
+
         #region Staff
 
         private void BtnStaffSelectWithChoice_Click(object sender, EventArgs e)
@@ -232,6 +234,7 @@ namespace DB_Course
                                                     dateContractBeginn.Value.ToShortDateString(),
                                                     dateContractEnd.Value.ToShortDateString(),
                                                     "No info");
+            AdministratorRequest.Show_Staff_Contract(factory, dgvStaffContract);
         }
 
         private void BtnDeleteStaffDegree_Click(object sender, EventArgs e)
@@ -284,11 +287,18 @@ namespace DB_Course
         }
         private void BtnUpdChairPhone_Click(object sender, EventArgs e)
         {
-            FillDgvForChair();
-            AdministratorRequest.Show_Chairs(factory, dgvChair);
-            AdministratorRequest.Update_Chair_Phone(factory, tbChairPhoneUpd.Text, comboChairUpd.SelectedItem.ToString());
+            try
+            {
+                FillDgvForChair();
+                //AdministratorRequest.Show_Chairs(factory, dgvChair);
+                AdministratorRequest.Update_Chair_Phone(factory, tbChairPhoneUpd.Text, comboChairUpd.SelectedItem.ToString());
+                AdministratorRequest.Show_Chairs(factory, dgvChair);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошла ошибка. Проверьте корректность данных");
+            }
         }
-
 
         #endregion
         //Все работает
@@ -513,6 +523,15 @@ namespace DB_Course
             dgvOrders.Columns.Add("Is_paid", "Оплачиваемый?");
         }
         //Кафедра
+        private void FillDgvForTimeSheet()
+        {
+            dgvTimeSheet.Columns.Clear();
+            dgvTimeSheet.Columns.Add("id_time_sheet", "Номер табеля");
+            dgvTimeSheet.Columns.Add("id_chair", "Номер кафедры");
+            dgvTimeSheet.Columns.Add("begd", "Начало");
+            dgvTimeSheet.Columns.Add("endd", "Конец");
+
+        }
         private void FillDgvForChair()
         {
             dgvChair.Columns.Clear();
@@ -571,9 +590,42 @@ namespace DB_Course
         {
             try
             {
-                factory = new Factory("127.0.0.1", "5432", comboLogin.SelectedItem.ToString(), tbLogin.Text, "University personnel department");
+                string login = comboLogin.SelectedItem.ToString();
+                string pass = tbLogin.Text;
+                factory = new Factory("127.0.0.1", "5432", login, pass, "University personnel department");
                 tabControlMain.Visible = true;
                 gbLogin.Dispose();
+                if (login == "user_")
+                {
+                    btnDeleteChair.Visible = false;
+                    btnDeleteContract.Visible = false;
+                    btnDeleteStaff.Visible = false;
+                    btnDeletePosition.Visible = false;
+                    BtnDeleteStaffDegree.Visible = false;
+                    BtnDeleteStaffTitle.Visible = false;
+                    BtnDeleteStaffTimeSheet.Visible = false;
+                    BtnDeleteTitle.Visible = false;
+                    BtnDeleteDegree.Visible = false;
+                    gbUpdPhone.Visible = false;
+                }
+                if (login == "observer")
+                {
+                    tabControlStaff.Visible = false;
+                    gbAddChair.Visible = false;
+                    gbUpdPhone.Visible = false;
+                    panelAddSheet.Visible = false;
+                    btnDeleteChair.Visible = false;
+                    btnDeleteContract.Visible = false;
+                    btnDeleteStaff.Visible = false;
+                    btnDeletePosition.Visible = false;
+                    BtnDeleteStaffDegree.Visible = false;
+                    BtnDeleteStaffTitle.Visible = false;
+                    BtnDeleteStaffTimeSheet.Visible = false;
+                    BtnDeleteTitle.Visible = false;
+                    BtnDeleteDegree.Visible = false;
+                    gbUpdPhone.Visible = false;
+                    BtnAddPosition.Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -587,6 +639,44 @@ namespace DB_Course
         {
             AdministratorRequest.Show_Concrete_Staff_Contract(factory, dgvStaffContract, tbContractSelectName.Text,
                 tbContractSelectLastname.Text, tbContractSelectPatronymic.Text);
+        }
+
+        private void BtnAddStaffSheet_Click(object sender, EventArgs e)
+        {
+            FillDgvForEmployeeSheet();
+            AdministratorRequest.Add_Staff_Sheet(factory,
+                                                 tbAddStaffSheetId.Text,
+                                                 tbAddStaffSheetTimeSheet.Text,
+                                                 tbAddStaffSheetWorkdays.Text,
+                                                 tbAddStaffSheetDayOffs.Text,
+                                                 tbAddStaffSheetVacations.Text);
+            AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
+        }
+
+        private void BtnShowChairTimeSheet_Click(object sender, EventArgs e)
+        {
+
+            FillDgvForTimeSheet();
+            AdministratorRequest.Show_Chair_Time_Sheet(factory, dgvTimeSheet);
+        }
+
+        private void BtnAddTimeSheet_Click(object sender, EventArgs e)
+        {
+            AdministratorRequest.Add_Chair_Time_Sheet(factory,
+                comboChairSheet.SelectedItem.ToString(),
+                dateTimeSheetBegin.Value.ToShortDateString(),
+                dateTimeSheetEnd.Value.ToShortDateString());
+        }
+
+        private void BtnDeleteContract_Click(object sender, EventArgs e)
+        {
+            //AdministratorRequest.Delete_Staff_Contract(factory, )
+        }
+
+        private void BtnShowAllEmployeeSheet_Click(object sender, EventArgs e)
+        {
+            FillDgvForEmployeeSheet();
+            AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
         }
     }
 }

@@ -247,3 +247,23 @@ end
 	$$
 	language
 		'plpgsql';
+
+Табель кафедры
+drop function if exists add_time_sheet;
+create or replace function add_time_sheet
+(
+	_name varchar,
+	_bdate varchar,
+	_edate varchar	
+)
+returns void 
+as $$
+declare _id int;
+begin 
+	_id = (select "ID_Chair" from chair where c_name = _name);
+	insert into "Time_Sheet" ("ID_Chair", "Beginn_Date", "End_Date") 
+	values (_id, to_date(_bdate, 'DD MM YYYY'), to_date(_bdate, 'DD MM YYYY'));
+end
+	$$
+	language
+		'plpgsql';

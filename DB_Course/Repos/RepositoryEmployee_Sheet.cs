@@ -81,16 +81,25 @@ namespace DB_Course.Repos
                     "values (@ID_Time_Sheet, @ID_Staff, @Number_of_work_days, @Number_of_day_offs, @Number_of_vacation_days);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@ID_Time_Sheet", ID_Time_Sheet); 
-                Command.Parameters.AddWithValue("@ID_Staff", ID_Staff);
-                Command.Parameters.AddWithValue("@Number_of_work_days", Number_of_work_days);
-                Command.Parameters.AddWithValue("@Number_of_day_offs", Number_of_day_offs);
-                Command.Parameters.AddWithValue("@Number_of_vacation_days", Number_of_vacation_days);
+                Command.Parameters.AddWithValue("@ID_Time_Sheet", Convert.ToInt32(ID_Time_Sheet)); 
+                Command.Parameters.AddWithValue("@ID_Staff", Convert.ToInt32(ID_Staff));
+                Command.Parameters.AddWithValue("@Number_of_work_days", Convert.ToInt32(Number_of_work_days));
+                Command.Parameters.AddWithValue("@Number_of_day_offs", Convert.ToInt32(Number_of_day_offs));
+                Command.Parameters.AddWithValue("@Number_of_vacation_days", Convert.ToInt32(Number_of_vacation_days));
               
-                try { Command.ExecuteNonQuery(); }
-                catch { MessageBox.Show("Лажа с эезекьютом"); }
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch (NpgsqlException pex)
+                {
+                    MessageBox.Show("Ошибка базы данных" + pex.Message);
+                }
             }
-            catch { MessageBox.Show("Лажа с методом"); }
+            catch
+            {
+                MessageBox.Show("Ошибка выполнения метода");
+            }
 
         }
     }
