@@ -68,6 +68,48 @@ namespace DB_Course.Repos
                 MessageBox.Show("Ошибка на уровне БД " + Convert.ToString(ex));
             }
         }
-        
+
+        public void Add(
+            string s_name,
+            string lastname,
+            string patrinymic,
+            string begin_date,
+            string End_Date,
+            string type,
+            string place,
+            string purpose,
+            string to_be_paid)
+        {
+            try
+            {
+                string QueryString =
+                    "select add_business_trip (@s_name, @LastName, @Patronymic, @Beginn_Date, @End_Date, @Type, @Place, @purpose, @to_be_paid);";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@s_name", s_name);
+                Command.Parameters.AddWithValue("@LastName", lastname);
+                Command.Parameters.AddWithValue("@Patronymic", patrinymic);
+                Command.Parameters.AddWithValue("@Beginn_Date", begin_date);
+                Command.Parameters.AddWithValue("@End_Date", End_Date);
+                Command.Parameters.AddWithValue("@Type", type);
+                Command.Parameters.AddWithValue("@Place", place);
+                Command.Parameters.AddWithValue("@purpose", purpose);
+                Command.Parameters.AddWithValue("@to_be_paid", Convert.ToInt32(to_be_paid));
+                //MessageBox.Show(End_Date, begin_date);
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch (PostgresException ex)
+                {
+                    MessageBox.Show("Проверьте корректность ввода pg.\n" + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Проверьте корректность ввода.\n " + ex.Message);
+            }
+        }
+
     }
 }

@@ -105,7 +105,14 @@ namespace DB_Course
         {
             factory.Employee_Sheet.Insert(ID_Time_Sheet, ID_Staff, workd, doffs, vacationd);
         }
-        
+
+        public void Add_Staff_Business_Trip(Factory factory, string Name, string Lastname, string Patronymic,
+            string bdate, string edate, string type, string place, string purpose, string to_be_paid)
+        {
+            
+            factory.Business_Trip.Add(Name, Lastname, Patronymic, bdate, edate,
+                type, place, purpose, to_be_paid);
+        }
         #endregion
         
         #region Titles

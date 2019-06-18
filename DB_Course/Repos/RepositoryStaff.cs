@@ -62,7 +62,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных" + ex.Message);
             }
         }
         public void Insert(
@@ -98,9 +98,9 @@ namespace DB_Course.Repos
                 {
                     Command.ExecuteNonQuery();
                 }
-                catch
+                catch (PostgresException ex)
                 {
-                    MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+                    MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных" + ex.Message);
                 }
             }
             catch

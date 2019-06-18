@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
-using DB_Course.Repos;
 
 namespace DB_Course
 {
@@ -165,7 +156,10 @@ namespace DB_Course
                 {
                     panelSickListOrder.Visible = false;
                     panelBusinessTripOrder.Visible = true;
-
+                    AdministratorRequest.Add_Staff_Business_Trip(factory,
+                        tbOrderName.Text, tbOrderLastname.Text, tbOrderPatronymic.Text, comboOrderTypeAdd.SelectedItem.ToString(),
+                        dtpAddOrderBeginn.Value.ToShortDateString(), dtpAddOrderEnd.Value.ToShortDateString(),
+                        tbBusinessTripPlace.Text, tbBusinessTripPurpose.Text, tbBusinessTripToBePaid.Text);
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
                 {
@@ -226,6 +220,7 @@ namespace DB_Course
 
         private void BtnContractAdd_Click(object sender, EventArgs e)
         {
+            FillDgvForEmployeeContract();
             AdministratorRequest.Add_Staff_Contract(factory, tbContractAddStaffName.Text,
                                                     tbContractAddStaffLastname.Text,
                                                     tbContractAddStaffPatronymic.Text,
