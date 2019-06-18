@@ -57,10 +57,10 @@ namespace DB_Course.Repos
             {
                 string QueryString =
                     "delete from \"contract\"" +
-                    " where \"ID_Employment_Contract\" = @ID_Employment_Contract;";
+                    " where \"ID_Contract\" = @ID_Contract;";
                 NpgsqlCommand Command = new NpgsqlCommand
                     (QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@ID_Employment_Contract", Convert.ToInt32(ID_Employment_Contract));
+                Command.Parameters.AddWithValue("@ID_Contract", Convert.ToInt32(ID_Employment_Contract));
                 Command.ExecuteNonQuery();
             }
             catch (Exception ex)

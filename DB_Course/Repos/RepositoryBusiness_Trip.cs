@@ -24,18 +24,17 @@ namespace DB_Course.Repos
             try
             {
                 string QueryString =
-                    "select *" +
-                    "from \"Business_Trip\"" +
-                    "order by \"ID_Business_Trip\";";
+                    "select * from staff_business_trip;";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
                 NpgsqlDataReader dataReader = Command.ExecuteReader();
                 foreach (DbDataRecord dbDataRecord in dataReader)
                 {
                     business_trip = new Business_Trip(
-                        dbDataRecord["ID_Business_Trip"].ToString(),
-                        dbDataRecord["ID_Staff"].ToString(),
                         dbDataRecord["ID_Order"].ToString(),
+                        dbDataRecord["s_name"].ToString(),
+                        dbDataRecord["LastName"].ToString(),
+                        dbDataRecord["Patronymic"].ToString(),
                         dbDataRecord["Purpose_of_the_trip"].ToString(),
                         dbDataRecord["Place_of_the_trip"].ToString(),
                         dbDataRecord["Beginn_Date"].ToString(),
@@ -70,9 +69,7 @@ namespace DB_Course.Repos
         }
 
         public void Add(
-            string s_name,
-            string lastname,
-            string patrinymic,
+            string ID_Staff,
             string begin_date,
             string End_Date,
             string type,
@@ -82,20 +79,19 @@ namespace DB_Course.Repos
         {
             try
             {
+               // MessageBox.Show('1' + End_Date + ' ' + begin_date);
                 string QueryString =
-                    "select add_business_trip (@s_name, @LastName, @Patronymic, @Beginn_Date, @End_Date, @Type, @Place, @purpose, @to_be_paid);";
+                    "select add_business_trip (@ID_Staff, @Beginn_Date, @End_Date, @Type, @Place, @purpose, @to_be_paid);";
                 NpgsqlCommand Command =
                     new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
-                Command.Parameters.AddWithValue("@s_name", s_name);
-                Command.Parameters.AddWithValue("@LastName", lastname);
-                Command.Parameters.AddWithValue("@Patronymic", patrinymic);
+                Command.Parameters.AddWithValue("@s_name", ID_Staff);
                 Command.Parameters.AddWithValue("@Beginn_Date", begin_date);
                 Command.Parameters.AddWithValue("@End_Date", End_Date);
                 Command.Parameters.AddWithValue("@Type", type);
                 Command.Parameters.AddWithValue("@Place", place);
                 Command.Parameters.AddWithValue("@purpose", purpose);
                 Command.Parameters.AddWithValue("@to_be_paid", Convert.ToInt32(to_be_paid));
-                //MessageBox.Show(End_Date, begin_date);
+               // MessageBox.Show('2' + End_Date +' '+ begin_date);
                 try
                 {
                     Command.ExecuteNonQuery();

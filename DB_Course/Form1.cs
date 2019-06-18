@@ -34,10 +34,11 @@ namespace DB_Course
             AdministratorRequest.Get_Chairs(factory, comboStaffByChair);
             AdministratorRequest.Get_Chairs(factory, comboChairSheet);
             AdministratorRequest.Get_Chairs(factory, comboChairUpd);
+            tabControlMain.Visible = true;
         }
         
         AdministratorRequests AdministratorRequest = new AdministratorRequests();
-        Factory factory = new Factory("127.0.0.1", "5432", "observer", "3333", "University personnel department"); //Viktor_db
+        Factory factory = new Factory("127.0.0.1", "5432", "admin", "1111", "University personnel department"); //Viktor_db
         ErrorProtector errorProtector = new ErrorProtector();
 
        
@@ -114,9 +115,7 @@ namespace DB_Course
         {
             AdministratorRequest.Select_Some_Staff(factory, dgvSelectedStaff, chboxStaffPass.Checked, chboxStaffEducation.Checked,
                 chboxStaffPhone.Checked, chboxStaffType.Checked, chboxStaffRegistration.Checked);
-        }
-       
-     //   private void BtnStaffDegreeAdd_Click(object sender, EventArgs e)       
+        }     
                 
         private void BtnAddStaffDegree_Click(object sender, EventArgs e)
         {
@@ -154,22 +153,18 @@ namespace DB_Course
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Командировка")
                 {
-                    panelSickListOrder.Visible = false;
-                    panelBusinessTripOrder.Visible = true;
                     AdministratorRequest.Add_Staff_Business_Trip(factory,
-                        tbOrderName.Text, tbOrderLastname.Text, tbOrderPatronymic.Text, comboOrderTypeAdd.SelectedItem.ToString(),
-                        dtpAddOrderBeginn.Value.ToShortDateString(), dtpAddOrderEnd.Value.ToShortDateString(),
+                        tbOrderStaffID.Text, dtpAddOrderBeginn.Value.ToShortDateString(), dtpAddOrderEnd.Value.ToShortDateString(),
+                         comboOrderTypeAdd.SelectedItem.ToString(),
                         tbBusinessTripPlace.Text, tbBusinessTripPurpose.Text, tbBusinessTripToBePaid.Text);
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
                 {
-                    panelSickListOrder.Visible = false;
-                    panelBusinessTripOrder.Visible = false;
+
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Больничный")
                 {
-                    panelSickListOrder.Visible = true;
-                    panelBusinessTripOrder.Visible = false;
+
                 }
             }
             catch { }
@@ -183,20 +178,31 @@ namespace DB_Course
 
         private void BtnShowStaffOrders_Click(object sender, EventArgs e)
         {
-            if (comboOrderTypes.SelectedItem.ToString() == "Командировка")
+            
+            try
             {
-                FillDgvForOrderBusinessTrip();
-                //AdministratorRequest.Show_Staff_Business_Trips(factory, dgvOrders);                
+                if (comboOrderTypes.SelectedItem.ToString() == "")
+                    MessageBox.Show("Выберите тип приказа!");
+                
+                if (comboOrderTypes.SelectedItem.ToString() == "Командировка")
+                {
+                    FillDgvForOrderBusinessTrip();
+                    AdministratorRequest.Show_Staff_Business_Trips(factory, dgvOrders);                
+                }
+                if (comboOrderTypes.SelectedItem.ToString() == "Больничный")
+                {
+                    FillDgvForOrderSick_List();
+                    AdministratorRequest.Show_Staff_Sick_List(factory, dgvOrders);
+                }
+                if (comboOrderTypes.SelectedItem.ToString() == "Отпуск")
+                {
+                    FillDgvForOrderVacation();
+                    AdministratorRequest.Show_Staff_Vacations(factory, dgvOrders);
+                }
             }
-            if (comboOrderTypes.SelectedItem.ToString() == "Больничный")
+            catch (Exception ex)
             {
-                FillDgvForOrderSick_List();
-                //AdministratorRequest.Show_Staff_Sick_List(factory, dgvOrders);
-            }
-            if (comboOrderTypes.SelectedItem.ToString() == "Отпуск")
-            {
-                FillDgvForOrderVacation();
-                //AdministratorRequest.Show_Staff_Vacations(factory, dgvOrders);
+                MessageBox.Show("Произошла ошибка: " + ex.Message);
             }
         }
 
@@ -335,7 +341,7 @@ namespace DB_Course
             AdministratorRequest.Show_Titles(factory, dgvTitles);
         }
 
-        /* private void BtnShowAllDegrees_Click(object sender, EventArgs e)
+        private void BtnShowAllDegrees_Click(object sender, EventArgs e)
         {
             FillDgvForDegrees();
             AdministratorRequest.Show_Degrees(factory, dgvDegrees);
@@ -345,7 +351,7 @@ namespace DB_Course
         {
             FillDgvForTitles();
             AdministratorRequest.Show_Titles(factory, dgvTitles);
-        }*/
+        }
 
         private void BtnDeleteDegree_Click(object sender, EventArgs e)
         {
@@ -399,6 +405,7 @@ namespace DB_Course
         private void FillDgvForSingleStaff()
         {
             dgvSelectedStaff.Columns.Clear();
+            dgvSelectedStaff.Columns.Add("ID", "Номер");
             dgvSelectedStaff.Columns.Add("Education", "Образование");
             dgvSelectedStaff.Columns.Add("Phone", "Телефон");
             dgvSelectedStaff.Columns.Add("Registration", "Прописка");
@@ -484,24 +491,24 @@ namespace DB_Course
         private void FillDgvForOrders()
         {
             dgvOrders.Columns.Clear();
-            dgvOrders.Columns.Add("Name", "Имя");
+            /*dgvOrders.Columns.Add("Name", "Имя");
             dgvOrders.Columns.Add("Lastname", "Фамилия");
-            dgvOrders.Columns.Add("Patronymic", "Отчество");
+            dgvOrders.Columns.Add("Patronymic", "Отчество");*/
+            dgvOrders.Columns.Add("ID_Order", "Номер");
+            
             dgvOrders.Columns.Add("Type", "Тип");
-            dgvOrders.Columns.Add("Beginn_Date", "Начало");
-            dgvOrders.Columns.Add("End_Date", "Окончание");
             dgvOrders.Columns.Add("Info", "Текст приказа");
+            // dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            // dgvOrders.Columns.Add("End_Date", "Окончание");
+
         }
         private void FillDgvForOrderBusinessTrip()
         {
+            
             dgvOrders.Columns.Clear();
-            dgvOrders.Columns.Add("Beginn_Date", "Начало");
-            dgvOrders.Columns.Add("End_Date", "Окончание");
-            dgvOrders.Columns.Add("Is_paid", "Оплачиваемый?");
-        }
-        private void FillDgvForOrderVacation()
-        {
-            dgvOrders.Columns.Clear();
+            dgvOrders.Columns.Add("s_name", "Имя");
+            dgvOrders.Columns.Add("LastName", "Фамилия");
+            dgvOrders.Columns.Add("Patronymic", "Отчество");
             dgvOrders.Columns.Add("Purpose", "Цель");
             dgvOrders.Columns.Add("Place", "Место");
             dgvOrders.Columns.Add("Beginn_Date", "Начало");
@@ -509,9 +516,22 @@ namespace DB_Course
             dgvOrders.Columns.Add("Cause", "Причина");
             dgvOrders.Columns.Add("Payment", "К оплате");
         }
+        private void FillDgvForOrderVacation()
+        {
+            dgvOrders.Columns.Clear();
+            dgvOrders.Columns.Add("s_name", "Имя");
+            dgvOrders.Columns.Add("LastName", "Фамилия");
+            dgvOrders.Columns.Add("Patronymic", "Отчество");
+            dgvOrders.Columns.Add("Beginn_Date", "Начало");
+            dgvOrders.Columns.Add("End_Date", "Окончание");
+            dgvOrders.Columns.Add("Is_paid", "Оплачиваемый?");
+        }
         private void FillDgvForOrderSick_List()
         {
             dgvOrders.Columns.Clear();
+            dgvOrders.Columns.Add("s_name", "Имя");
+            dgvOrders.Columns.Add("LastName", "Фамилия");
+            dgvOrders.Columns.Add("Patronymic", "Отчество");
             dgvOrders.Columns.Add("Beginn_Date", "Начало");
             dgvOrders.Columns.Add("End_Date", "Окончание");
             dgvOrders.Columns.Add("Cause", "Причина");
@@ -665,7 +685,11 @@ namespace DB_Course
 
         private void BtnDeleteContract_Click(object sender, EventArgs e)
         {
-            //AdministratorRequest.Delete_Staff_Contract(factory, )
+            foreach (DataGridViewRow row in dgvStaffContract.SelectedRows)
+            {
+                AdministratorRequest.Delete_Staff_Contract(factory, row.Cells["ID_Contract"].Value.ToString());
+                dgvStaffContract.Rows.Remove(row);
+            }
         }
 
         private void BtnShowAllEmployeeSheet_Click(object sender, EventArgs e)
@@ -673,5 +697,7 @@ namespace DB_Course
             FillDgvForEmployeeSheet();
             AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
         }
+
+        
     }
 }

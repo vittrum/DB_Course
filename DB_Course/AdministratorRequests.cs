@@ -7,7 +7,7 @@ namespace DB_Course
     {
         
         #region Staff 
-              
+        //Сотрудники
         public void Add_Staff(Factory factory, string name, string lastname, string patronymic, 
             string education, string phone, string registration, string pass, string type)
         {            
@@ -23,7 +23,7 @@ namespace DB_Course
         public void Select_Staff_By_Name(Factory factory, DataGridView dgv, string name, string lastname, string patronymic)
         {
             foreach (var i in factory.Staff.GetStaffByName(name, lastname, patronymic))
-                dgv.Rows.Add(i.Education, i.Phone, i.Registration, i.Pass, i.Type);
+                dgv.Rows.Add(i.ID_Staff, i.Education, i.Phone, i.Registration, i.Pass, i.Type);
         }
         public void Select_Staff_By_Chair(Factory factory, DataGridView dgv, string chair_name)
         {
@@ -58,6 +58,7 @@ namespace DB_Course
         {
             factory.Staff.Delete(id_staff);
         }
+        //Расписание
         public void Show_Staff_Time_Sheet(Factory factory, DataGridView dgv)
         {
             foreach (var i in factory.Employee_Sheet.GetTable())
@@ -66,13 +67,7 @@ namespace DB_Course
                     i.Number_of_day_offs, i.Number_of_vacation_days);
             }
         }
-        public void Show_Concrete_Staff_Titles(Factory factory, DataGridView dgv)
-        {
-            
-        }
-        //public void Show_Concrete_Staff_Degrees() { }
-        //public void Show_Staff_Chair() { }
-        public void Show_Staff_Orders() { }
+        //Контракт
         public void Show_Staff_Contract(Factory factory, DataGridView dgv)
         {
             foreach (var i in factory.Contract.GetTable())
@@ -81,7 +76,6 @@ namespace DB_Course
                     i.Name, i.Beginn_Date, i.End_Date, i.Additional_Information);               
             }
         }
-
         public void Show_Concrete_Staff_Contract(Factory factory, DataGridView dgv, string s_name, string lastname, string patronymic)
         {
             foreach (var i in factory.Contract.GetContract(s_name, lastname, patronymic))
@@ -100,18 +94,47 @@ namespace DB_Course
         {
             factory.Contract.Delete(ID_Contract);
         }
-
         public void Add_Staff_Sheet(Factory factory, string ID_Time_Sheet, string ID_Staff, string workd, string doffs, string vacationd)
         {
             factory.Employee_Sheet.Insert(ID_Time_Sheet, ID_Staff, workd, doffs, vacationd);
         }
-
-        public void Add_Staff_Business_Trip(Factory factory, string Name, string Lastname, string Patronymic,
-            string bdate, string edate, string type, string place, string purpose, string to_be_paid)
+        // Приказы
+        public void Add_Staff_Business_Trip(Factory factory, string Id, string bdate, string edate, string type, string place, string purpose, string to_be_paid)
         {
             
-            factory.Business_Trip.Add(Name, Lastname, Patronymic, bdate, edate,
-                type, place, purpose, to_be_paid);
+            factory.Business_Trip.Add(Id, bdate, edate, type, place, purpose, to_be_paid);
+        }
+        public void Add_Staff_Vacation(Factory factory, string id, string bdate, string edate)
+        {
+            //factory.Vacations.Add(id, bdate, edate);
+        }
+        public void Add_Staff_Sick_List(Factory factory, string id, string bdate, string edate, string cause, string tobepaid)
+        {
+           // factory.Sick_List.Add(id, bdate, edate, cause, tobepaid);
+        }
+        public void Show_Staff_Sick_List(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.Sick_List.GetTable())
+                dgv.Rows.Add(i.s_name, i.LastName, i.Patronymic, i.Beginn_Date, i.End_Date, i.Cause, i.Is_paid);
+        }
+        public void Show_Staff_Vacations(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.Vacations.GetTable())
+                dgv.Rows.Add(i.s_name, i.LastName, i.Patronymic, i.Beginn_Date, i.End_Date, i.Is_Paid);
+        }
+        public void Show_Staff_Business_Trips(Factory factory, DataGridView dgv)
+        {
+            foreach (var i in factory.Business_Trip.GetTable())
+                dgv.Rows.Add(i.s_name, i.LastName, i.Patronymic, i.Purpose_of_the_trip, 
+                    i.Purpose_of_the_trip, i.Place_of_the_trip, i.Beginn_Date, i.End_Date, i.To_be_paid);
+        }
+        public void Show_NotAbsent_Staff(Factory factory, DataGridView dgv)
+        {
+            
+        }
+        public void Show_Absent_Staff(Factory factory, DataGridView dgv)
+        {
+            
         }
         #endregion
         
@@ -187,7 +210,8 @@ namespace DB_Course
         #region Orders
         public void Show_Orders(Factory factory, DataGridView dgv)
         {
-
+            foreach (var i in factory.Order.GetTable())
+                dgv.Rows.Add(i.ID_Order, i.Text, i.Type);
         }
         public void Select_Concrete_Order() { }
         public void Add_Order() { }

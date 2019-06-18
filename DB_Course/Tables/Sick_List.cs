@@ -2,9 +2,9 @@
 {
     class Sick_List
     {
-        public string ID_Sick_List { private set; get; }
-        public string ID_Staff { private set; get; }
-        public string ID_Order { private set; get; }
+        public string s_name { private set; get; }
+        public string LastName { private set; get; }
+        public string Patronymic { private set; get; }
         public string Beginn_Date { private set; get; }
         public string End_Date { private set; get; }
         public string Cause { private set; get; }
@@ -12,17 +12,17 @@
 
         public Sick_List() { }
         public Sick_List(
-            string ID_Sick_List,
-            string ID_Staff,
-            string ID_Order,
+            string s_name,
+            string LastName,
+            string Patronymic,
             string Beginn_Date,
             string End_Date,
             string Cause,
             string Is_paid)
         {
-            this.ID_Sick_List = ID_Sick_List;
-            this.ID_Staff = ID_Staff;
-            this.ID_Order = ID_Order;
+            this.s_name = s_name;
+            this.LastName = LastName;
+            this.Patronymic = Patronymic;
             this.Beginn_Date = Beginn_Date;
             this.End_Date = End_Date;
             this.Cause = Cause;

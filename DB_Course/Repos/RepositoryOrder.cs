@@ -16,7 +16,35 @@ namespace DB_Course.Repos
         public RepositoryOrder(SqlConnection sqlConnection)
         {
             this.sqlConnection = sqlConnection;
-        }  
-        
+        }
+        public List<Orders> GetTable()
+        {
+            Orders or;
+            List<Orders> ors = new List<Orders>();
+            try
+            {
+                string QueryString =
+                    "select *" +
+                    "from \"Orders\"" +
+                    "order by \"ID_Order\";";
+                NpgsqlCommand Command =
+                    new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                NpgsqlDataReader dataReader = Command.ExecuteReader();
+                foreach (DbDataRecord dbDataRecord in dataReader)
+                {
+                    or = new Orders(
+                        dbDataRecord["ID_Order"].ToString(),
+                        dbDataRecord["Text"].ToString(),
+                        dbDataRecord["Type"].ToString());
+                    ors.Add(or);
+                }
+                dataReader.Close();
+            }
+            catch (PostgresException ex)
+            {
+                MessageBox.Show("Ошибка базы данных \n" + Convert.ToString(ex));
+            }
+            return ors;
+        }
     }
 }
