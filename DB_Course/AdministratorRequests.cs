@@ -106,11 +106,11 @@ namespace DB_Course
         }
         public void Add_Staff_Vacation(Factory factory, string id, string bdate, string edate)
         {
-            //factory.Vacations.Add(id, bdate, edate);
+            factory.Vacations.Add(id, bdate, edate, "false");
         }
         public void Add_Staff_Sick_List(Factory factory, string id, string bdate, string edate, string cause, string tobepaid)
         {
-           // factory.Sick_List.Add(id, bdate, edate, cause, tobepaid);
+            factory.Sick_List.Add(id, bdate, edate, cause, tobepaid);
         }
         public void Show_Staff_Sick_List(Factory factory, DataGridView dgv)
         {
@@ -213,9 +213,9 @@ namespace DB_Course
             foreach (var i in factory.Order.GetTable())
                 dgv.Rows.Add(i.ID_Order, i.Text, i.Type);
         }
-        public void Select_Concrete_Order() { }
+        /*public void Select_Concrete_Order() { }
         public void Add_Order() { }
-        public void Delete_Order() { }
+        public void Delete_Order() { }*/
         #endregion
         //Запросы готовы (еще 1 переделать)
         #region Chairs
@@ -296,5 +296,14 @@ namespace DB_Course
                 comboBox.Items.Add(i.Name);
         }
         #endregion
+
+        public void Register(Factory factory, string login, string pass, string role)
+        {
+            factory.registration.Create_User(login, pass, role);
+        }
+        public string Check_Role(Factory factory)
+        {
+            return factory.login.Check_Role();
+        }
     }
 }

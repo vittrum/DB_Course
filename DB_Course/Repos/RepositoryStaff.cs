@@ -142,7 +142,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных"+ex.Message);
             }
             return staffs;
         }
@@ -183,7 +183,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных");
+                MessageBox.Show("Ошибка выполнения операции. \n Проверьте корректность введенных данных"+ ex.Message);
             }
             return staffs;
         }

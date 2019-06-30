@@ -70,7 +70,7 @@ namespace DB_Course.Repos
                 }
                 catch (PostgresException ex)
                 {
-                    MessageBox.Show("Ошибка на уровне базы данных. \n Проверьте корректность введенных данных");
+                    MessageBox.Show("Ошибка на уровне базы данных. \n Проверьте корректность введенных данных"+ex.Message);
                 }
             }
             catch { MessageBox.Show("Ошибка выполнения операции"); }
@@ -95,12 +95,12 @@ namespace DB_Course.Repos
                 }
                 catch (PostgresException e)
                 {
-                    MessageBox.Show("Ошибка выполнения операции");
+                    MessageBox.Show("Ошибка выполнения операции"+e.Message);
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Ошибка выполнения операции");
+                MessageBox.Show("Ошибка выполнения операции"+e.Message);
             }
         }
     }

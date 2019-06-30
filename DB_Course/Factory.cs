@@ -7,6 +7,11 @@ namespace DB_Course
     {
         public NpgsqlConnection NpgsqlConnection;
         public SqlConnection SqlConnection;
+
+        public Login log { private get; set; }
+        public Login login => log;
+        public Registration reg { private get; set; }
+        public Registration registration => reg;
         public RepositoryBusiness_Trip RepositoryBusiness_Trip { private get; set; }
         public RepositoryBusiness_Trip Business_Trip => RepositoryBusiness_Trip;
         public RepositoryChair RepositoryChair { private get; set; }
@@ -61,6 +66,8 @@ namespace DB_Course
             RepositoryTitle = new RepositoryTitle(SqlConnection);
             //RepositoryTransfer_Training = new RepositoryTransfer_Training(SqlConnection);
             RepositoryVacations = new RepositoryVacations(SqlConnection);
+            reg = new Registration(SqlConnection);
+            log = new Login(SqlConnection);
         }
 
         public void OpenConnection()

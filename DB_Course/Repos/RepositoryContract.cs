@@ -99,7 +99,7 @@ namespace DB_Course.Repos
                 }
                 catch(PostgresException ex)
                 {
-                    MessageBox.Show("Проверьте корректность ввода.\n Возможно, сотрудник уже совмещает две должности");
+                    MessageBox.Show("Проверьте корректность ввода.\n Возможно, сотрудник уже совмещает две должности" + ex.Message);
                 }
             }
             catch

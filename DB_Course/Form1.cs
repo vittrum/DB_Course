@@ -11,7 +11,7 @@ namespace DB_Course
             #region login
             tabControlMain.Visible = false;
             //panelLogin.Visible = true;
-            
+            gbLogin.BringToFront();
             #endregion
 
             //Заполнить кафедры            
@@ -160,12 +160,17 @@ namespace DB_Course
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Отпуск")
                 {
-
+                    AdministratorRequest.Add_Staff_Vacation(factory, tbOrderStaffID.Text, 
+                        dtpAddOrderBeginn.Value.ToShortDateString(), dtpAddOrderEnd.Value.ToShortDateString());
                 }
                 if (comboOrderTypeAdd.SelectedItem.ToString() == "Больничный")
                 {
-
+                    AdministratorRequest.Add_Staff_Sick_List(factory, tbOrderStaffID.Text,
+                        dtpAddOrderBeginn.Value.ToShortDateString(), dtpAddOrderEnd.Value.ToShortDateString(),
+                        tbCause.Text, chboxCause.Checked.ToString());
                 }
+                FillDgvForOrders();
+                AdministratorRequest.Show_Orders(factory, dgvOrders);
             }
             catch { }
         }
@@ -264,7 +269,7 @@ namespace DB_Course
             }
         }
         #endregion
-        //Все работает, нужен апдейт телефона
+       
         #region Chair
         private void BtnAddChair_Click_1(object sender, EventArgs e)
         {
@@ -297,12 +302,12 @@ namespace DB_Course
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Произошла ошибка. Проверьте корректность данных");
+                MessageBox.Show("Произошла ошибка. Проверьте корректность данных"+ex.Message);
             }
         }
 
         #endregion
-        //Все работает
+        
         #region Positions
         private void BtnAddPosition_Click(object sender, EventArgs e)
         {
@@ -325,7 +330,7 @@ namespace DB_Course
             }
         }
         #endregion
-        //Все работает
+        
         #region Degrees And Titles
         private void BtnAddDegree_Click(object sender, EventArgs e)
         {
@@ -597,21 +602,22 @@ namespace DB_Course
         }
 
         #endregion
-
         
-               
-
         private void BtnLogin_Click_2(object sender, EventArgs e)
         {
             try
-            {
-                string login = comboLogin.SelectedItem.ToString();
-                string pass = tbLogin.Text;
+            {                
+                string login = tbLoginLogin.Text; 
+                string pass = tbLoginPass.Text;
                 factory = new Factory("127.0.0.1", "5432", login, pass, "University personnel department");
+                //string role = AdministratorRequest.Check_Role(factory);
+                //MessageBox.Show(role);
+                string role = comboLoginRole.SelectedItem.ToString();
                 tabControlMain.Visible = true;
                 gbLogin.Dispose();
-                if (login == "user_")
+                if (role == "users")
                 {
+                    tabControlMain.TabPages["regPage"].Dispose();
                     btnDeleteChair.Visible = false;
                     btnDeleteContract.Visible = false;
                     btnDeleteStaff.Visible = false;
@@ -623,8 +629,9 @@ namespace DB_Course
                     BtnDeleteDegree.Visible = false;
                     gbUpdPhone.Visible = false;
                 }
-                if (login == "observer")
+                if (role == "observers")
                 {
+                    tabControlMain.TabPages["regPage"].Dispose();
                     tabControlStaff.Visible = false;
                     gbAddChair.Visible = false;
                     gbUpdPhone.Visible = false;
@@ -644,10 +651,8 @@ namespace DB_Course
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Проверьте соединение и корректность введенных данных");
+                MessageBox.Show("Проверьте соединение и корректность введенных данных" + ex.Message);
             }
-            
-
         }
 
         private void BtnContractShow_Click(object sender, EventArgs e)
@@ -698,6 +703,9 @@ namespace DB_Course
             AdministratorRequest.Show_Staff_Time_Sheet(factory, dgvStaffEmployeeSheet);
         }
 
-        
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            AdministratorRequest.Register(factory, tbRegisterLogin.Text, tbRegisterPassword.Text, comboRoles.SelectedItem.ToString());
+        }
     }
 }

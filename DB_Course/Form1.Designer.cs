@@ -145,6 +145,12 @@
             this.rbtnSelectStaffByName = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.dgvSelectedStaff = new System.Windows.Forms.DataGridView();
+            this.gbLogin = new System.Windows.Forms.GroupBox();
+            this.tbLoginLogin = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.tbLoginPass = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
             this.pageStaffDegrees = new System.Windows.Forms.TabPage();
             this.BtnShowStaffTitle = new System.Windows.Forms.Button();
             this.btnShowStaffDegree = new System.Windows.Forms.Button();
@@ -182,18 +188,17 @@
             this.label27 = new System.Windows.Forms.Label();
             this.pageStaffOrders = new System.Windows.Forms.TabPage();
             this.splitOrders = new System.Windows.Forms.SplitContainer();
-            this.btnShowAllOrders = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnShowAllOrders = new System.Windows.Forms.Button();
             this.btnShowStaffOrders = new System.Windows.Forms.Button();
             this.comboOrderTypes = new System.Windows.Forms.ComboBox();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label70 = new System.Windows.Forms.Label();
             this.panelSickListOrder = new System.Windows.Forms.Panel();
-            this.rbtnSickListNo = new System.Windows.Forms.RadioButton();
-            this.rbtnSickListYes = new System.Windows.Forms.RadioButton();
+            this.chboxCause = new System.Windows.Forms.CheckBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tbCause = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.panelBusinessTripOrder = new System.Windows.Forms.Panel();
             this.label59 = new System.Windows.Forms.Label();
@@ -269,12 +274,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvStaffEmployeeSheet = new System.Windows.Forms.DataGridView();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.tbLogin = new System.Windows.Forms.TextBox();
-            this.comboLogin = new System.Windows.Forms.ComboBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
+            this.regPage = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.comboRoles = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.tbRegisterPassword = new System.Windows.Forms.TextBox();
+            this.tbRegisterLogin = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboLoginRole = new System.Windows.Forms.ComboBox();
             this.pagePositions.SuspendLayout();
             this.groupboxPositions.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -309,6 +319,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).BeginInit();
+            this.gbLogin.SuspendLayout();
             this.pageStaffDegrees.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffTitle)).BeginInit();
@@ -337,7 +348,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).BeginInit();
             this.tabControlMain.SuspendLayout();
-            this.gbLogin.SuspendLayout();
+            this.regPage.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // pagePositions
@@ -1048,8 +1060,8 @@
             // 
             this.splitContainer3.Panel1.Controls.Add(this.btnDeleteStaff);
             this.splitContainer3.Panel1.Controls.Add(this.panelAllStaff);
-            this.splitContainer3.Panel1.Controls.Add(this.groupBox2);
             this.splitContainer3.Panel1.Controls.Add(this.groupBox4);
+            this.splitContainer3.Panel1.Controls.Add(this.groupBox2);
             // 
             // splitContainer3.Panel2
             // 
@@ -1540,6 +1552,76 @@
             this.dgvSelectedStaff.Size = new System.Drawing.Size(634, 717);
             this.dgvSelectedStaff.TabIndex = 1;
             // 
+            // gbLogin
+            // 
+            this.gbLogin.Controls.Add(this.comboLoginRole);
+            this.gbLogin.Controls.Add(this.label37);
+            this.gbLogin.Controls.Add(this.tbLoginLogin);
+            this.gbLogin.Controls.Add(this.btnLogin);
+            this.gbLogin.Controls.Add(this.tbLoginPass);
+            this.gbLogin.Controls.Add(this.label69);
+            this.gbLogin.Controls.Add(this.label68);
+            this.gbLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbLogin.Location = new System.Drawing.Point(0, 0);
+            this.gbLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.gbLogin.Name = "gbLogin";
+            this.gbLogin.Padding = new System.Windows.Forms.Padding(2);
+            this.gbLogin.Size = new System.Drawing.Size(1257, 783);
+            this.gbLogin.TabIndex = 23;
+            this.gbLogin.TabStop = false;
+            this.gbLogin.Text = "Авторизация";
+            // 
+            // tbLoginLogin
+            // 
+            this.tbLoginLogin.Location = new System.Drawing.Point(21, 99);
+            this.tbLoginLogin.Name = "tbLoginLogin";
+            this.tbLoginLogin.Size = new System.Drawing.Size(207, 31);
+            this.tbLoginLogin.TabIndex = 18;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnLogin.Location = new System.Drawing.Point(21, 253);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(207, 45);
+            this.btnLogin.TabIndex = 14;
+            this.btnLogin.Text = "Войти";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click_2);
+            // 
+            // tbLoginPass
+            // 
+            this.tbLoginPass.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbLoginPass.Location = new System.Drawing.Point(21, 158);
+            this.tbLoginPass.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLoginPass.Name = "tbLoginPass";
+            this.tbLoginPass.Size = new System.Drawing.Size(207, 31);
+            this.tbLoginPass.TabIndex = 13;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label69.Location = new System.Drawing.Point(17, 133);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(70, 23);
+            this.label69.TabIndex = 11;
+            this.label69.Text = "Пароль";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label68.Location = new System.Drawing.Point(17, 73);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(59, 23);
+            this.label68.TabIndex = 10;
+            this.label68.Text = "Логин";
+            // 
             // pageStaffDegrees
             // 
             this.pageStaffDegrees.Controls.Add(this.BtnShowStaffTitle);
@@ -1991,17 +2073,6 @@
             this.splitOrders.SplitterDistance = 578;
             this.splitOrders.TabIndex = 27;
             // 
-            // btnShowAllOrders
-            // 
-            this.btnShowAllOrders.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowAllOrders.Location = new System.Drawing.Point(114, 140);
-            this.btnShowAllOrders.Name = "btnShowAllOrders";
-            this.btnShowAllOrders.Size = new System.Drawing.Size(227, 42);
-            this.btnShowAllOrders.TabIndex = 26;
-            this.btnShowAllOrders.Text = "Показать все приказы";
-            this.btnShowAllOrders.UseVisualStyleBackColor = true;
-            this.btnShowAllOrders.Click += new System.EventHandler(this.BtnShowAllOrders_Click);
-            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.btnShowAllOrders);
@@ -2014,6 +2085,17 @@
             this.groupBox7.TabIndex = 26;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Показать приказы";
+            // 
+            // btnShowAllOrders
+            // 
+            this.btnShowAllOrders.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowAllOrders.Location = new System.Drawing.Point(114, 140);
+            this.btnShowAllOrders.Name = "btnShowAllOrders";
+            this.btnShowAllOrders.Size = new System.Drawing.Size(227, 42);
+            this.btnShowAllOrders.TabIndex = 26;
+            this.btnShowAllOrders.Text = "Показать все приказы";
+            this.btnShowAllOrders.UseVisualStyleBackColor = true;
+            this.btnShowAllOrders.Click += new System.EventHandler(this.BtnShowAllOrders_Click);
             // 
             // btnShowStaffOrders
             // 
@@ -2085,37 +2167,23 @@
             // 
             // panelSickListOrder
             // 
-            this.panelSickListOrder.Controls.Add(this.rbtnSickListNo);
-            this.panelSickListOrder.Controls.Add(this.rbtnSickListYes);
+            this.panelSickListOrder.Controls.Add(this.chboxCause);
             this.panelSickListOrder.Controls.Add(this.label46);
-            this.panelSickListOrder.Controls.Add(this.textBox12);
+            this.panelSickListOrder.Controls.Add(this.tbCause);
             this.panelSickListOrder.Controls.Add(this.label48);
             this.panelSickListOrder.Location = new System.Drawing.Point(14, 330);
             this.panelSickListOrder.Name = "panelSickListOrder";
             this.panelSickListOrder.Size = new System.Drawing.Size(318, 82);
             this.panelSickListOrder.TabIndex = 32;
             // 
-            // rbtnSickListNo
+            // chboxCause
             // 
-            this.rbtnSickListNo.AutoSize = true;
-            this.rbtnSickListNo.Location = new System.Drawing.Point(149, 50);
-            this.rbtnSickListNo.Name = "rbtnSickListNo";
-            this.rbtnSickListNo.Size = new System.Drawing.Size(42, 17);
-            this.rbtnSickListNo.TabIndex = 33;
-            this.rbtnSickListNo.TabStop = true;
-            this.rbtnSickListNo.Text = "Нет";
-            this.rbtnSickListNo.UseVisualStyleBackColor = true;
-            // 
-            // rbtnSickListYes
-            // 
-            this.rbtnSickListYes.AutoSize = true;
-            this.rbtnSickListYes.Location = new System.Drawing.Point(95, 50);
-            this.rbtnSickListYes.Name = "rbtnSickListYes";
-            this.rbtnSickListYes.Size = new System.Drawing.Size(38, 17);
-            this.rbtnSickListYes.TabIndex = 32;
-            this.rbtnSickListYes.TabStop = true;
-            this.rbtnSickListYes.Text = "Да";
-            this.rbtnSickListYes.UseVisualStyleBackColor = true;
+            this.chboxCause.AutoSize = true;
+            this.chboxCause.Location = new System.Drawing.Point(98, 50);
+            this.chboxCause.Name = "chboxCause";
+            this.chboxCause.Size = new System.Drawing.Size(15, 14);
+            this.chboxCause.TabIndex = 32;
+            this.chboxCause.UseVisualStyleBackColor = true;
             // 
             // label46
             // 
@@ -2128,14 +2196,14 @@
             this.label46.TabIndex = 31;
             this.label46.Text = "Оплата?";
             // 
-            // textBox12
+            // tbCause
             // 
-            this.textBox12.Location = new System.Drawing.Point(95, 11);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(144, 21);
-            this.textBox12.TabIndex = 28;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbCause.Location = new System.Drawing.Point(95, 11);
+            this.tbCause.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCause.Name = "tbCause";
+            this.tbCause.Size = new System.Drawing.Size(144, 21);
+            this.tbCause.TabIndex = 28;
+            this.tbCause.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label48
             // 
@@ -2939,6 +3007,7 @@
             this.tabControlMain.Controls.Add(this.pageChair);
             this.tabControlMain.Controls.Add(this.pageTitles);
             this.tabControlMain.Controls.Add(this.pagePositions);
+            this.tabControlMain.Controls.Add(this.regPage);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
@@ -2946,89 +3015,134 @@
             this.tabControlMain.SelectedIndex = 0;
             this.tabControlMain.Size = new System.Drawing.Size(1257, 783);
             this.tabControlMain.TabIndex = 0;
+            this.tabControlMain.Visible = false;
             // 
-            // gbLogin
+            // regPage
             // 
-            this.gbLogin.Controls.Add(this.btnLogin);
-            this.gbLogin.Controls.Add(this.tbLogin);
-            this.gbLogin.Controls.Add(this.comboLogin);
-            this.gbLogin.Controls.Add(this.label69);
-            this.gbLogin.Controls.Add(this.label68);
-            this.gbLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbLogin.Location = new System.Drawing.Point(535, 268);
-            this.gbLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Padding = new System.Windows.Forms.Padding(2);
-            this.gbLogin.Size = new System.Drawing.Size(301, 349);
-            this.gbLogin.TabIndex = 23;
-            this.gbLogin.TabStop = false;
-            this.gbLogin.Text = "Авторизация";
-            this.gbLogin.Visible = false;
+            this.regPage.Controls.Add(this.groupBox11);
+            this.regPage.Location = new System.Drawing.Point(4, 22);
+            this.regPage.Name = "regPage";
+            this.regPage.Padding = new System.Windows.Forms.Padding(3);
+            this.regPage.Size = new System.Drawing.Size(1249, 757);
+            this.regPage.TabIndex = 5;
+            this.regPage.Text = "Зарегистрировать пользователя";
+            this.regPage.UseVisualStyleBackColor = true;
             // 
-            // btnLogin
+            // groupBox11
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnLogin.Location = new System.Drawing.Point(21, 195);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(113, 45);
-            this.btnLogin.TabIndex = 14;
-            this.btnLogin.Text = "Войти";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click_2);
+            this.groupBox11.Controls.Add(this.comboRoles);
+            this.groupBox11.Controls.Add(this.label35);
+            this.groupBox11.Controls.Add(this.label33);
+            this.groupBox11.Controls.Add(this.label32);
+            this.groupBox11.Controls.Add(this.tbRegisterPassword);
+            this.groupBox11.Controls.Add(this.tbRegisterLogin);
+            this.groupBox11.Controls.Add(this.btnRegister);
+            this.groupBox11.Location = new System.Drawing.Point(6, 6);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(282, 355);
+            this.groupBox11.TabIndex = 1;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Регистрация";
             // 
-            // tbLogin
+            // comboRoles
             // 
-            this.tbLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(21, 157);
-            this.tbLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(207, 31);
-            this.tbLogin.TabIndex = 13;
+            this.comboRoles.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboRoles.FormattingEnabled = true;
+            this.comboRoles.Items.AddRange(new object[] {
+            "users",
+            "observers"});
+            this.comboRoles.Location = new System.Drawing.Point(20, 184);
+            this.comboRoles.Name = "comboRoles";
+            this.comboRoles.Size = new System.Drawing.Size(171, 31);
+            this.comboRoles.TabIndex = 7;
             // 
-            // comboLogin
+            // label35
             // 
-            this.comboLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboLogin.FormattingEnabled = true;
-            this.comboLogin.Items.AddRange(new object[] {
-            "admin",
-            "user_",
-            "observer"});
-            this.comboLogin.Location = new System.Drawing.Point(21, 98);
-            this.comboLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.comboLogin.Name = "comboLogin";
-            this.comboLogin.Size = new System.Drawing.Size(207, 31);
-            this.comboLogin.TabIndex = 12;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label35.Location = new System.Drawing.Point(20, 156);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(49, 23);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "Роль";
             // 
-            // label69
+            // label33
             // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label69.Location = new System.Drawing.Point(17, 131);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(70, 23);
-            this.label69.TabIndex = 11;
-            this.label69.Text = "Пароль";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(20, 92);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(74, 23);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "Пароль ";
             // 
-            // label68
+            // label32
             // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label68.Location = new System.Drawing.Point(17, 71);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(59, 23);
-            this.label68.TabIndex = 10;
-            this.label68.Text = "Логин";
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(20, 28);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(158, 23);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "Имя пользователя";
+            // 
+            // tbRegisterPassword
+            // 
+            this.tbRegisterPassword.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbRegisterPassword.Location = new System.Drawing.Point(20, 120);
+            this.tbRegisterPassword.Name = "tbRegisterPassword";
+            this.tbRegisterPassword.Size = new System.Drawing.Size(171, 31);
+            this.tbRegisterPassword.TabIndex = 2;
+            // 
+            // tbRegisterLogin
+            // 
+            this.tbRegisterLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbRegisterLogin.Location = new System.Drawing.Point(20, 56);
+            this.tbRegisterLogin.Name = "tbRegisterLogin";
+            this.tbRegisterLogin.Size = new System.Drawing.Size(171, 31);
+            this.tbRegisterLogin.TabIndex = 1;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRegister.Location = new System.Drawing.Point(20, 220);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(171, 39);
+            this.btnRegister.TabIndex = 0;
+            this.btnRegister.Text = "Зарегистрировать";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label37.Location = new System.Drawing.Point(17, 191);
+            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(88, 23);
+            this.label37.TabIndex = 19;
+            this.label37.Text = "Войти как";
+            // 
+            // comboLoginRole
+            // 
+            this.comboLoginRole.FormattingEnabled = true;
+            this.comboLoginRole.Items.AddRange(new object[] {
+            "users",
+            "admins",
+            "observers"});
+            this.comboLoginRole.Location = new System.Drawing.Point(21, 217);
+            this.comboLoginRole.Name = "comboLoginRole";
+            this.comboLoginRole.Size = new System.Drawing.Size(207, 31);
+            this.comboLoginRole.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1257, 783);
-            this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.gbLogin);
+            this.Controls.Add(this.tabControlMain);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3077,6 +3191,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStaff)).EndInit();
+            this.gbLogin.ResumeLayout(false);
+            this.gbLogin.PerformLayout();
             this.pageStaffDegrees.ResumeLayout(false);
             this.pageStaffDegrees.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -3115,8 +3231,9 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaffEmployeeSheet)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            this.gbLogin.ResumeLayout(false);
-            this.gbLogin.PerformLayout();
+            this.regPage.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3234,10 +3351,8 @@
         private System.Windows.Forms.DateTimePicker dtpAddOrderBeginn;
         private System.Windows.Forms.Panel panelBusinessTripOrder;
         private System.Windows.Forms.Panel panelSickListOrder;
-        private System.Windows.Forms.RadioButton rbtnSickListNo;
-        private System.Windows.Forms.RadioButton rbtnSickListYes;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tbCause;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.TextBox tbBusinessTripToBePaid;
@@ -3337,8 +3452,7 @@
         private System.Windows.Forms.DateTimePicker dateStaffDegreeAdd;
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox tbLogin;
-        private System.Windows.Forms.ComboBox comboLogin;
+        private System.Windows.Forms.TextBox tbLoginPass;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.ComboBox comboChairSheet;
@@ -3355,6 +3469,19 @@
         private System.Windows.Forms.SplitContainer splitOrders;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.CheckBox chboxCause;
+        private System.Windows.Forms.TextBox tbLoginLogin;
+        private System.Windows.Forms.TabPage regPage;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox comboRoles;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox tbRegisterPassword;
+        private System.Windows.Forms.TextBox tbRegisterLogin;
+        private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.ComboBox comboLoginRole;
+        private System.Windows.Forms.Label label37;
     }
 }
 

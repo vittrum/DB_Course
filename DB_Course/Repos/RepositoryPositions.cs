@@ -38,7 +38,7 @@ namespace DB_Course.Repos
             }
             catch (PostgresException ex)
             {
-                MessageBox.Show("Ошибка выполнения операции.");
+                MessageBox.Show("Ошибка выполнения операции." + ex.Message);
             }
             return positions;
         }
@@ -57,7 +57,7 @@ namespace DB_Course.Repos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ошибка выполнения операции. \n Нельзя удалить должность, пока ее занимает сотрудник");
+                MessageBox.Show("Ошибка выполнения операции. \n Нельзя удалить должность, пока ее занимает сотрудник"+ex.Message);
             }
         }
         public void Insert(string Name)

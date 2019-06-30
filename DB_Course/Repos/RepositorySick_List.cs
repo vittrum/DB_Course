@@ -48,5 +48,34 @@ namespace DB_Course.Repos
             }
             return sls;
         }
+        public void Add(string id, string bdate, string edate, string cause, string is_paid )
+        {
+            try
+            {
+                string QueryString =
+                    "select add_sick_list(@ID_Staff, @Beginn_Date, @End_Date, @Cause, @is_paid);";
+                NpgsqlCommand Command =
+                        new NpgsqlCommand(QueryString, sqlConnection.CreateConnection.Connection);
+                Command.Parameters.AddWithValue("@ID_Staff", Convert.ToInt32(id));
+                Command.Parameters.AddWithValue("@Beginn_Date", bdate);
+                Command.Parameters.AddWithValue("@End_Date", edate);
+                Command.Parameters.AddWithValue("@Cause", cause);
+                Command.Parameters.AddWithValue("@is_paid", is_paid);
+
+                try
+                {
+                    Command.ExecuteNonQuery();
+                }
+                catch (PostgresException ex)
+                {
+                    MessageBox.Show("Проверьте корректность ввода pg.\n" + ex.Message);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Проверьте корректность ввода.\n " + ex.Message);
+            }
+
+        }
     }
 }

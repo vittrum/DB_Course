@@ -268,7 +268,7 @@ end
 	$$
 	language
 		'plpgsql';
-
+	добавить командировку
 drop function if exists add_business_trip;
 create or replace function add_business_trip
 (
@@ -293,3 +293,42 @@ end
 	$$
 	language
 		'plpgsql';
+
+	Добавить отпуск
+	drop function if exists add_vacation;
+create or replace function add_vacation
+(
+	_id_staff int,
+	_bdate varchar,
+	_edate varchar,
+	_is_paid varchar
+)
+returns void 
+as $$
+begin 		
+		insert into "Orders" ("Type") values ('Отпуск');
+		insert into "Vacation" ("ID_Order", "ID_Staff", "Beginn_Date", "End_Date",  "Is_Paid")
+				values ((select max("ID_Order") from "Orders"), _id_staff, to_date(_bdate, 'DD MM YYYY'), to_date(_edate, 'DD MM YYYY'),
+						_is_paid::boolean);		
+end	
+	$$ language	'plpgsql';
+
+	Добавить больничный
+	drop function if exists add_sick_list;
+create or replace function add_sick_list
+(
+	_id_staff int,
+	_bdate varchar,
+	_edate varchar,
+	_cause varchar,
+	_is_paid varchar
+)
+returns void 
+as $$
+begin 		
+		insert into "Orders" ("Type") values ('Больничный');
+		insert into "Vacation" ("ID_Order", "ID_Staff", "Beginn_Date", "End_Date", "Cause",  "Is_Paid")
+				values ((select max("ID_Order") from "Orders"), _id_staff, to_date(_bdate, 'DD MM YYYY'), to_date(_edate, 'DD MM YYYY'), _cause,
+						_is_paid::boolean);		
+end	
+	$$ language	'plpgsql';
